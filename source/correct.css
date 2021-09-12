@@ -1,0 +1,10 @@
+.answer_success {
+    border-color: #ff3553;
+    border-style: solid;
+    border-width: 1px;
+}
+.answer_error {
+    border-color: #00b0e8;
+    border-style: solid;
+    border-width: 1px;
+}
