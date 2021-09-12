@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<a href="hack.html">       
+    <div class="banner_block" style="background-image:url('source/hack_9X2ouwy.jpg')">
+        <div class="banner_content">
+            <h2>Хак</h2>
+            <p>Лучшая защита - это нападение.</p>
+        </div>
+    </div>
+    </a>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="hack.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+
+
+ <div class="text_content">
+        <p>Изучим атакующую возможность Burp`а - Intruder. Intruder дает возможность моифицировать запрос по маскам и слать его, например так можно пробрутить админку, чем мы с тобой сейчас и займемся.</p>
+
+<blockquote>
+<p>Да, я знаю где лежат логин и пароль дефолтные от DVWA</p>
+</blockquote>
+
+<p>Итак, запущеный барп, запущеный браузер, настроеные прокси на барп - это все что сейчас понадобится. Открываем урл DVWA и попадаем на форму авторизации. Вводи любые данные и жми &quot;Login&quot; - это нужно чтобы барп поймал запрос.</p>
+
+<p>Смотри в барп, вкладка Target -&gt; Site map.</p>
+
+<p><a href="взлом магазов (шопов) и ставить потом снифер на оплату"><img alt="" src="source/send_to_intruder.png" style="height:400px; width:100%" /></a></p>
+
+<p>Видно? ПКМ на пост запросе. Теперь нужно перейти на вкладку Intruder</p>
+
+<p><a href="source/intruder_payload_porition.png"><img alt="" src="source/intruder_payload_porition.png" style="height:400px; width:100%" /></a></p>
+
+<p>Тут остановимся подробнее. Большое текстовое поле - это твой сырой HTTP запрос, который тебе нужно настроить т.е. указать какие параметры ты хочешь модифицировать. Посмотри внимательно, значение параметра password обернуто в спец символ и тоже самое в значении user_token. Вот управлять этим можно кнопками Add, Clear, Auto. Выделил что нужно менять и жмешь соответствующую кнопку. Auto отметит все значения для всех параметров.</p>
+
+<p>Типы атак:</p>
+
+<ul>
+    <li>Sniper - подставление payload исключитьтельно в первую позицию. Т.е. обработка только одного параметра.</li>
+    <li>Battering ram - Подставление одного значения payload во все выделеные параметры.</li>
+    <li>Pitchfork - Подставление по одному значению из каждого списка payload для каждого параметра.</li>
+    <li>Cluster bomb - Перебор всех комбинайций payload.</li>
+</ul>
+
+<p>Объяснию, если требуется протестировать только один параметр, например на XSS, то нужно выбирать тип снайпер и таргетить только один параметр. Ты также можешь выбрать Battering ram если хочешь чтобы один и тотже пейлоад вставал на место нескольких значений. Cluster bomb используется как раз для брута. В нашем случае Pichfork, потому что нам нужно грепить CSRF токен из ответов сервера. CSRF токенизация используется только для POST запросов и необходима для обеспечения защиты от подделки этих запросов. Итак я выделали параметр для пароля, чтобы подставлять туда значения и user_token, чтобы подставлять туда CSRF токен.</p>
+
+<p>Переходим к настройке пайлоадов (полезная нагрузка).</p>
+
+<p><a href="source/intruder_payload_option_1.png"><img alt="" src="source/intruder_payload_option_1.png" style="height:400px; width:100%" /></a></p>
+
+<p>Payload set - список выбраных пейлоадов (они считаются слева на право, сверху вниз), <s>пароль я выбираю тебя</s> выбирай пароль. <a href="https://portswigger.net/burp/help/intruder_payloads_types" target="_blank">Pyload type</a> - тип подстваляемого значения, в данном случчае это обычный список. В опциях пейлоада, в выпадающем списке найди Passwords и тыкни. Паролей достаточно много.</p>
+
+<p>Теперь сложнее. Выбирай в пайлоад сетс - 2</p>
+
+<p><a href="source/intruder_payload_option_2.png"><img alt="" src="source/intruder_payload_option_2.png" style="height:400px; width:100%" /></a></p>
+
+<p>А тип пейлоада Recursive grep. Теперь нужно узнать как именно в HTML выглядит поле с токеном. Для этого можно перейти куда угодно: вернуться на вкладку Position и на поле запроса ПКМ или в Target и тоже самое или в Proxy</p>
+
+<p><a href="source/send_to_repeater.png"><img alt="" src="source/send_to_repeater.png" style="height:400px; width:100%" /></a></p>
+
+<p>Инструмент Repeater позволяет руками модифицировать запрос и отправлять его на сервер и потом анализировать ответ. Переходи на вкладку Repeater.</p>
+
+<p><a href="source/repeater_request_1.png"><img alt="" src="source/repeater_request_1.png" style="height:400px; width:100%" /></a></p>
+
+<p>Сейчас нам не нужно ничего модифицировать, поэтому просто жми &quot;GO&quot;, справа увидишь ответ, с каким кодом он пришел? Правильно 302! Никакого контента этот ответ не может содержать, нам нужно перейти по Location, для этого жми &quot;Follow redirection&quot;.</p>
+
+<p><a href="source/repeater_request_2.png"><img alt="" src="source/repeater_request_2.png" style="height:400px; width:100%" /></a></p>
+
+<p>Выделил стрелочку, они помогают перемещаться по истории запроса. Теперь код ответа 200 и он содержит html. Крути вниз пока не найдешь форму и инпут с токеном. Ниже полей запроса и ответа есть поиск, если что. Т.е. CSRF токен содержится в</p>
+
+<pre>
+<code class="language-html">&lt;input type='hidden' name='user_token' value='TOKEN' /&gt;
+</code></pre>
+
+<p>Отлично, теперь ты умеешь пользоваться репитером :-) Возвращаемся в интрудер.</p>
+
+<p><a href="source/intruder_grep_extract_1.png"><img alt="" src="source/intruder_grep_extract_1.png" style="height:400px; width:100%" /></a></p>
+
+<p>Отмечаем галочку на скрине и жмем Add.</p>
+
+<p><a href="source/intruder_grep_extract_2.png"><img alt="" src="source/intruder_grep_extract_2.png" style="height:400px; width:100%" /></a></p>
+
+<p>Внизу виден ответ от сервера. Да неудобно что тут именно 302 ответ светится, когда нам нужен переход по редиректу, поэтому появилась вставка с рептером. Указываем в полях шаблон для выдергивания токена, тут надо писать так, как есть в html и тут не поддерживаются регулярки, регулярки справа. Отметим галочку, чтобы не парсил загловки. Жмем &quot;OK&quot;. Обрати внимание, токен содержится именно между тем, что я ввел в поля.</p>
+
+<p><a href="source/intruder_grep_extract_3.png"><img alt="" src="source/intruder_grep_extract_3.png" style="height:400px; width:100%" /></a></p>
+
+<p>Теперь надо отметить редирект в пределах сайта, также длина CSRF токена всегда равна 32 и пересылаем куки, если нас залогинит, нам должны выдать другие куки.</p>
+
+<p><a href="source/intruder_options_threads.png"><img alt="" src="source/intruder_options_threads.png" style="height:400px; width:100%" /></a></p>
+
+<p>И еще надо убрать многопоточный режим, так как Recursive grep его не поддерживает. Возвращаемся в Payloads</p>
+
+<p><a href="source/intruder_payload_option_22.png"><img alt="" src="source/intruder_payload_option_22.png" style="height:400px; width:100%" /></a></p>
+
+<p>и видим, что наше выражение для grep встало. Отлично, можно жать &quot;Start attack&quot;.</p>
+
+<p><a href="source/intruder_attack_1.png"><img alt="" src="source/intruder_attack_1.png" style="height:400px; width:100%" /></a></p>
+
+<p>Окно атаки интрудера показывает каждую итерацию по списку пэйлоадов. Внизу отображены запросы и ответы, сейчас у нас по 2 запроса и по 2 ответа, потому что сайт редиректит. На скринах я выделил, как работает Recursive grep</p>
+
+<p><a href="source/intruder_attack_2.png"><img alt="" src="source/intruder_attack_2.png" style="height:400px; width:100%" /></a></p>
+
+<p>Т.е. перед следующим запросом парсится токен из предыдущего запроса и вставляется в запрос. Поэтому не поддерживается многопоточность. Пользователь user у нас не прошел, пробуем admin. Когда закончит можешь просто закрыть окно. Перейти в настройки запроса интрудера и вписать вместо user admin и запустить.</p>
+
+<p><a href="source/intruder_attack_3.png"><img alt="" src="source/intruder_attack_3.png" style="height:400px; width:100%" /></a></p>
+
+<p>Таким же образом можно тестировать любые параметры на все что угодно. Мы еще вернемся не раз к интрудеру и репитеру.</p>
+    </div>
+    <br>
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

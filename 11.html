@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<div class="banner_block" style="background-image:url('source/hack_tie4J6J.jpg')">
+        <div class="banner_content">
+            <h2>Введение</h2>
+            <p>Безопасность</p>
+            <p>Покидай свой дом так, словно его охраняет тысяча врагов!</p>
+        </div>
+    </div>
+    <br>
+
+
+<div class="article_actions">
+        <a href="security.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+    <div class="text_content">
+        <p>kali linux используется для хакинга. Устанавливаться он будет поверх подготовленной виртуальной связки из прeдыдущей практики. Если вы ещё не поставили VirtualBox с Whonix-Gateway, сделайте это сейчас. Причём устанавливать kali именно в виртуальную машину, а не как основную систему -- это правильно. Kali linux не гарантирует безопасность и лучше не использовать его вне ВМ.</p>
+
+<p><a href="https://www.kali.org/downloads/">Официальная страница загрузки kali linux</a>. Нам нужен там&nbsp; файл Kali Linux Mate 64 Bit. Это установщик системы с нуля, которую мы сейчас проведём. Этот способ предпочтительный так как позволяет убедится в чистоте установки.</p>
+
+<p>Есть вариант установки через готовый VirtualBox образ. Ссылка на его загрузку есть&nbsp; для VirtualBox есть внизу списка. Этот процесс намного проще, а проблем с такой виртуалкой обычно не возникает. Можно сначала попробовать поставить виртуалку через импорт и вернуться к полной установке только в случае проблем</p>
+
+<p>&nbsp;</p>
+
+<p>Полная установка</p>
+
+<p>После того как скачали iso файл, откройте VirtualBox. Нажмите кнопку New(новая) вверху.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-06-23.png" style="height:81px; width:229px" /></p>
+
+<p>Задайте любое имя для новый машины. Тип системы поставьте linux. Версия - Debian (64-bit)</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-08-47.png" style="height:363px; width:530px" /></p>
+
+<p>Количество оперативки оставляем стандартное. Его потом можно будет увеличить, если не будет хватать.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-09-06.png" /></p>
+
+<p>При выборе виртуального диска оставляем пункт &quot;Создать новый виртуальный диск сейчас&quot;</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-09-32.png" /></p>
+
+<p>В появившемся менеджере указываем тип VDI.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-10-01.png" /></p>
+
+<p>Выбираем динамический размер.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-10-16.png" /></p>
+
+<p>Надо увеличить размер. Если тип диска динамический, то реальный файл с диском в системе будет увеличиться только по мере заполнения диска. То есть мы задаём сейчас лимит, максимальный размер диска, поэтому лучше поставить 70 ГБ. И нажимаем Create(Создать)</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-10-45.png" /></p>
+
+<p>Появится новая машина в списке. Выделяем её одинарным кликом и нажимаем кнопку настроек вверху.</p>
+
+<p>В пункте сеть тип первого адаптера меняем на Internal Network(внутренняя сеть) и в имени из списка выбираем Whonix.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-35-44.png" /></p>
+
+<p>Нажимаем ok, затем запускаем машину, кликаем два раза по ней. Появится окно с выбором расположения диска для запуска. Нажимаем там кнопку выбора файла и указываем путь к скачанному iso.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-22-25.png" /></p>
+
+<p>После запуска откроется меню kali. Выбираем в нём пункт Graphical install.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-24-08.png" /></p>
+
+<p>Сразу предлагает выбрать язык интерфейса и установки, лучше оставить его на английском, чтобы не добавлять уникальности системе. Я для примера русский поставлю чтобы проверить степень локализации.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-26-22.png" /></p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-26-58.png" /></p>
+
+<p>Страну любую выбираем, проверяться эта информация не будет.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-29-56.png" style="height:591px; width:786px" /></p>
+
+<p>Русскую раскладку можно добавить, хотя реальной необходимости в русском на этой виртуалке нет.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-31-22.png" /></p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-31-38.png" /><br />
+Имя компьютера лучше оставляем по умолчанию.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-41-35.png" /></p>
+
+<p>Имя домена можно оставить пустым.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-42-50.png" /></p>
+
+<p>Пароль не обязательно должен быть очень сложным. Эта виртуалка защищена на уровне системы, да и без шифрования системы пароль на запуск системы мало что сделает, поэтому тут можно ограничится простым паролем.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-43-25.png" /></p>
+
+<p>При проверки интернет соединения адрес автоматически не будет настроен. Это нормальная ситуация. Напротив, если у вас автоматически нашлось интернет соединение, то, скорее всего, настройки интернет для виртуальной машины выставлены неправильно и надо перепроверить их.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-52-08.png" /></p>
+
+<p>Выбираем ручную настройку сети</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-52-30.png" /></p>
+
+<p>Вводим в поле IP-address значение 10.152.152.22</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-53-22.png" /></p>
+
+<p>Net mask: 255.255.192.0</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-53-48.png" /></p>
+
+<p>Gate: 10.152.152.10</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-54-09.png" /></p>
+
+<p>Address of DNS server: 10.152.152.10</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-54-44.png" /></p>
+
+<p>Шифровать диск имеет смысл если виртуальная машина будет переноситься куда-то. Пока эта виртуалка будет храниться на машине с зашифрованным диском, дополнительное шифрование не требуется.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-56-29.png" /></p>
+
+<p>Используем весь виртуальный диск для установки</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-56-45.png" /></p>
+
+<p>Отделение разделов даёт больше свобод управления, но на первое время лучше не отделять разделы, потому что поменять их размер потом не получится.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-57-17.png" /></p>
+
+<p>Подтверждаем правильность разметки</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-57-41.png" /></p>
+
+<p>Тут надо выбрать Да(Yes). Все изменения происходят на виртуальном диске и не способны повредить файлы основной системы.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-05-23-57-56.png" /></p>
+
+<p>Этот выбор не очень важен</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-06-00-08-48.png" /></p>
+
+<p>Дополнительные прокси не нужны, оставляем пустым</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-06-00-09-09.png" /></p>
+
+<p>Даём grub записаться на диск. Не записывать grub можно тогда, когда на диске уже есть средство управления загрузкой. Поскольку каждая виртуальная система устанавливается на отдельной виртуальный диск, необходимости не ставить grub нет.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-06-00-11-20.png" /></p>
+
+<p>Выбираем наш единственный диск</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-06-00-11-36.png" /></p>
+
+<p>К завершению система размонтирует диск и дополнительно извлекать ничего не надо. Просто нажимаем Продолжить(Next)</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-06-00-13-33.png" /></p>
+
+<p>После повторного запуска машины нас встретит уже окно grub. Тут надо выбрать обычную загрузку или просто подождать 6 секунд.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-06-00-15-31.png" /></p>
+
+<p>При некоторых установках графическая оболочка почему-то не стартует автоматически. Тогда после загрузки мы попадаем в консоль. В таком случае надо сначала войти в систему с логином root и паролем указанным при установке</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-06-00-17-33.png" /></p>
+
+<p>И после входа выполнить команду</p>
+
+<blockquote>
+<p>startx</p>
+</blockquote>
+
+<p>При успешной установке после запуска графической сессии перед нами должен появится такой интерфейс системы.</p>
+
+<p><img alt="" src="source/screenshot-from-2018-07-06-00-25-23.png" /></p>
+    </div>
+
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

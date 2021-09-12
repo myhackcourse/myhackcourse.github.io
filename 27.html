@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<a href="hack.html">       
+    <div class="banner_block" style="background-image:url('source/hack_9X2ouwy.jpg')">
+        <div class="banner_content">
+            <h2>Хак</h2>
+            <p>Лучшая защита - это нападение.</p>
+        </div>
+    </div>
+    </a>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="hack.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+
+
+ <div class="text_content">
+        <p>HTTP протокол нужен чтобы ты мог видеть эту страницу. Когда ты отправляешь запрос (нажатие кнопки Enter в адресной строке), то первым делом браузер отправляет DNS запрос, чтобы получить IP адрес сервера, после этого этот IP указывается в запросе HTTP и отправляется, а принимает&nbsp;его уже веб сервер (apache, nginx, etc), обрабатывает и дает ответ. Т.е. обмен данными с сервером идет через отправку и получения HTTP пакетов. В этих пакетах указывается тип запроса, внутренний путь ресурса, версия HTTP, заголовки и тело запроса. В ответе почти тоже самое только еще добавляется код состояния.</p>
+
+<p>Основные типы запросов (<a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">методы</a>).</p>
+
+<p>GET - метод гет это обычный запрос. Ты открываешь браузер, вводишь URL и нажимаешь &lt;Enter&gt; и выполняется GET запрос. GET запрос может передавать параметры, обычно url от параметров отделяет ?, а сами параметры разделяются &amp; и указываются в формате key=value. И вся эта каша находится именно в браузерной строке.</p>
+
+<p>POST - чуть сложнее в понимании потому что не видно где параметры. А параметры передаются в теле запроса. Пост запросы обычно используют там где требуется скрыть передаваемые параметры. Так например, если ты авторизуешься на сайте и он шлет твои логин и пароль методом GET, то уже не важно использует ли сайт ssl, снифер поймает пакет и получит эти данные, так как они будут частью URL. А вот если отправить методом пост, то данные будут частью тела запроса и будут зашифрованы, также как и тело ответа.</p>
+
+<p>Некоторые важные <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields" target="_blank">заголовки</a>.</p>
+
+<p>Host - заголовок указывающий адрес хоста для которого предназначается пакет. Указывается в запросе.</p>
+
+<p>Location - указывает новый адрес запрашиваемого ресурса. Указывается в ответе.</p>
+
+<p>Referer - указывает на url где ты был перед тем как кликнул по ссылке. Указывается в запросе.</p>
+
+<p>Cookie - печеньки. Выставляются при ответе и всегда указываются при запросе. Имеют срок жизни.</p>
+
+<p>User-Agent - строка содержащая информацию о браузере и системе. Указывается при запросе.</p>
+
+<p>Content-Length - длина контента.</p>
+
+<p>Content-Type - MIME тип отправляемого контента. <a href="https://en.wikipedia.org/wiki/Media_type" target="_blank">Wiki</a></p>
+
+<p>Основные коды ответа HTTP, остальные есть в <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">вики</a>.</p>
+
+<p>200 - Этот код говорит, что запрос выполнился успешно.</p>
+
+<p>301 - Значит, что указанный uri постоянно перемещен. Куда указывается в заголовке Location.</p>
+
+<p>302 - Временное перенаправление на странице.</p>
+
+<p>400 - Не верно составленный HTTP запрос.</p>
+
+<p>403 - Требуется авторизация.</p>
+
+<p>404 - uri не существует.</p>
+
+<p>50х - Эти коды состояния означают внутреннюю ошибку сервера.</p>
+
+<p>Давай я тебе покажу примеры HTTP запросов. Чтобы это узреть запусти утилиту netcat.</p>
+
+<p>$ echo &#39;Hello!&#39; | nc -l 8080</p>
+
+<p>Таким образом мы попросим netcat слушать подключение на 127.0.0.1:8080. В браузере можно отправить запрос на этот IP. Просто введи в адресную строку http://127.0.0.1:8080/ и ты увидешь Hello. Теперь в терминале у тебя сырой HTTP запрос от браузера.</p>
+
+<pre>
+<code class="language-http">GET / HTTP/1.1
+Host: 127.0.0.1:8080
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:56.0) Gecko/20100101 Firefox/56.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+</code></pre>
+
+<p>Это будет нашим запросом. Сохраняем в файл. Теперь пропрбуй использовать этот запрос чтобы обратиться к другому сайту из netcat</p>
+
+<p>$ cat request.txt|nc trello.com 80</p>
+
+<p><span style="color:#999999">443 нам не ответит, позже разберем</span></p>
+
+<p>Что в ответ? 400 Bad Request - это значит что наш HTTP запрос не правильный. А все потому что надо было указать правильный заголовок Host, сейчас он указывает на старый адрес. Меняем на &quot;trello.com&quot; и пробуем еще раз.</p>
+
+<pre>
+<code class="language-http">HTTP/1.1 301 Moved Permanently
+Content-Length: 0
+Location: https://trello.com/
+Date: Thu, 31 May 2018 15:59:42 GMT
+Connection: keep-alive
+
+
+</code></pre>
+
+<p>301 - понял, да? Сохраняем ответ в файл response.txt. Теперь можно заменить адрес в поле Location например на https://google.com/ и зпустить netcat</p>
+
+<p>$ cat response.txt|nc -l 8080<br />
+И откроется google :-).&nbsp; Теперь ответим 200-м статусом)</p>
+
+<pre>
+<code class="language-html">HTTP/2.0 200 OK
+content-encoding: br
+content-type: text/html; charset=UTF-8
+date: Thu, 31 May 2018 16:50:25 GMT
+server: gws
+domain=.google.com
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello 2.0&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Сохрани и запусти netcat</p>
+
+<p>$ cat response.txt|nc -l 8080</p>
+
+<p>В данном случае netcat выступал в качестве HTTP сервера, который принимал запрос и отдавал ответ. Вот только у нас нет никакой логики. В реальном сайте в качестве веб сервера обычно используется Apache2 или Nginx, они передают запрос в бекенд, а в качестве бекенда может использоваться: PHP, ASP, Python, etc. Именно бекенд отвечает за обработку данных отправленных в HTML запросе, генерирует ответ и отдает его вебсерверу, а веб сервер твоему браузеру. Данные которые отображаются на странице: содержимое сайта, данные пользователей и т.д. хранятся в базе данных, с которой работает бекенд. А вот HTML, JavaScript, CSS и все остальное, что выполняется в самом браузере, относится к фронтэнду.</p>
+
+<p>Мы будем разбирать несколько уязвимостей связанных с неправильной работой бекенда - это SQL-Injection, Local File Include, Remote File Include. Подробнее о них позже. Тебе для начала нужно осознать суть, что эксплуатировать данные уязвимости можно, если кодер не подумал о фильтрации данных отправленных пользователем. Вообще весь user input является потенциально опасным и к данным пришедшим от пользователя нужно относиться очень серьезно. Возможно ты сейчас подумаешь: &quot;Ну и что? Раз всем изместно, что данные от пользователя небезопасны, значит все их фильтруют и я могу сломать только что то самописное, где неопытный кодер мог ошибиться, а какой нибудь движек не получится сломать, потому что там трудится куча народу!&quot; А вот и нет! Во-первых: ты не раз слышал о дырках в винде и ошибках выпускаемых с обновлением винды, а ведь это крупная корпорация выпускающая платный продукт, над которым трудится команда профессиональных разрабочиков на протяжении N-лет; Во-вторых: <a href="https://xakep.ru/2018/05/29/drupal7-drupalgeddon2/" target="_blank">drupalgeddon2</a>; Так что наивно полагать, что если над проектом трудится много народу, то там все гайки закручены, <span style="color:#999999">у семи нянек дитя без глазу</span><span style="color:null">. Этих знаний хватит, чтобы начать. И помни - Стоячая вода превращается в болото!</span></p>
+
+<p><span style="color:null">Вернемся к запросам HTTP и netcat. Нам не ответит сервер по 443 порту потому что сначала надо установить сессию SSL. Чтобы пообщаться с сервером сырыми запросами, нужно использовать </span>утилиту openssl. Например так:</p>
+
+<p>$ openssl s_client -connect server:port</p>
+
+<p><span style="color:#999999">Да, бывают некоторые команды которые принимают параметры по своему</span></p>
+    </div>
+    <br>
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

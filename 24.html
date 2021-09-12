@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<a href="hack.html">       
+    <div class="banner_block" style="background-image:url('source/hack_9X2ouwy.jpg')">
+        <div class="banner_content">
+            <h2>Хак</h2>
+            <p>Лучшая защита - это нападение.</p>
+        </div>
+    </div>
+    </a>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="hack.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+
+
+<div class="text_content">
+        <p>Программы которые работают в фоне называют сервисами (даемонами, демонами). Для управления сервисами используется systemctl (не путать с sysclt)</p>
+
+<blockquote>
+<p><tt><strong>$ man sysclt</strong></tt></p>
+
+<p>NAME<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sysctl - configure kernel parameters at runtime</p>
+
+<p>SYNOPSIS<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sysctl [options] [variable[=value]] [...]<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sysctl -p [file or regexp] [...]</p>
+
+<p>DESCRIPTION<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sysctl is used to modify kernel parameters at runtime.&nbsp; The parameters available are those<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; listed under /proc/sys/.&nbsp; Procfs is required for sysctl support in&nbsp; Linux.&nbsp;&nbsp; You&nbsp; can&nbsp; use<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sysctl to both read and write sysctl data.</p>
+</blockquote>
+
+<blockquote>
+<p><tt><strong>$ man systemctl</strong></tt><br />
+NAME<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; systemctl - Control the systemd system and service manager</p>
+
+<p>SYNOPSIS<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; systemctl [OPTIONS...] COMMAND [NAME...]</p>
+
+<p>DESCRIPTION<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; systemctl may be used to introspect and control the state of the &quot;systemd&quot; system and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; service manager. Please refer to systemd(1) for an introduction into the basic concepts<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and functionality this tool manages.</p>
+</blockquote>
+
+<p><br />
+systemctl предоставляет возможность включать и выключать сервисы и назначить сервисы в автозагрузку. Например, после установки сервиса апач, чтобы он включился после ребута, нужно написать команду:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt># systemctl enable apache2</tt></div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt># systemctl start apache2</tt></div>
+
+<p>После этого сервис апач будет запущен и будет стартовать при вкючении. Теперь запускать и останавливать сервис можно командой</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># service apache2 start</div>
+
+<blockquote>
+<p><tt><strong>$ man service</strong></tt></p>
+
+<p>NAME<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; service - run a System V init script</p>
+
+<p>SYNOPSIS<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; service SCRIPT COMMAND [OPTIONS]</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; service --status-all</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; service --help | -h | --version</p>
+
+<p>DESCRIPTION<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; service&nbsp; runs&nbsp; a&nbsp; System&nbsp; V init script or upstart job in as predictable an environment as<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; possible, removing most environment variables and with the current working&nbsp; directory&nbsp; set<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to /.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The&nbsp; SCRIPT&nbsp; parameter specifies a System V init script, located in /etc/init.d/SCRIPT, or<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the name of an upstart job in /etc/init. The existence of an upstart job of the same&nbsp; name<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; as&nbsp; a&nbsp; script in /etc/init.d will cause the upstart job to take precedence over the init.d<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; script.&nbsp; The supported values of COMMAND depend on the&nbsp; invoked&nbsp; script.&nbsp;&nbsp; service&nbsp; passes<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp; and OPTIONS to the init script unmodified. For upstart jobs, start, stop, status,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and reload are passed through to their upstart equivalents. Restart will call the&nbsp; upstart<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#39;stop&#39;&nbsp; for&nbsp; the&nbsp; job,&nbsp; followed immediately by the &#39;start&#39;, and will exit with the return<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code of the start command.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All scripts should support at least the start and stop commands.&nbsp; As a&nbsp; special&nbsp; case,&nbsp; if<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND is --full-restart, the script is run twice, first with the stop command, then with<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the start command. This option has no effect on upstart jobs.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; service --status-all runs all init scripts, in alphabetical order, with&nbsp; the&nbsp; status&nbsp; com‐<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mand.&nbsp;&nbsp; The status is [ + ] for running services, [ - ] for stopped services and [ ? ] for<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; services without a &#39;status&#39; command.&nbsp; This option only calls&nbsp; status&nbsp; for&nbsp; sysvinit&nbsp; jobs;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; upstart jobs can be queried in a similar manner with initctl list.</p>
+</blockquote>
+
+<p><br />
+Проще говоря, systemctl нужен для активации сервиса, а service для менеджеринга сервиса. Чтобы посмотреть какие сервисы работают сейчас можно выполнить команду</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt># service --status-all | grep +</tt></div>
+
+<p>Если же хочется увидеть вообще все сервисы, просто убери grep.</p>
+
+<h3><u>Запуск сервиса:</u></h3>
+
+<p>Запустить сервис сейчас, если он не активирован в systemctl, то после ребута он <strong>не</strong> будет запущен.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>service &lt;service_name&gt; start</tt></div>
+
+<h3><u>Остановка сервиса:</u></h3>
+
+<p>Остановка процесса демона. Опять же, если он активен в systemctl, то после перезагрузки этот сервис будет автоматически запущен.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>service &lt;service_name&gt; stop</tt></div>
+
+<h3><u>Перезапуск сервиса:</u></h3>
+
+<p>Обычно применяют после изменения конфига сервиса, если не поддерживается reload.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>service &lt;service_name&gt; restart</tt></div>
+
+<p>Аналогично</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>service &lt;service_name&gt; stop &amp;&amp; service &lt;service_name&gt; start</tt></div>
+
+<h3><u>Перезагрузка конфигурационных файлов без остановки сервиса:</u></h3>
+
+<p>Перечитываение конфигурационных файлов без остановки процесса сервиса. Поддерживается не всегда.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>service &lt;service_name&gt; reload</tt></div>
+
+<h3><u>Убрать сервис из systemctl:</u></h3>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>systemctl disable &lt;service_name</tt>&gt;</div>
+
+<h3><u>Просмотреть статус сервиса:</u></h3>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>service &lt;service_name&gt; status</tt></div>
+
+<p>или</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>systemctl status &lt;service_name</tt>&gt;</div>
+
+<h3><u>Просмотр журнала событий:</u></h3>
+
+<p>Если что то не работает и неизвестно почему, то глянуть лог можно командой</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>journalctl -u &lt;service_name&gt;</tt></div>
+
+<p>Весь лог:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>journalctl</tt></div>
+
+<p>Демонами удобно пользоваться для запуска процессов. Как я уже сказал есть сервис апача, который после запуска прочитает конфигурационные файлы находящиеся в &quot;<tt>/etc/apache2</tt>&quot; (там конфиги самого апача и конфиги виртуальных хостов) и при получении запроса к серверу на порт 80 (или что там будет написано в конфиге хоста) он обработает этот запрос и вернет ответ.</p>
+
+<p>Аналогично работает сервис sshd, который обеспечивает подключение по ssh к серверу. Если же выключить его, то доступа уже не получить.</p>
+
+<p>А теперь <s>создадим ручного демона</s> напишем свой юнит, который будет бекапить нам папку.</p>
+
+<p>Пишем конфиг юнита:</p>
+
+<pre>
+<code class="language-ini">[Unit]
+Description=Backups projects
+ 
+[Service]
+RemainAfterExit=true
+ExecStop=/usr/local/bin/project_backup
+Type=oneshot
+ 
+[Install]
+WantedBy=multi-user.target</code></pre>
+
+<p><tt><strong>[Unit]</strong></tt> хранит общие сведения о юните.<br />
+&nbsp;&nbsp;&nbsp; * <tt><strong>Description</strong></tt> - Описание.<br />
+&nbsp;&nbsp;&nbsp; * <tt><strong>After</strong></tt> - запускать этот юнит после определенных демонов или целей (цель - это набор юнитов). Например, network.target значит, что демон запустится после того как поднимутся сетевые интерфейсы.<br />
+<tt><strong>[Service]</strong></tt> объединяет сведения, необходимые для выполнения юнитом его задач.<br />
+&nbsp;&nbsp;&nbsp; * <tt><strong>Type</strong></tt> - тип сервиса. simple - демон запускается и начинает ожидать на консоле и не отфоркивается. forking - демон запускается, потом форкается и завершает родительский процесс. Многие программы именно так и запускаются, чтобы перейти в background режим. Например, nginx запускается по такой схеме. one-shot - используется для запуска скриптов которые запускаются, отрабатывают и завершаются.<br />
+&nbsp;&nbsp;&nbsp; * <tt><strong>ExecStop</strong></tt> - указывает скрипт, который должен быть выполнен перед остановкой сервиса.<br />
+&nbsp;&nbsp;&nbsp; * <tt><strong>ExecStart</strong></tt> - определяет команду, которая должна быть выполнена сразу после запуска сервиса.<br />
+&nbsp;&nbsp;&nbsp; * <tt><strong>RemainAfterExit</strong></tt> - предписывает systemd считать процесс активным после его завершения.<br />
+&nbsp;&nbsp;&nbsp; * <tt><strong>Restart</strong></tt> - рестартовать демон, если он завершится/упадет. При always - systemd будет перезапускать демон независимо от того почему он завершился. Можно указать on-failure, тогда будет перезапускаться если демон вышел с ненулевым кодом возврата или был завершен по сигналу (kill DAEMONPID)</p>
+
+<p><tt><strong>[Install]</strong></tt> содержит сведения о том, при каких обстоятельствах должен быть запущен сервис.<br />
+&nbsp;&nbsp;&nbsp; * <strong><tt>WantedBy</tt></strong> - устанавливает запуск при обычной загрузке компьютера.</p>
+
+<p>Сохраняем юнит с именем &quot;<tt>project_backup.service</tt>&quot; поместим его в <tt>&quot;/etc/systemd/system</tt>&quot;.<br />
+В ExecStop прописан путь до скрипта <tt>&quot;/usr/local/bin/project_backup&quot;</tt>, который должен быть запущен. Его у нас там нет, так что открываем редактор и пишем скрипт</p>
+
+<pre>
+<code class="language-bash">#!/bin/bash
+current_date="$(date +'%F_%H_%M')"
+
+tar -czf /home/user/.backups/$current_date.tar.gz /home/user/project_dir
+</code></pre>
+
+<p>И сохраняем это в файл /usr/local/bin/project_backup. Даем права на запуск</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ chmod +x /usr/local/bin/project_backup</tt></div>
+
+<p>Разберемся что в скрипте:<br />
+1-ая строка указывает путь к оболочке в которой будет запущен код. Т.е. в данном случае это bash скрипт.<br />
+2-ая строка получает текущую дату (date), форматирует в вид &quot;ГОД-МЕСЯЦ-ДЕНЬ_ЧАСЫ_МИНУТЫ&quot; и записывает в переменную.<br />
+3-ая строка упаковывает папку с помощью tar.</p>
+
+<p>Теперь осталось создать папку <tt>/home/user/.backups</tt>, куда будут складываться бекапы и активировать демона:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#999999">Релоад конфигурации systemd (нужно при создании/редактировании юнит файлов)</span><br />
+<tt># systemctl daemon-reload</tt></div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#999999"><tt>Активация сервиса</tt></span><br />
+<tt># systemctl enable project_backup</tt></div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt><span style="color:#999999">Запуск</span><br />
+# systemctl start project_backup</tt></div>
+
+<p>Запуск юнита я делал указывая &quot;project_backup&quot;, а не &quot;project_backup<strong>.service</strong>&quot;, потому как по умолчанию подрузамевается именно &quot;project_backup.service&quot;. Это используется для создание нескольких юнитов одного демона. Например системного &quot;.service&quot; и пользовательского &quot;.{user}&quot;, где в место user имя пользователя.</p>
+
+<p>Можно ребутнуться и посмотреть результат. Важно понимать, что ничего не получится если у тебя нечего бекапить. Если вдруг что то пошло не так то смотрим лог:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ journalctl -u project_backup</tt></div>
+
+<p>&nbsp;</p>
+    </div>
+    <br>
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

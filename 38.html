@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<a href="hack.html">       
+    <div class="banner_block" style="background-image:url('source/hack_9X2ouwy.jpg')">
+        <div class="banner_content">
+            <h2>Хак</h2>
+            <p>Лучшая защита - это нападение.</p>
+        </div>
+    </div>
+    </a>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="hack.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+
+<div class="text_content">
+        <p>Сайты состоят из кода, а код это текст, когда текста много, то его приходится делить на файлы. File Inclusion (подключение файлов) - это способ включения кода одного файла в текущий, при котором код в подключаемом файле выполняется.</p>
+
+<p>File Inclusion делятся на два типа: Local и Remote. LFI будет работать там где php код принимает имя файла в параметрах и инклудит его. Опять же плохая фильтрация. Это дает нам возможность выходить из директории и подключать любые файлы находящиеся на веб сервере. RFI будет работать там, где в php.ini включены опции allow_url_fopen и allow_url_include, первая позволяет работать со ссылками как с файлами, вторая инклудить ссылки как файлы. Начнем с LFI.</p>
+
+<p>Открывай раздел File Inclusion. У нас тут такой url</p>
+
+<p>http://127.0.0.1/dvwa/vulnerabilities/fi/?page=include.php</p>
+
+<p>т.е. include.php это 100% какой то файл на сервере. Хорошо, первое что тут можно сделать это попытаться подставить ./ или ../ перед именем файла. В первом случае никаких изменений, что уже хорошо, во втором ничего не вывел, потому что мы вышли из директории где этот файл лежал. Теперь ты понимаешь почему я так много уделил времени изучению линукса? Отлично, тогда шлем такой запрос</p>
+
+<p><a href="source/lfi_low_1.png"><img alt="" src="source/lfi_low_1.png" style="height:400px; width:100%" /></a><br />
+Вот так все просто. Мы получили содержимое файла /etc/passwd.</p>
+
+<p>Чтобы не париться с вставлением ../ и не думать о их кол-ве можно воспользоваться.. Чем? Правильно, интрудером. Отправляй запрос в интрудер, помечай параметр page, тип атаки снайпер. В параметрах пэйлоада в выпадающем списке находишь &quot;Fuzzing - Path travesal&quot;. Теперь обрати внимание на пути, в конце есть {FILE} - это типо маски, тебе нужно сделать замену этой маски на что то свое. Ниже есть раздел &quot;Payload Processing&quot; жми Add, появится окно надстройки и в выпадающем списке выбирай &quot;Math/replace&quot;. Теперь в первое поле пишешь регулярку что менять, а ниже на что менять. В твоем случае ты меняешь &quot;\{FILE\}&quot; на &quot;etc/passwd&quot;. Помнишь же что спец символы в регулярном выражении нужно экранировать обратным слешем иначе он будет управляющей конструкцие для регулярного выражения. Все &quot;OK&quot; и &quot;Start attack&quot;. Так ты быстро найдешь как высоко тебе нужно подниматься по дереву каталогов.</p>
+
+<h2>Склеивание указанного в параметре имени файла с расширением</h2>
+
+<p>Дальше несколько приемов обхода фильтраций. Например, ты видишь в урле просто имя файла, значит оно склеивается на сервере с расширением, чтобы отбросить это расширение нужно подставить в конец имени в запросе нулевой байт, к пример %00. Список нулевых байтов ты можешь найти все в тех же репозиториях для фаззинга.</p>
+
+<p>Если не проканало, то можно попробовать вписывать ../ до тех пор пока длина пути не будет равна или больше 4096 - это максимальная длина пути для php (тут могу ошибаться). А пхп в свою очередь усекет все, что превышает длину при инклуде файла.</p>
+
+<p>Хорошо, что такое LFI понятно, перейдем к RFI. С RFI все очень просто, достаточно в параметр подключающий файл указать урл.</p>
+
+<p><a href="source/rfi.png"><img alt="" src="source/rfi.png" style="height:400px; width:100%" /></a></p>
+
+<p>Вот так все просто, указал урл на свой шелл и сразу через &amp; добавил параметр x который должен принять мой шелл.</p>
+
+<p>Пойдем дальше и сменим сложность на medium. Для LFI сразу сразу видно в сорце замену &quot;../&quot; и замену &quot;http(s)://&quot;. Ну первая фильтрация обходится если указать &quot;....//&quot;, фаззинг списки с таким приемом и подобными ты найдешь в репоиториях опять же. А вот интереснее стал случай с RFI. Получается что в данный момент не получится указать урл вовсе. В такой ситуации выручит <a href="https://secure.php.net/manual/en/wrappers.php" target="_blank">wrapper</a>. Напрмер в данном случа и LFI заработает если мы сделаем такой запрос.</p>
+
+<p><a href="source/lfi_base64.png"><img alt="" src="source/lfi_base64.png" style="height:400px; width:100%" /></a></p>
+
+<p>И мы получим запрошенный файл в кодировке base64. Вкладка декодер нужна именно для таких случаев :-) Также возможно попробовать любой враппер</p>
+
+<p>php://input</p>
+
+<p><a href="source/lfi_input.png"><img alt="" src="source/lfi_input.png" style="height:400px; width:100%" /></a></p>
+
+<p>expect - правда по умолчанию эта фича не работает.</p>
+
+<pre>
+<code class="language-http">GET /dvwa/vulnerabilities/fi/?page=expect://id HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cookie: security=medium; PHPSESSID=ku3botmeivenk4p68eiscp81l1
+Connection: close
+Upgrade-Insecure-Requests: 1
+Content-Length: 0
+
+</code></pre>
+
+<p>php://filter без кодирования в base64</p>
+
+<pre>
+<code class="language-http">GET /dvwa/vulnerabilities/fi/?page=php://filter/resource=/etc/passwd HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cookie: security=medium; PHPSESSID=ku3botmeivenk4p68eiscp81l1
+Connection: close
+Upgrade-Insecure-Requests: 1
+Content-Length: 0
+
+</code></pre>
+
+<p>&nbsp;Если на сайте есть форма загрузки файлов, то можно попытаться упаковать shell в zip и распаковать враппером. В данном примере подразумевается, что при распаковке пхп добавит расширение .php, если этого не произойдет, то ты знаешь что делать :-)</p>
+
+<pre>
+<code class="language-http">php?page=zip://path/to/file.zip%23shell</code></pre>
+
+<p>Для чего все это нужно. Если у нас есть возможность инклудить файлы, то мы можем прогрузить шелл. Например если у нас есть доступ к чтению файлов, и только, то нужно искать файлы логов. Варианты тут такие:</p>
+
+<ul>
+    <li>/var/log/apache2/access.log - Ищем логи веб сервера, если они есть, то пишем в юзер агент однострочный php шелл и отправляем запрос на чтение этого файла и сразу подставляем праметр для шелла. Особенность инклуда в том, что ему не важно имеет ли файл нужное расширение.</li>
+    <li>/proc/self/environ - если мы можем читать этот файл, то поступаем также как выше.</li>
+    <li>/tmp/sess_ID или /var/lib/php/sess_ID - иногда сайт пишет в файл сессии пользователя юзер агент. ID - значение параметра PHPSESSID в куках.</li>
+    <li>Загрузить любой файл, лиж бы в нем был пхп код, например добавить пхп код в exif в JPEG и прочитать его через LFI.</li>
+    <li>/var/log/auth.log - самый извратный способ. Если есть доступ к этому логу то логинимся по ссш на сервер, а в качестве имени пользователя указываем, угадай что?, однострочный шелл.</li>
+    <li>Если ничего не вышло пробуем врапперы.</li>
+</ul>
+
+<p>Чтобы добавить пхп шелл в изображение в раздел EXIF, нужно в любом графическом редакторе изменить свойства изображения. Например можно вписать шелл в поле &quot;Камера&quot;. И я надеюсь ты уже понял как обойти фильтрацию в Higth.</p>
+    </div>
+    <br>
+ 
+ 
+        
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

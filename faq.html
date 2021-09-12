@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src=source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book ">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat active">FAQ</a>
+        </nav>
+        <div class="content">
+
+<div class="step_block">
+            <div class="step_head">
+                <p>Упаковка в gzip с помощью tar</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>Как упаковать файлы и папки в gz?</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p><span style="color:null"><span style="background-color:null">Упаковка файлов и папок:</span></span></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt>$ tar -czvf name-of-archive.tar.gz /path/to/directory-or-file</tt></span></div>
+
+<ul>
+    <li>&nbsp;&nbsp;&nbsp; -c: Создание архива.</li>
+    <li>&nbsp;&nbsp;&nbsp; -z: Сжатие gzip.</li>
+    <li>&nbsp;&nbsp;&nbsp; -v: Показывать прогресс.</li>
+    <li>&nbsp;&nbsp;&nbsp; -f: Позволяет указать имя файла в архиве.</li>
+</ul>
+
+<p><span style="background-color:null">Упаковка нескольких директорий и/или файлов в один архив:</span></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt>$tar -czvf archive.tar.gz /pat/to/dir1 /pat/to/dir2 /pat/to/file</tt></span></div>
+
+<p><span style="background-color:null">Исключить файлы и/или папки:</span></p>
+
+<p>По названию:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt>$ tar -czvf archive.tar.gz /path/to/dir --exclude=/path/to/dir/extra --exclude=/path/to/dir/.hidden</tt></span></div>
+
+<p>Или по маске:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt>$ tar -czvf archive.tar.gz /path/to/dir --exclude=*.ext</tt></span></div>
+
+<p><span style="background-color:null">Использовать сжатие bzip2:</span></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt>$ tar -cjvf archive.tar.bz2 /path/to/dir</tt></span></div></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>Распаковка с помощью tar.</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>Как распаковать архив с помощью tar?</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>Распаковка tar:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt>$ tar -xzvf archive.tar.gz</tt></span></div>
+
+<p>Распаковка в папку:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt>$ tar -xzvf archive.tar.gz -C /tmp</tt></span></div>
+
+<p>Если файл является сжатым файлом bzip2, замените &laquo;z&raquo; в приведенных выше командах на &laquo;j&raquo;.</p></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>Дополнения гостевой ОС Kali.</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>Как в Kali 2.0 установить дополнения гостевой ОС (Guest Additional)?</p></p></div>
+
+                <p><span class="answer">Answer:</span> <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt># apt update<br />
+# apt install -y virtualbox-guest-x11<br />
+# shutdown -r now</tt></span></div></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>Установка linux headers.</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>Как установить заголовочные файлы линукс?</p></p></div>
+
+                <p><span class="answer">Answer:</span> <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt># apt -y build-essential linux-headers-$(uname -r)<br />
+# shutdown -r now</tt></span></div></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>Сменить версию java.</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>BurpSuit ругается на установленную версию java, как установить другую версию и какая нужна?</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>Барпу нужна 8-ая версия Java. Она уже установлена в Kali 2.0. Обновление используемой версии выполняется с помощью команды:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt>$ update-alternatives --config java</tt></span></div>
+
+<p>После этого вы увидите список установленных версий Java и можете цифрой выбрать нужную.</p></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>Установка SublimeText</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>Я хочу нормальный текстовый редактор с подсветкой синтаксиса <s>бекджеком и шлюхами,</s> какой выбрать и как установить?</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>Самым крутым редактором (на мой взгляд) явялется SublimeText. Чтобы установить есть 2 путя:</p>
+
+<ol>
+    <li>
+    <p>Через загрузку deb пакета:<br />
+    x64 Version:</p>
+
+    <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt>$ wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3047_amd64.deb<br />
+    $ dpkg -i sublime-text_build-3047_amd64.deb</tt></span></div>
+
+    <p>x86 Version :&nbsp;</p>
+
+    <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt>$ wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3047_i386.deb<br />
+    $ dpkg -i sublime-text_build-3047_i386.deb</tt></span></div>
+    <br />
+    Если попросит обновление (появится алерт с кнопкой &quot;Download&quot;), качаете архив и распаковываете в <code>/opt/sublime_text. Желательно папку перед этим очистить.</code></li>
+    <li><code>Через добавление репозитория</code>
+    <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt>$ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -<br />
+    $ echo &quot;deb https://download.sublimetext.com/ apt/stable/&quot; | sudo tee /etc/apt/sources.list.d/sublime-text.list<br />
+    $ apt update<br />
+    $ apt install sublime-text</tt></span></div>
+    </li>
+</ol></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>Пустить весь трафик через ssh.</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>Я использую тор и впн, но знаю и понимаю, что тор не пускает через себя udp трафик, как мне быть?</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>Чтобы зашифровать весь трафик нужно использовать ssh туннель. SSH поддерживает как tcp так и udp (для тех кто не вкурсе dns запросы идут по udp протоколу). Для настройки SSH туннеля можно использовать замечательный инструмент под названием <a href="http://sshuttle.readthedocs.io/en/stable/usage.html" target="_blank">sshuttle</a>.</p>
+
+<p>Можно попробовать установить из репозитория своего дистрибутива (apt, dnf, etc) или установить через pip.</p></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>Production-сервер</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>Что значит продакшен (production) сервер?</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>Production-окружение - это рабочее, так называемое &quot;боевое&quot; окружение, в котором производится работа с реальными клиентам и актуальными данными. Production-сервер - это сервер, относящийся к production-окружению. На production-сервере должна находиться стабильная, оттестированная сборка.</p>
+
+<p>Говоря о веб-программировании, http://stackoverflow.com - это &quot;боевой&quot;, продакшновый сайт StackOverflow.</p>
+
+<p>Этому термину обычно противопоставляются понятия тестовое окружение и тестовый сервер - он не доступен сторонним пользователям и используется разработчиками для разработки, отладки и тестирования новых версий продукта. Зачастую, тестовый сервер работает либо с тестовыми, не реальными данными (если данные являются конфиденциальными. например, в банковской сфере), либо с копией данных (во избежание ошибочных изменений). <a href="https://ru.stackoverflow.com/a/460051" target="_blank">Источник</a></p></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>Запуск X-сервера</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>Поставил кали и&nbsp; не могу понять как ее включить, при запуске просит логин и пароль, ввожу а толку нет, что делать?</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>Скорее всего стартует только tty сессия. Для запуска иксов надо ввести команду</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt># startx</tt></span></div></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>RCE</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>Что значит RCE?</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>RCE (Remote Code Execution) - уязвимость позволяющая выполнить какой то код на стороне сервера (обычно bash). Примерами могут служить: CVE-2018-7600, CVE-2018-10562, CVE-2018-5955 и еще множество других.</p></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>Добавление дополненний управления репозиторием.</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>Что делать? Не могу добавить репозиторий через команду</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt># add-apt-repository</tt></span></div>
+
+<p>&nbsp;</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>Нужно поставить дополнения для&nbsp;менеджера&nbsp;пакетов</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><span style="color:#000000"><tt># apt install software-properties-common</tt></span></div></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>Частота смены оборудования</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>Как часто менять модем или симку?</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>Жёстких сроков нет. Рекомендуется периодически менять, чтобы в случае прокола где-то, по логам нельзя было поднять все подключения с устройства. Хорошим поводом преждевременно обновить связку является выход по неосторожности через интернет модема туда, куда выходить не стоит. А так рекомендуемый срок обновления -- три месяца - полгода. Причём менять надо не только симку или модем по отдельности, а всё сразу, чтобы связей между оборудованием не оставлять.</p></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>Не работает интернет в виртуалке</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>Виртуальная машина настроена для работы через gateway, но интернета в ней нет. Или он был, но после перезагрузки пропал.</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>Надо убедиться, что виртуальная машина Whonix Gateway запущена и работает в фоне.</p>
+
+<p>Если компьютер был в спящем режиме, то рекомендуется перезапустить gateway, потому что на нём могло сбиться время из-за заморозки. По этой причине не надо сохранять состояние whonix gateway, а всегда выключать и включать заново.</p>
+
+<p>Или можно выставить время на уже работающей машине командой</p>
+
+<p>date -s &quot;Правильна дата и время&quot;</p>
+
+<p>Пример<br />
+date -s &quot;19 APR 2012 11:14:00&quot;</p>
+
+<p>Вписывать надо данные по UTC(московское время минус 3 часа)</p></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>OVA или ISO</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>На ВМ есть разница между Кали которую надо устанавливать (iso) или уже готовую с настройками (ova)?</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>По разнице между образом для импортирования и iso, в первом варианте в комлекте идут дополнения гостевой ОС, поэтому там будет работать и буфер и папки общие можно создать. Во втором варианте ставить дополнения гостевой ОС нужно самому.</p></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>При старте претеста veracrypt не перезагружается</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>В процессе шифрования после старте претеста система просто выключается, или перезапускается, но запускается windows как обычно и выдаёт ошибку, что претест не пройден. Какие проблемы могут быть?</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>1) В BIOS включён secure boot. Для шифрования на уровне системы veracrypt надо добавить свой загрузчик, который создаст слой шифрования перед стартом системы. А эта функция не позволяет программе поставить свой загрузчик. Поэтому до начала шифрования надо зайти в BIOS и установить пункт <em><strong>secure boot</strong></em>(находится чаще всего в секции boot) в <em><strong>disabled</strong></em></p>
+
+<p>2) Загрузчик veracrypt не на первом месте. Такое случается, если система загружается с uefi. После того как претест начался и ноутбук пошёл на перезагрузку, надо войти в bios и в секции boot проверить, не появилось ли новой опции с veracrypt в названии. Если она есть, надо выбрать загрузку с неё.</p></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>В kali ничего не устанавливается</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p><span style="color:null">При вводе команды apt-get update она просто выходит и в консоли ничего не появляется. При попытке что-то установить через apt-get install пишет Unable to locate package...</span></p></p></div>
+
+                <p><span class="answer">Answer:</span> <p><span style="background-color:null">Скорее всего проблема в sources.list. Проверить что в нём находится можно командой</span></p>
+
+<p>cat /etc/apt/sources.list</p>
+
+<p>Если там пусто или нет ни одной строки, которая начинается на deb, то надо выполнить команду</p>
+
+<p>echo &quot;deb http://http.kali.org/kali kali-rolling main non-free contrib&quot; &gt; /etc/apt/sources.list</p>
+
+<p>Так же если там есть строки упоминающие cd или cdrom, их надо удалить</p>
+
+<p>После чего надо повторить изначальную команду.</p></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>Белый экрна</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>На сайте показывает белый экран! Все далал по инструкции.</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>Белый экран - это ошибка php, а на сервере выключено отображение ошибок php. Включить его можно в конфигурационном файле php для апача. Например по пути /etc/php/7.2/apache2/php.ini.</p></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>Пропал интернет в linux(OpenVPN)</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>После запуска VPN в linux перестал открывать сайты в браузере, но jabber работает.</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>Эта проблема связана с DNS серверами. В linux существует проблема с автоматической настройкой DNS после включения конфига. Исправить это можно редактированием файла /etc/resolve.conf. В терминале это можно сделать командой</p>
+
+<p>nano /etc/resolve.conf</p>
+
+<p>Туда надо занести данные действующего DNS сервера. Например, DNS google. Для этого надо заменить содержание файла на</p>
+
+<p>nameserver 8.8.8.8</p>
+
+<p>Сохранить документ - ctrl+o, enter, закрыть редактор - ctrl+x</p></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>mkdir</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>Что значит значение &quot;700&quot; в команде mkdir? $ mkdir -m 700 tmp</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>параметр -m определяет права доступа к создаваемой директории. 700 разрешит rwx для владельца, второй и третий нули запретят какой либо доступ для группы и остальных пользователей. Это подробно описано в лекции про права и группы.</p></p>
+            </div>
+        </div>
+    
+        <div class="step_block">
+            <div class="step_head">
+                <p>php-gd</p>
+                <a href="#" class="settings"></a>
+            </div>
+            <div class="step_body">
+                <div class="question_text"><p><span class="question">Question:</span> <p>Как найти пакет gd для php?</p></p></div>
+
+                <p><span class="answer">Answer:</span> <p>https://www.digitalocean.com/community/questions/is-there-a-php-gd-command-for-php7</p>
+
+<p>&nbsp;</p></p>
+            </div>
+        </div>
+    
+</div>
+
+
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<a href="hack.html">       
+    <div class="banner_block" style="background-image:url('source/hack_9X2ouwy.jpg')">
+        <div class="banner_content">
+            <h2>Хак</h2>
+            <p>Лучшая защита - это нападение.</p>
+        </div>
+    </div>
+    </a>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="hack.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+
+<div class="text_content">
+        <p>Сегодня разберемся с привелегиями пользователей. В любой ОС, да и не только, есть система прав и групп. В линукс при создании пользователя автоматически создается группа с именем этого пользователя и сам пользователь добавляется в свою группу. Можно посмотреть свои права и группы выполнив команду</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ id</tt></div>
+
+<p>вывод будет примерно таким</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>uid=1000(unit) gid=1000(unit) группы=1000(unit),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),113(lpadmin),130(sambashare)</tt></div>
+
+<p>Тут мы видим id пользователя &quot;<tt><strong>uid</strong></tt> (<em>User ID</em>)&quot;, ид группы &quot;<tt><strong>gid</strong></tt> (<em>Group ID</em>)&quot;, а также список групп к которым принадлежит данный пользователь.&nbsp; А вот вывод этой команды из под рута</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>uid=0(root) gid=0(root) группы=0(root)</tt></div>
+
+<p>Все по нулям, что говорит нам о полном доступе к системе. Переключиться на рута или выполнить команду от рута, можно:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ sudo su</tt></div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ sudo &lt;command&gt;</tt></div>
+
+<p>Очень хорошо о запуске команд от другого пользователя написано в <a href="https://www.cyberciti.biz/open-source/command-line-hacks/linux-run-command-as-different-user/" onclick="window.open(this.href, '', 'resizable=yes,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=yes,dependent=no'); return false;">этой статье</a>, уж не стал копипастить и переводить.</p>
+
+<p>Также список команд которыми ты можешь воспользоваться и какие софты юзать на машине определено группами, в которых состоит пользователь, и правами на файлы. В системе есть файл хранящий пароли пользователей, лежит он по пути &quot;<tt>/etc/shadow</tt>&quot;. Для просмотра содержимого файла используется команда &quot;<tt>cat</tt>&quot;</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ cat /etc/shadow</tt></div>
+
+<p>&nbsp;Не получилось, да? Это потому, что на файл установлены права позволяющие читать и писать в него только владельцу и только читать на группу. Чтобы это увидеть можно воспользоваться командой &quot;<tt>ls</tt>&quot;. Опять не получилось? Вывелся только путь? Не беда, как я уже говорил почти у каждой команды есть параметры, а узнать какие параметры принимает команда и что они делают можно 2-мя путями:</p>
+
+<ol>
+    <li>Используя утилиту man. Выход из документации по нажатию &quot;q&quot;.
+    <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ man ls</tt>&nbsp;</div>
+    </li>
+    <li>Используя параметры &quot;<tt>-h/--help</tt>&quot;. Есть противные скрипты которые перекрывают параметр &quot;<tt>-h</tt>&quot; используя его в своих целях, но оставляют справку по ключу &quot;<tt>--help</tt>&quot;, &quot;<tt>ls</tt>&quot; относится к таким.
+    <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">$ ls -h</div>
+    </li>
+</ol>
+
+<p>Очень важно уметь находить и читать документацию. Теперь ознакомившись с маном ты можешь выполнить команду &quot;<tt>ls</tt>&quot; правильно, я понимаю, что тебе лень каждый раз помнить и печатать пути, поэтому обратиться к истории команд тебе помогут, как это ни странно, клавиши вверх и вниз, а подставить ранее введенный параметр можно по шоткату &lt;<tt>Alt+&gt;</tt>&gt;. Позже мы к этому вернемся.</p>
+
+<blockquote>
+<p>А еще, если команда которую ты только что ввел, нужно запустить повторно из-под sudo то сделать можно так:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ sudo !!</tt></div>
+
+<p>Чтобы не вводить в заблуждение &quot;<tt>!!</tt>&quot; команда повтора предыдущей команды!</p>
+</blockquote>
+
+<p>Права на файл &quot;<tt>/etc/shadow</tt>&quot;</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>-rw-r----- 1 root shadow 1,4K апр 14 14:29 /etc/shadow</tt></div>
+
+<p>Первая колонка (<em>таблица выводимая &quot;<tt>ls</tt>&quot; разделяется пробелами</em>)&nbsp; - права на файл, вторая - кол-во ссылок на файл, владелец, группа, размер (в байтах), дата последнего изменения и имя файла. Отсюда мы видим, что файл принадлежит пользователю &quot;<tt>root</tt>&quot; и группе &quot;<tt>shadow</tt>&quot;. А теперь перейдем к самим правам &quot;<tt>-rw-r-----&quot;.</tt> Кол-во тире всегда одинаковое, сами тире означают, что права не установлены, а каждая буква дает определенное право. Дели права по 3 черточки (бита). Первый бит определяет тип объекта:<tt> </tt></p>
+
+<ul>
+    <li>
+    <p><tt>-</tt> &mdash; обычный файл;</p>
+    </li>
+    <li>
+    <p><tt>d</tt> &mdash; каталог;</p>
+    </li>
+    <li>
+    <p><tt>b</tt> &mdash; файл блочного устройства;</p>
+    </li>
+    <li>
+    <p><tt>c</tt> &mdash; файл символьного устройства;</p>
+    </li>
+    <li>
+    <p><tt>s</tt> &mdash; доменное гнездо (<em>socket</em>);</p>
+    </li>
+    <li>
+    <p><tt>p</tt> &mdash; именованный канал (<em>pipe</em>);</p>
+    </li>
+    <li>
+    <p><tt>l</tt> &mdash; символическая ссылка.</p>
+    </li>
+</ul>
+
+<p>В нашем случае - это файл. Далее идут права по 3 бита слева на право: владелец, группа, все остальные. Права обозначаются следующими буквами:</p>
+
+<ul>
+    <li><tt>r</tt> - право на чтение (<strong>r</strong>ead);</li>
+    <li><tt>w</tt> - право на запись (<strong>w</strong>rite);</li>
+    <li><tt>x</tt> - право на запуск (e<strong>x</strong>ecute);</li>
+</ul>
+
+<p>Таким образом первый набор бит (&quot;<tt>rw-</tt>&quot;) дает владельцу файла (&quot;<tt>root</tt>&quot;) право на чтение и запись данных в файл. Второй - (&quot;<tt>r--</tt>&quot;) право на чтение всем, кто входит в группу &quot;<tt>shadow</tt>&quot;. И третий - (&quot;<tt>---</tt>&quot;) никаких прав никому не дает. С правами в линуксе следующая история, что не разрешено - значит запрещено. Таким образом прочитать файл &quot;<tt>/etc/shadow</tt>&quot; можно так:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ sudo cat /etc/shadow</tt></div>
+
+<p>Ты, как любой пользователь системы, можешь поменять себе пароль, просто запустив команду &quot;<tt>passwd</tt>&quot;, и дважды введя <u>новый пароль</u>. И тут должен возникнуть любопытный вопрос: &quot;Раз все пароли хранятся в <tt>/etc/shadow</tt>, а доступ на запись есть только у рута, то как я могу менять свой пароль с помощью <tt>passwd</tt>, ведь она запускается мной, а значит с моими правами?&quot; Все верно, запускаемые скрипты и команды выполняются с привелегиями текущего пользователя и поэтому <tt>cat</tt> запущенный тобой не может прочитать файл shadow. А из-за необходимости давать обычным пользователям права которых у них не должно быть, были придуманы биты <tt>suid</tt> (<em>Set User ID или смена идентификатора пользователя</em>) и <tt>sgid</tt> (<em>Set Group ID</em> или <em>смена идентификатора группы</em>), которые на время запуска файла с таким битом предоставляют права владельца запускаемого файла. Посмотрим на права заданные для программы passwd</p>
+
+<p><img alt="" src="source/2018-05-16-18-04-23.png" style="height:355px; width:100%" /></p>
+
+<p>Обрати внимание на первый набор бит &quot;<tt>rw<strong>s</strong></tt>&quot;, именно наличие бита &quot;<tt>s</tt>&quot; дает запускаемому процессу привелегии владельца файла и позволяет модифицировать файл с паролями, куда в обычной ситуации получить доступ нельзя.</p>
+
+<p>Право <tt>suid</tt> считается потенциально опасным и неправильное его использование может вызвать проблемы. Например если бы <tt>passwd</tt> работал бы как <tt>sudo</tt> (<em>без вопросов выполнял бы команды</em>), то мы бы получили полный доступ к системе.</p>
+
+<p>Для бита suid не предусмотрено отдельного места, поэтому это право перекрывает &quot;x&quot;, причем если есть право на запуск, то - &quot;s&quot;, если права на запуск нет, то -&quot;S&quot;.</p>
+
+<p>Таким образом одним из векторов повышения привелегий может стать поиск исполняемых файлов, которые запускаются от <tt>root</tt> и куда есть доступ на запись (<em>заглянуть можно, например, в файлы cron</em>).</p>
+
+<p>Также ты можешь менять права на объекты, владельцем которых являешься, с помщью команды &quot;<tt>chmod wXp /path/to</tt>&quot;, где:</p>
+
+<p>w - указатель для кого устанавливаются права:</p>
+
+<ul>
+    <li><tt>u</tt> - для владельца</li>
+    <li><tt>g</tt> - для группы</li>
+    <li><tt>o</tt> - пользователи не входящие в группу</li>
+    <li><tt>a</tt> - для всех пользователей</li>
+</ul>
+
+<p>X - указатель на модификатор:</p>
+
+<ul>
+    <li><tt>+</tt> - добавить право</li>
+    <li><tt>-</tt> - удалить право</li>
+    <li><tt>=</tt> - установить право</li>
+</ul>
+
+<p>p - указатель на само право:</p>
+
+<ul>
+    <li><tt>r</tt> - чтение</li>
+    <li><tt>w</tt> - запись</li>
+    <li><tt>x</tt> - запуск</li>
+</ul>
+
+<p>Вот несколько примеров использования команды chmod:</p>
+
+<p>Предоставить всем пользователям право на выполнение:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ chmod a+x /path/to</tt></div>
+
+<p>Удалить право на чтение и запись для всех, кроме владельца файла:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ chmod go-rw /path/to</tt></div>
+
+<p>Дать всем права на чтение, запись и выполнение:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ chmod ugo+rwx /path/to</tt></div>
+
+<p>&nbsp;</p>
+
+<p>Если опустить указание на то, кому предоставляется данное право, то подразумевается, что речь идет вообще обо всех пользователях, т.&nbsp;е. вместо</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ chmod a+x /path/to</tt></div>
+
+<p>можно записать просто</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ chmod +x /path/to</tt></div>
+
+<p>&nbsp;</p>
+
+<p>Рекурсивное применение прав для текущей директории. Удалить права на чтение, выполнение и запись во все файлы и каталоги текущей директории:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ chmod -R go-rwx .</tt></div>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="source/2018-05-16-21-09-49.png" style="height:405px; width:100%" /></p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="source/2018-05-16-21-12-00.png" style="height:432px; width:100%" /></p>
+
+<p>Тоже самое можно сделать так:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ chmod -R go= .</tt></div>
+
+<p>&nbsp;При работе с правами можно лишиться привелегий, если удалить у себя право &quot;x&quot; на папку (все папки должны иметь это право для владельца). Ниже на гифке показан этот процесс.</p>
+
+<p><img alt="" src="source/chmod_lost_perms.gif" style="height:477px; width:100%" /></p>
+
+<p>Команду &quot;<tt>find</tt>&quot; разберем позже. Суть в том, что у директорий обязательно должно быть разрешение &quot;<tt>x</tt>&quot;.</p>
+
+<p>Можно задавать права через числовое представление этих прав. Т.е. каждое право имеет свое числовое представление:</p>
+
+<ul>
+    <li><tt>r</tt> - 4</li>
+    <li><tt>w</tt> - 2</li>
+    <li><tt>x</tt> - 1</li>
+    <li>не давать никаких прав - 0</li>
+</ul>
+
+<p>Чтобы предоставить права таким способом нужно сложить соответствующие цифры для каждого набора. Например: нам нужно чтобы запускать, писать и читать мог только владелец, читать и запускать участники группы, а все остальные только запускать. Тогда мы складываем <tt>4+2+1=7 (r+w+x), 4+1=5 (r+x), 1=1 (x)</tt>. В итоге просто пишем результаты для каждой группы слитно - <tt>751</tt>.</p>
+
+<p><img alt="" src="source/2018-05-17-10-39-28.png" style="height:400px; width:100%" /></p>
+
+<p>Этот способ используется чаще, хотя мне больше нравится первый.</p>
+
+<p>Еще одна команда которую рассмотрим сегодня - это &quot;<tt>chown</tt>&quot;, которая позволяет менять владельца и группу. Синтаксис тут следующий: &quot;<tt>chmod [OPTIONS] user:group /path/to</tt>&quot;, опции тут как у <tt>chmod</tt> с дополнениеями, например вместо пользователя:группы можно указать файл от которого эти параметры унаследуются.</p>
+
+<p style="text-align:center"><img alt="" src="source/chown.png" style="height:260px; width:100%" /></p>
+
+<p>Тут я поменял группу у файла и теперь все кто входит в группу &quot;<tt>www-data</tt>&quot; могут читать и запускать этот файл. Важно помнить что из под обычного пользователя ты не сможешь поставить владельца или группу к которой не принадлежишь.</p>
+
+<p><img alt="" src="source/chown_group.gif" style="height:386px; width:100%" /></p>
+    </div>
+    <br>
+
+
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

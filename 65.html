@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+
+
+<div class="banner_block" style="background-image:url('source/virusology.jpeg')">
+        <div class="banner_content">
+            <h2>Склейка</h2>
+            <p>Вирусология</p>
+            <p>Зголовок обновика</p>
+        </div>
+    </div>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="virus.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+    
+  <div class="text_content">
+        <p>Начнём с того, что из себя представляет склейка. Склейка - это совмещение нескольких файлов в один. При создании вирусов она часто используется. Типичный пример: у нас есть два exe. Один из них - обычный установщик word, например. А второй - вирус, который незаметно поражает систему. И есть жертва, который надо закинуть вирус. Отправлять сам вирус палевно. После того как человек запустит файл и увидит, что ничего не происходит не то, что он ожидал, он насторожится. Для таких целей и существует склейка. Она помогает создать exe, который будет вести себя как обычная программа или даже установщик, а вирус будет запущен в фоне.</p>
+
+<p>Сегодня мы познакомимся со склейкой вирусов с исполняемыми файлами.</p>
+
+<p style="text-align:center">В склейке существует 2 больших типа.</p>
+
+<p style="margin-left:40px; text-align:right"><strong>Склейка с использованием сторонней программы</strong></p>
+
+<pre>
+<code>Joiner работает по этому типу. Суть заключается в том, что два файла программно упаковываются в один, и изначально запускается внешняя программа, которая сама потом запускает встроенные в неё файлы в соответствии с её настройками</code></pre>
+
+<p style="text-align:right"><strong>Склейка через модификацию кода исходной программы</strong></p>
+
+<pre>
+<code>Такой метод считается более основательным. Он позволяет внедрить вирус прям в программу. Поскольку такая склейка делается вручную, её труднее обнаружить. Но сделать её не всегда возможно. Нужны 2 фактора: 1) программа для заражения должна поддаваться модификации. Это значит, что либо у неё должен быть открытый исходный код, либо её можно декомпилировать и модифицировать в последствии. 2) Надо понимать основы программирования. Если заражаемая программа с открытым исходным кодом, заразить её не так сложно. Иногда достаточно сделать пару вставок шаблонного кода.</code></pre>
+
+<p>Второй тип скейки более перспективный и мы рассмотрим его позже, пока сосредоточимся на более простом - первом типе. Любая склейка может выполняться через программу. Если поискать в интернете, можно найти кучу софта под эти задачи. Но у таких программ есть большой минус: после склейки они оставляют кучу детектов.</p>
+
+<p><em>Если склеить две безобидные программы каким-нибудь joiner&#39;ом, то программа на выходе будет активно биться антивирусами как зловред.</em></p>
+
+<p>Причиной тому является метод, по которому производится склейка. Современные антивирусы на такие глупые, и они полагаются не только на вирусные базы. Антивирусы сейчас стараются искать паттерны, которые используют вирусы. Любой склейщик совмещает программы по какому-то алгоритму, и он неизменен. Антивирусы вычисляют признаки работы этого алгоритма и таким образом находят программы, которые были склеены подобными программами. Поэтому использование легкодоступного склкйщика лишь добавляет проблем.</p>
+
+<h2 style="text-align:center">&nbsp;</h2>
+
+<h2 style="text-align:center">Склейка через winrar</h2>
+
+<p>Этот метод является наиболее оптимальным среди простых методов склейки. На выходе мы получаем один исполняемый файл, который будет вести себя как исходная программа. Поскольку winrar - легитимная программа, она не добавляет новых детектов конечному файлу.</p>
+
+<p><strong>Подготовка</strong><br />
+В системе должен быть установлен winrar. Для удобство лучше переместить файл вируса и файл, под который вирус будет маскироваться, в одну папку. В этом примере будет использоваться программа notmyfault, а в качестве вируса безобидная программа, которая просто покажет окно с текстом, что она запустилась.</p>
+
+<p><cite>Важно убедится, что программа, с которой производится склейка, не должна иметь зависимостей. Например, нельзя просто выдернуть exe из установленной программы и отправить его кому-то. Скорее всего такая программа не заработает, потому что ей будет не хватать библиотек или файлов конфигурации.</cite></p>
+
+<p><u><strong>Шаг 1</strong></u><br />
+Выделяем файл вируса и конечной программы</p>
+
+<p><img alt="" src="source/scleyka1.png" style="height:53px; width:213px" /></p>
+
+<p><u><strong>Шаг 2</strong></u><br />
+Нажимаем правой копкой мыши и выбираем <strong>Добавить в архив</strong>.</p>
+
+<p><img alt="" src="source/scleyka2.png" /></p>
+
+<p><u><strong>Шаг 3</strong></u><br />
+Установите галочки &quot;<strong>Create SFX archive</strong>&quot;, &quot;<strong>Create solid archive</strong>&quot; и &quot;<strong>Lock archive</strong>&quot;</p>
+
+<p><img alt="" src="source/scleyka3.png" style="height:431px; width:477px" /></p>
+
+<p><u><strong>Шаг 4</strong></u><br />
+Во вкладке &quot;<strong>Advanced</strong>&quot; откройте &quot;SFX options...&quot;</p>
+
+<p><img alt="" src="source/scleyka4.png" /></p>
+
+<p>&nbsp;</p>
+
+<p><u><strong>Шаг 5</strong></u><br />
+Во вкладке &quot;<strong>Setup</strong>&quot; на первой строке напишите имя программы, под которую маскируется вирус. <u>Писать надо полное имя с расширением.</u> С новой строки напишите имя файла вируса.</p>
+
+<p><img alt="" src="source/scleyka5.png" style="height:505px; width:511px" /></p>
+
+<p><cite>Порядок можно поменять. Тогда вирус запустится первым. Но это можно делать лишь с теми вирусами, которые переносят исполняемый файл после перезапуска. Иначе основная программа не запустится, пока вирус не завершит работу.</cite></p>
+
+<p><u><strong>Шаг 6</strong></u><br />
+Во вкладке &quot;<strong>Modules</strong>&quot; установите галочку &quot;<strong>Unpack to temporary folder</strong>&quot; и в &quot;<strong>Silent mode</strong>&quot; выбирите &quot;<strong>Hide all</strong>&quot;</p>
+
+<p><img alt="" src="source/scleyka6.png" style="height:499px; width:505px" /></p>
+
+<p><u><strong>Шаг 7</strong></u><br />
+На вкладке &quot;<strong>Update</strong>&quot; в &quot;<strong>Overwrite mode</strong>&quot; поставьте &quot;<strong>Overwrite all files</strong>&quot;</p>
+
+<p><img alt="" src="source/scleyka7.png" style="height:501px; width:513px" /></p>
+
+<p><u><strong>Результат</strong></u><br />
+В результате в папке с исходными файлами будет создан ещё один. Это и есть комбинированная программа, которая ведёт себя как исходный exe, но имеет в себе функции вируса.</p>
+
+<p><img alt="" src="source/scleyka8.png" /><br />
+&nbsp;</p>
+
+<p><strong><u>Проверка</u></strong></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">В результате запуска полученного файла в системе исполнится склеенный вирус, поэтому на надо запускать его на виртуалках не предназначенных для тестов.</div>
+
+<p><img alt="" src="source/scleyka9.png" /></p>
+
+<p>После запуска exe открылась основная программа, после закрытия которой появилось это окно. Оно отобразилось потому что в качестве вируса было приложение, которое выводит, что система заражена. Настоящий вирус запускается в фоне без создания окон</p>
+    </div>
+    <br>
+
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

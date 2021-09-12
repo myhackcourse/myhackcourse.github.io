@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<a href="hack.html">       
+    <div class="banner_block" style="background-image:url('source/hack_9X2ouwy.jpg')">
+        <div class="banner_content">
+            <h2>Хак</h2>
+            <p>Лучшая защита - это нападение.</p>
+        </div>
+    </div>
+    </a>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="hack.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+
+
+ <div class="text_content">
+        <p>SQL-Injection - уязвимость связанная с неправильной обработкой пользовательских данных при составлении SQL запроса. БД сайту нужна для хранения текстовых данных, хотя иногда и картинки хранят в БД (фе...), т.е. твои логин и пароль хранятся в бд, текст этой статьи хранится в БД, да почти все что требует структурированное хранение, простое и быстрое извлечение хранится в БД.</p>
+
+<p>Базы данных имеют свой язык SQL - язык структурированных запросов. Через него сайт общается с БД, получает данные и сохраняет данные. Так вот, при составлении SQL запроса часто трбуется подставить параметр, который передал пользователь. И вот тут начинается рок-н-ролл, когда из-за неправильной фильтрации пользовательских параметров, атакующий может выполнить свой запрос и скомпрометировать базу, а в дальнейшем все приложение и сервер как итог. Давай попробуем.</p>
+
+<p>Открой DVWA, как обычно, и бурп. Для тестировани SQLi поставь уровень сложности Low, так будет проще и перейди в раздел SQL-Injection.</p>
+
+<p>Как видишь поле ввода предлагает ввести тебе User ID, из контекста ID может быть только целым чилом, попробуй ввести 1. Что выдало? Имя и Фамилия пользователя. А теперь взглянем на сорец:</p>
+
+<pre>
+<code class="language-php">&lt;?php
+
+if( isset( $_REQUEST[ 'Submit' ] ) ) {
+    // Get input
+    $id = $_REQUEST[ 'id' ];
+
+    // Check database
+    $query  = "SELECT first_name, last_name FROM users WHERE user_id = '$id';";
+    $result = mysqli_query($GLOBALS["___mysqli_ston"],  $query ) or die( '&lt;pre&gt;' . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) . '&lt;/pre&gt;' );
+
+    // Get results
+    while( $row = mysqli_fetch_assoc( $result ) ) {
+        // Get values
+        $first = $row["first_name"];
+        $last  = $row["last_name"];
+
+        // Feedback for end user
+        echo "&lt;pre&gt;ID: {$id}&lt;br /&gt;First name: {$first}&lt;br /&gt;Surname: {$last}&lt;/pre&gt;";
+    }
+
+    mysqli_close($GLOBALS["___mysqli_ston"]);
+}
+
+?&gt; </code></pre>
+
+<p>&quot;Get input&quot; не требует объяснения, &quot;Check database&quot; тут идет встраивание полученного от пользователя ID в SQL запрос. Да, эта строка SQL запрос к базе данных. И чтобы тебе было понятнее разберемся в основах SQL.</p>
+
+<h3><strong>Немного про SQL</strong></h3>
+
+<p>SQL&nbsp; - это язык и, как в каждом языке, тут есть свои зарезервированные слова и свой синтаксис. SQL запрос всегда начинается с команды, а команды могут быть следующими:</p>
+
+<ul>
+    <li><strong>SELECT</strong> - extracts data from a database</li>
+    <li><strong>UPDATE</strong> - updates data in a database</li>
+    <li><strong>DELETE</strong> - deletes data from a database</li>
+    <li><strong>INSERT INTO</strong> - inserts new data into a database</li>
+    <li><strong>CREATE DATABASE</strong> - creates a new database</li>
+    <li><strong>ALTER DATABASE</strong> - modifies a database</li>
+    <li><strong>CREATE TABLE</strong> - creates a new table</li>
+    <li><strong>ALTER TABLE</strong> - modifies a table</li>
+    <li><strong>DROP TABLE</strong> - deletes a table</li>
+    <li><strong>CREATE INDEX</strong> - creates an index (search key)</li>
+    <li><strong>DROP INDEX</strong> - deletes an index</li>
+</ul>
+
+<p>У SELECT следующий синтаксис</p>
+
+<p>SELECT column_name,column_name2 FROM database.tablename;</p>
+
+<p>вместо перечисления колонок можно поставить * и тогда будет забираться все, а после этого через FROM нужно указать название таблицы, откуда брать эти колонки. При этом если ты в данный момент работаешь с той таблицей откуда берешь данные, то ее имя указывать не обязательно.&nbsp; Еще раз на тот запрос который в сайте, когда ты передаешь цифру 1 в веб форме и отправляешь форму, то запрос получается таким:</p>
+
+<p>ВЫБЕРИ first_name, last_name ИЗ users ГДЕ user_id = &#39;1&#39;;</p>
+
+<p>Да, именно ВЫБЕРИ, потому что запрос SELECT занимается выборкой данных из таблицы. Если ты хочешь выучить SQL, то <a href="https://www.w3schools.com/SQl/default.asp" target="_blank">вот</a>.</p>
+
+<p>В принципе я все это тебе рассказываю чтобы ты понимал откуда профит тут. Переданные тобой из формы данные отправятся напрямую в запрос. И кто сказал что ты не можешь написать там хуй? И да, если ты напишешь &quot;хуй&quot; то так оно в запрос и полетит. Т.е. где здесь ошибка? Правильно, недостаточная, а в данном случае отсутствие, фильтрации пользовательских данных.</p>
+
+<h3><strong>Тестируем параметры</strong></h3>
+
+<p>От слов к делу. Отправляй цифру в форму, а запрос в интрудер. В интрудуре пометь значение параметра id, тип атаки снайпер и в опциях пейлоада в выпадающем списке найди Fuzzing SQL-Injection. После проведения атаки, ты увидишь, что много пэйлоада прошло, а значит у нас тут SQL инъекция, хотя тут это очевидно. Потыкайся в ответах, там есть места где сервер возвращает нам не один ответ как это было задумано разработчиком, а несколько, также есть места где сервер нам возвращает ошибку синтаксиса SQL.</p>
+
+<p><a href="source/sql1.png"><img alt="" src="source/sql1.png" style="height:400px; width:100%" /></a></p>
+
+<p><a href="source/sql2.png"><img alt="" src="source/sql2.png" style="height:400px; width:100%" /></a></p>
+
+<p><a href="source/sql3.png"><img alt="" src="source/sql3.png" style="height:400px; width:100%" /></a></p>
+
+<p>Вообще, да, изначально для проверки возможности проведения SQL можно было просто отправить не 1, а 1&#39; или 1&quot; в зависимости от того какой тип ковычек использует запрос. Это вызовет в данном случае ошибку синтаксиса SQL о чем веб приложение нас проинформирует. Это как первый&nbsp; вариант протестировать запрос. Также можно проверить математику, т.е. отправить 2-1 и если сервер вернет данные, такие же как при отправке 1, то можно сказать что тут есть дыра. Еще можно отправить 1 and 2=1, если такой запрос не выполнится, то опять же тут дыра. Ну и еще куча есть вариантов. Мы же не будем мучаться, а будем юзать фаззинг листы и интрудер, для начала.</p>
+
+<p>Еще, обрати внимание на первый скрин, где вместо ковычки я отправил %27 - это ковычка закодированная в URL.</p>
+
+<h3><strong>SQLMap</strong></h3>
+
+<p>- Хорошо, интрудер показал, что тут есть уязвимость, что дальше?</p>
+
+<p>А дальше мы будем юзать самый лучший сплоит для проведения SQL инъекций - sqlmap. SQLMap - это полноценный интрумент с богатым функционалом. Все что связано с SQLi он может и пробивает до 90%. Итак найди чистый запрос в истории прокси, чистый имею ввиду без ковычек в параметрах. Нажми на поле с запросом ПКМ и внизу &quot;Copy to file&quot;.</p>
+
+<p>Вот это должны быть в файле:</p>
+
+<pre>
+<code class="language-http">GET /dvwa/vulnerabilities/sqli/?id=1&amp;Submit=Submit HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cookie: security=low; PHPSESSID=gfcko16d7l48emc2b2fqk9vfq7
+Connection: close
+Upgrade-Insecure-Requests: 1
+
+</code></pre>
+
+<p>И 2 символа перевода каретки (две пустых строки) должны завершать запрос.</p>
+
+<p>Теперь открывай терминал и введи такую команду</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>sqlmap -r /path/to/request_file</tt></div>
+
+<p><a href="source/sql4.png"><img alt="" src="source/sql4.png" style="height:400px; width:100%" /></a></p>
+
+<p><a href="source/sql5.png"><img alt="" src="source/sql5.png" style="height:400px; width:100%" /></a></p>
+
+<p>В самом начале мап определяет какая СУБД используется на сайте, после чего он дает тебе возможность пропустить дальнейшие тесты на определения СУБД и продолжить дальше, основываясь на результате. Когда ты пропускаешь дальнейшие тесты на определение СУБД также идет вопрос о уровне и риски сканирования, об этом позже, оставляем все как есть.&nbsp; Теперь мап будет определять техники проведения атак основываясь на определенной СУБД. Ну и в конце, если он определил, что параметр уязвим и подобрал техники, он предложит тебе остановиться или продолжить тестирование других параметров.</p>
+
+<p>Немного о самой сути работы SQLMap`а. В начале он определяет наличие параметров в запросе, затем проводит эвристический анализ ответов сервера, на основании которых SQLMap делает предварительный вывод о том, что параметр уязвим или нет перед инъекцией. После начинается попытка подстановки пэйлоада, на основе анализа. Т.е. бывает такое, что мап говорит мол параметр скорее всего не уязвим, а потом после долгого подробного анализа может его пробить. Ниже представлен список поддерживаемых sqlmap техник проведения атак:</p>
+
+<ul>
+    <li><strong>UNION query SQL injection</strong>. Классический вариант внедрения SQL-кода, когда в уязвимый параметр передается выражение, начинающееся с &laquo;UNION ALL SELECT&raquo;. Эта техника работает, когда веб-приложения напрямую возвращают результат вывода команды SELECT на страницу: с использованием цикла for или похожим способом, так что каждая запись полученной из БД выборки последовательно выводится на страницу. Sqlmap может также эксплуатировать ситуацию, когда возвращается только первая запись из выборки (Partial UNION query SQL injection).</li>
+    <li><strong>Error-based SQL injection</strong>. В случае этой атаки сканер заменяет или добавляет в уязвимый параметр синтаксически неправильное выражение, после чего парсит HTTP-ответ (заголовки и тело) в поиске ошибок DBMS, в которых содержалась бы заранее известная инъецированная последовательность символов и где-то &laquo;рядом&raquo; вывод на интересующий нас подзапрос. Эта техника работает только тогда, когда веб-приложение по каким-то причинам (чаще всего в целях отладки) раскрывает ошибки DBMS.</li>
+    <li><strong>Stacked queries SQL injection</strong>. Сканер проверяет, поддерживает ли веб-приложение последовательные запросы, и, если они выполняются, добавляет в уязвимый параметр HTTP-запроса точку с запятой (;) и следом внедряемый SQL-запрос. Этот прием в основном используется для внедрения SQL-команд, отличных от SELECT, например для манипуляции данными (с помощью INSERT или DELETE). Примечательно, что техника потенциально может привести к возможности чтения/записи из файловой системы, а также выполнению команд в ОС. Правда, в зависимости от используемой в качестве бэк-энда системы управления базами данных, а также пользовательских привилегий.</li>
+    <li><strong>Boolean-based blind SQL injection</strong>. Реализация так называемой слепой инъекции: данные из БД в &laquo;чистом&raquo; виде уязвимым веб-приложением нигде не возвращаются. Прием также называется дедуктивным. Sqlmap добавляет в уязвимый параметр HTTP-запроса синтаксически правильно составленное выражение, содержащее подзапрос SELECT (или любую другую команду для получения выборки из базы данных). Для каждого полученного HTTP-ответа выполняется сравнение headers/body страницы с ответом на изначальный запрос &mdash; таким образом, утилита может символ за символом определить вывод внедренного SQL-выражения. В качестве альтернативы пользователь может предоставить строку или регулярное выражение для определения &laquo;true&raquo;-страниц (отсюда и название атаки). Алгоритм бинарного поиска, реализованный в sqlmap для выполнения этой техники, способен извлечь каждый символ вывода максимум семью HTTP-запросами. В том случае, когда вывод состоит не только из обычных символов, сканер подстраивает алгоритм для работы с более широким диапазоном символов (например для unicode&rsquo;а).</li>
+    <li><strong>Time-based blind SQL injection</strong>. Полностью слепая инъекция. Точно так же как и в предыдущем случае, сканер &laquo;играет&raquo; с уязвимым параметром. Но в этом случае добавляет подзапрос, который приводит к паузе работы DBMS на определенное количество секунд (например, с помощью команд SLEEP() или BENCHMARK()). Используя эту особенность, сканер может посимвольно извлечь данные из БД, сравнивая время ответа на оригинальный запрос и на запрос с внедренным кодом. Здесь также используется алгоритм двоичного поиска. Кроме того, применяется специальный метод для верификации данных, чтобы уменьшить вероятность неправильного извлечения символа из-за нестабильного соединения.</li>
+</ul>
+
+<p>В данном случае мап определил 4 техники проведения атаки, в будущем при работе с этим сайтом он будет выбирать наиболее быструю технику, также были определены: версия ОС, версия веб сервера и версия СУБД.</p>
+
+<blockquote>
+<p>СУБД - DBMS - Data Base Menegment System - Система Управления Базами Данных</p>
+</blockquote>
+
+<p>Теперь можно предварительно узнать информацию по СУБД</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>sqlmap -r dvwa.get --users --current-user --password --hostname --is-dba --current-db --banner</tt></div>
+
+<ul>
+    <li>--users - получить список пользователей СУБД.</li>
+    <li>--current-user - узнать от какого пользователя сайт работает с СУБД.</li>
+    <li>--password - получить хеши паролей пользователей СУБД.</li>
+    <li>--hostname - имя хоста на котором запущена СУБД.</li>
+    <li>--is-dba - проверить наличие у текущего пользователя привелегированного доступа.</li>
+    <li>--current-db - узнать название текущей БД с которой работает сайт.</li>
+    <li>--banner - вывести банер СУБД.</li>
+</ul>
+
+<p>По каждому хосту мап хранит нужную для работы информацию т.е. дважды тестировать и пытать проникать он не будет, а возьмет результаты из сессии, которые хранятся в &quot;~/.sqlmap&quot;. Ну в моем случае я все получил кроме хешей паролей, так как не хватило прав. Ну и хрен с ним, давай глянем на список доступных баз:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>sqlmap -r dvwa.get --dbs</tt></div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">available databases [2]:<br />
+[*] dvwa<br />
+[*] information_schema</div>
+
+<p>Последняя - системная БД, которая хранит информацию о таблицах, базах, пользователях СУБД. Теперь можно глянуть спиок таблиц в базе dvwa, которая, как мы определили является текущей БД, ну это и понятно, она одна.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>sqlmap -r dvwa.get -D dvwa --tables</tt></div>
+
+<p>Теперь глянем список колонок в таблице users</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>sqlmap -r dvwa.get -D dvwa -T users --columns</tt></div>
+
+<p>А теперь только осталось получить данные по интересующим колонкам</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>sqlmap -r dvwa.get -D dvwa -T users -C user,password --dump</tt></div>
+
+<p>После этого мап определит, что мы получили хеши и теперь предложит тебе сохранить их для отправки на расшифровку в другие программы, затем предложит расшифровать их используя атаку по словарю, затем спросит откуда взять словарь для бурта, я выбрал 1 и последний вопрос про подстановку суффиксов, это интересно при использовании соленых хешей, в данном случае я отказался.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>Database: dvwa &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+Table: users<br />
+[5 entries]<br />
++---------+---------------------------------------------+<br />
+| user &nbsp; &nbsp;| password &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|<br />
++---------+---------------------------------------------+<br />
+| 1337 &nbsp; &nbsp;| 8d3533d75ae2c3966d7e0d4fcc69216b (charley) &nbsp;|<br />
+| admin &nbsp; | 202cb962ac59075b964b07152d234b70 (123) &nbsp; &nbsp; &nbsp;|<br />
+| gordonb | e99a18c428cb38d5f260853678922e03 (abc123) &nbsp; |<br />
+| pablo &nbsp; | 0d107d09f5bbe40cade3de5c71e9e9b7 (letmein) &nbsp;|<br />
+| smithy &nbsp;| 5f4dcc3b5aa765d61d8327deb882cf99 (password) |<br />
++---------+---------------------------------------------+</tt><br />
+&nbsp;</div>
+
+<p>Вот такой вот результат.</p>
+
+<p>Это было интересно и просто.&nbsp; Для POST запроса тоже самое получится у нас. Интереснее будет перейти сразу на уровень Higth и в раздел &quot;SQL-Injection (Blind)&quot; - это слепая SQL инъекция. Теперь суть такая, что ты меняешь свой ID через форму, которая откроется в отдельном окне и этот id прописывается в куки, а дальше сайт анализирует именно параметр через куки.</p>
+
+<p><a href="source/sql6.png"><img alt="" src="source/sql6.png" style="height:400px; width:100%" /></a></p>
+
+<p>И тебе тестировать надо именно гет запрос, который отдает куки на урл, который и проверяет параметр id в бд. POST запрос только устанавливает куки. Сохраняй запрос в файл и запускай sqlmap:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>sqlmap -r dvwa.get --banner -p &quot;id&quot; --level=2</tt></div>
+
+<p>Где:</p>
+
+<ul>
+    <li>-r - файл содержащий запрос.</li>
+    <li>--banner - выведет банер БД.</li>
+    <li>-p - указываем название конкретного параметра, который нужно протестировать.</li>
+    <li>--level=2 - указываем уровень тестирования.</li>
+</ul>
+
+<p>--level - определяет какие параметры будут протестированны.</p>
+
+<blockquote>
+<p>Из документации.</p>
+
+<p>By default sqlmap tests all GET parameters and POST parameters. When the value of <code>--level</code> is &gt;= <strong>2</strong> it tests also HTTP <code>Cookie</code> header values. When this value is &gt;= <strong>3</strong> it tests also HTTP <code>User-Agent</code> and HTTP <code>Referer</code> header value for SQL injections. It is however possible to manually specify a comma-separated list of parameter(s) that you want sqlmap to test. This will bypass the dependence on value of <code>--level</code> too.</p>
+</blockquote>
+
+<p>--risk - опредеяет набор тестов которым будут подвергнуты параметры. Более подробно о самих параметрах можно и нужно прочитать в <a href="https://github.com/sqlmapproject/sqlmap/wiki/Usage" target="_blank">документации</a>.</p>
+
+<p>В общем то описывать дальше нечего, так как sqlmap найдет &quot;boolean-based blind&quot; and &quot;AND/OR time-based blind&quot; SQL-Injection. Да, он еще спросит менять ли куки, которые возвращает ответ сервера, тут стоит отказаться. Поясню, при извлечении данных через слепую инъекцию (когда сервер не выводит текст ошибки, а лишь сигнализирует о ее наличии) желательно указывать кол-во потоков --threads. Максмальное кол-во потоков равно 10 и их не получится использовать при технике &quot;time-based blind&quot;, так как тут вытягивание данных зависит от скорости ответа сервера.</p>
+
+<h3><strong>WAF</strong></h3>
+
+<p>WAF (Web Application Firewall) - Это механизм защиты сервера от инъекционных атак. Он анализирует запросы к серверу по своим фильтрам и может заблокировать его до передачи на сервер. Таким образом атака становится невозможной, даже при наличии уязвимости.&nbsp;SQLMap поддерживает идентификацию использования WAF, а также имеет в своем арсенале кучу дополнений по обходу фаервола. Идентификация waf включается параметром <tt>--identify-waf</tt>, а обход - через включение тамперов, например <tt>--tamper=space2comment</tt>, можно через запятую указывать несколько тамперов. Это нужно так как выбираемый тампер зависит от СУБД и WAF.</p>
+
+<p>Тамперы при MSSQL:</p>
+
+<p>apostrophemask, apostrophenullencode, base64encode, between, chardoubleencode, charencode, charunicodeencode, equaltolike, greatest, ifnull2ifisnull, multiplespaces, nonrecursivereplacement, percentage, randomcase, securesphere, space2comment, space2plus, space2randomblank, unionalltounion, unmagicquotes</p>
+
+<p>MySQL</p>
+
+<p>between, charencode, charunicodeencode, equaltolike, greatest, multiplespaces, nonrecursivereplacement, percentage, randomcase, securesphere, sp_password, space2comment, space2dash, space2mssqlblank, space2mysqldash, space2plus, space2randomblank, unionalltounion, unmagicquotes</p>
+
+<p><a href="https://github.com/sqlmapproject/sqlmap/tree/master/tamper" target="_blank">Список всех скриптов для тампинга пэйлоад</a></p>
+
+<p>Выбирешь 1-2 тампера и пускаешься в бой.</p>
+
+<h3><strong>Резултаты SQLMap</strong></h3>
+
+<p>Как я уже говорил, sqlmap хранит отчет по каждой проведенной атаке. Если ты повторял все действия за мной, то ты найдешь дам таблицы с пользователями по пути</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>/root/.sqlmap/output/127.0.0.1/dump/dvwa</tt></div>
+
+<p>Очень удобно, если в будущем ты опять будешь получить дамп этой таблицы с этого сайта и БД, то старые данные <strong>не будут</strong> перезаписаны. Также в папке с хостом лежит лог, в котором сохраняются результаты тестирований, например мы не дампили список колонок таблицы users и найти его можно именно в логе, чтобы не получить эти данные повторно, хотя даже если выполнить повторное получение этих колонок, мап вытащит их из файла session.sqlite. И тут есть одно условие, главное чтобы запуск sqlmap был таким же как и при первом получении данных. Ну вот например, мы сначала тестировали гет параметры, а потом пост, в первом случае мы получили колонки, а потом через пост решили попросить, то теперь мап будет опять изимать данные из БД. Потому что запросы разные.</p>
+
+<p>Если тебе нужно передать кому то раскрученную скулю, то ты отдаешь папку с хостом, которую получатель положит к себе, а команду для запуска он найдет в файле target.txt. Файл лога ему не нужен.</p>
+
+<h3><strong>Применение в боевых условиях</strong></h3>
+
+<p>В боевых условиях при тестировании веб приложений нужно думать о том как не спалиться. Первое что нужно предпринять - это указывать мапу использовать рандомный User-Agent, если этого не сделать, то в запросах будет отдаваться дефолтный юзер агент, содержащий название софта. Второе - использование прокси, sqlmap поддерживает как список прокси, так и указание конкретного прокси, например можно в качестве прокси указать прокси тора.</p>
+
+<p>Если ты по каким то причинам не можешь или не хочешь перехватывать запросы барпом, чтобы просто отправить их в мап, то поступать можно так. Например, ты запустил зевса и насканил себе кучу урлов в файл. Тогда тот подход, на котором мы тренировались не подойдет, так как софт должен упрощать жизнь, а не усложнять ее. И тут нет ничего проще чем просто отдать лог файл, к счастью в логе хостов зевс записыват урлы как ему отдала ПМ (Поисковая Машина), в скульмап.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>sqlmap --tamper=space2comment --identify-waf --random-agent -m sqlmap_task.log --batch</tt></div>
+
+<p>Последний параметр включает режим при котором скульмап сам отвечает на свои вопросы, тем самым автоматизируя всю работу. Это конечно интересно, вот только надо понимать, что конверсия при этом снизится. Хотя тут все зависит от твоих предпочтений и целей.</p>
+
+<p>При точечных атаках тебе потребуется указывать URL, Cookie*, Method* для этого также есть соответствующие параметры. Так что теперь переходи к чтению документации. И да, я понимаю, что это скучно.</p>
+
+<p><span style="color:#999999">* Опционально</span></p>
+
+<h3><strong>И еще кое что</strong></h3>
+
+<p>Если вдруг нужно сбросить сессию скульмапа, чтобы он что то сделал по новой, то используй параметр --flush-session.</p>
+
+<p>При тестировании можно также указывать какие техники нужно использовать ( --technique=BEUS), по умолчанию используются все техники :</p>
+
+<ul>
+    <li><code>B</code>: Boolean-based blind</li>
+    <li><code>E</code>: Error-based</li>
+    <li><code>U</code>: Union query-based</li>
+    <li><code>S</code>: Stacked queries</li>
+    <li><code>T</code>: Time-based blind</li>
+    <li><code>Q</code>: Inline queries</li>
+</ul>
+
+<p>Стек запросов это выполнение нескольких запросов следующих друг за другом и разделенные `<tt>;</tt>`.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>SELECT * FROM table_name WHERE name=`admin`; DROP other_table_name --</tt></div>
+
+<p>Этот запрос удалит таблицу `<tt>other_table_name</tt>` в текущей таблице. Но проблема в том что не все связки поддерживают такие запросы.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>ASP.NET | MySQL | Supported<br />
+ASP&nbsp;&nbsp;&nbsp;&nbsp; | MySQL | Not supported<br />
+PHP &nbsp; &nbsp; | MySQL | Not supported</tt></div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>ASP.NET | MSSQL | Supported<br />
+ASP&nbsp;&nbsp;&nbsp;&nbsp; | MSSQL | Supported<br />
+PHP&nbsp;&nbsp;&nbsp;&nbsp; | MSSQL | Supported</tt></div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>ASP.NET | PostgreSQL | Supported<br />
+ASP&nbsp;&nbsp;&nbsp;&nbsp; | PostgreSQL | Supported<br />
+PHP&nbsp;&nbsp;&nbsp;&nbsp; | PostgreSQL | Supported</tt></div>
+
+<p>С чтением и записью файлов существуют другие проблемы. В частности у SQL сервера должны быть права на чтение/запись, нужно знать абсолютный путь и необходимо чтобы команда SQL, выполняющая запись на диск, не была заблокирована. Данные конфигурации встречаются довольно редко, тем не менее они есть и надо это всегда проверять. Чтобы окончательно убедить тебя в том что проверять нужно все, приведу пример в марте 2017-го появилась информация как спамеры слили в общий доступ 700 лямов почт с паролями. Спамеры всего лишь не правильно настроили права на папку с их бекапами и эти данные оказались в общем доступе. Чтобы ты понимал масштабность проблемы, это крупнейшая утечка в истории!</p>
+    </div>
+    <br>
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

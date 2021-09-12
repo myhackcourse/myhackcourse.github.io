@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<a href="hack.html">       
+    <div class="banner_block" style="background-image:url('source/hack_9X2ouwy.jpg')">
+        <div class="banner_content">
+            <h2>Хак</h2>
+            <p>Лучшая защита - это нападение.</p>
+        </div>
+    </div>
+    </a>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="hack.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+
+
+ <div class="text_content">
+        <p>Теперь мы начнем говорить о сканерах веб приложений. Точнее рассмотрим только один сканер. Почему один? А какже Owasp-ZAP? А какже Nessus? А Arachni? А Acunectix будем рассматривать? Да, сканеров много и я ничего не имею против полностью автоматического сканирования, только это долго, нудно&nbsp;и неинтересно. К тому же автоматика всегда тупее человека. Owasp-ZAP мне просто не нравится. Чем же так хорошь Burp? Хм... Просто смотри.</p>
+
+<p>Для начала нам нужна платформа для тренировок. Чтобы не <s>ебаться</s>&nbsp;терять время на&nbsp;поиск&nbsp;дырявых сайтов.</p>
+
+<h2>Настройка СУБД.</h2>
+
+<p>Для начала запусти сервис mysql (больше я такого говорить не буду, ты уже должен это знать).&nbsp;</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt># service mysql start</tt></div>
+
+<p>Теперь входим в СУБД</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt># mysql -u root -p</tt></div>
+
+<p>Если попросит пароль, то просто нажми Enter. Добавь пользователя в СУБД</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>MariaDB [(none)]&gt; create user &#39;<em>db_user</em>&#39;@&#39;127.0.0.1&#39; identified by &#39;<em>Qwerty1</em>&#39;;</tt></div>
+
+<p>Создай новую базу данных</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>MariaDB [(none)]&gt; create database dvwa;</tt></div>
+
+<p>И нужно разрешить новому пользователю доступ к созданой БД</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>MariaDB [(none)]&gt; grant all on <em>dvwa</em>.* to &#39;<em>user</em>&#39;@&#39;127.0.0.1&#39;;</tt></div>
+
+<p>Примени&nbsp;изменение привелегий</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>MariaDB [(none)]&gt; flush privileges;</tt></div>
+
+<p>И выходи из БД</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>MariaDB [(none)]&gt; exit;</tt></div>
+
+<h2>Настройка PHP</h2>
+
+<p>Откроем файл конфигурации php.ini для апача.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt># subl /etc/php/7.2/apache2/php.ini</tt></div>
+
+<blockquote>
+<p>В директории <tt>/etc/php</tt> лежат все установленные версии php. Т.е. если у тебя php не 7.2, а, например, 7.0, то путь будет немного другим. <tt>ls</tt> тебе в помощь!</p>
+</blockquote>
+
+<p>Переходим на 840-ую строку и выставляем&nbsp;</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>﻿allow_url_include = On</tt></div>
+
+<p><a href="source/phpini.png"><img alt="" src="source/phpini.png" style="height:726px; width:1120px" /></a></p>
+
+<p>Сохраняем. И еще нужно поставить <tt>php-gd</tt>, который есть в репозитории (помнишь же как пользоваться apt?).</p>
+
+<h2>Настройка Apache2</h2>
+
+<p>Открываем конфигурационный файл апача.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt># subl /etc/apache2/apache2.conf</tt></div>
+
+<p>И разрешаем перезаписывать правила для файлов .htaccess в директории <tt>/var/www</tt></p>
+
+<p><a href="source/apache2conf.png"><img alt="" src="source/apache2conf.png" style="height:728px; width:1124px" /></a></p>
+
+<p>Сохраняй, закрывай. И нужно активировать <tt>mod_rewrite</tt>.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt># a2enmod rewrite</tt></div>
+
+<p>После каких либо изменений в php.ini или конфигурационном файле апача, надо перезапускать сервис апача (<tt>apache2</tt>).</p>
+
+<h2>Поднимаем сайт</h2>
+
+<p>Серварная настройка закончена, т.е. ты настроил работу бекенда (php),&nbsp;веб сервера (apache2) и БД (mysql), теперь нужно поставить сайт.&nbsp;Качай&nbsp;<a href="https://github.com/ethicalhack3r/DVWA">DVWA (Damn Vulnerable Web Application)</a>, там есть Releases и бери последний (v1.9). Cоздай папку в <tt>/var/www/html</tt>, например <tt>dvwa</tt> и перекинь содержимое архива в нее. Путь <tt>/var/www/html/dvwa</tt> для нашего сайта будет корнем. Теперь в корне сайта нужно создать файл `<tt>.htaccess`</tt> с таким содержимым</p>
+
+<pre>
+<code class="language-apache">&lt;FilesMatch "\.(php*|phtm|phtml|asp|aspx)"&gt;
+    SetHandler application/x-httpd-php
+&lt;/FilesMatch&gt; </code></pre>
+
+<p>Эти 3 строки обозначат тип контента для файлов который подходят под регулярку в директиве FileMatch. Далее нужено настроить подключение к бд для сайта. Конфигурационный файл лежит по пути&nbsp;<tt>﻿config/config.inc.php.dist</tt><em> (путь относительно корня, разумеется). </em>Это пример конфигурационного файла, поэтому скопируем его в&nbsp;<tt>config.inc.php</tt></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt># cd&nbsp;/var/www/html/dvwa/config/</tt></div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt># cp config.inc.php.dist config.inc.php</tt></div>
+
+<blockquote>
+<p><em>Это правильный путь, сохранять оригинальные файлы конфигураций.</em></p>
+</blockquote>
+
+<p>Открываем&nbsp;config.inc.php на редактирование и прописываем параметры подключения к БД.</p>
+
+<pre>
+<code class="language-php">....
+$_DVWA[ 'db_server' ]   = '127.0.0.1';
+$_DVWA[ 'db_database' ] = 'YOUR_DB_NAME';
+$_DVWA[ 'db_user' ]     = 'SAME_USER_NAME';
+$_DVWA[ 'db_password' ] = 'SAME_PASSWORD';
+....</code></pre>
+
+<p>Сохрани и закрой. Не забывай, что манипуляции копирования файлов ты делал от рута, а веб сервер работает от пользователя&nbsp;www-data, поэтому надо сделать владельца, да и группу тоже,&nbsp;www-data для каталога <tt>/var/www/htmldvwa</tt> (без подсказок слабо?).</p>
+
+<h2>Настройка сайта</h2>
+
+<p>Теперь нужно перейти по адресу&nbsp;<tt>http://127.0.0.1/dvwa/setup.php</tt> и внизу нажать кнопку &quot;Create / Reset Databse&quot;.</p>
+
+<p><a href="source/dvwaconfig.png"><img alt="" src="source/dvwaconfig.png" style="height:812px; width:1372px" /></a></p>
+
+<p><a href="source/dvwalogin.png"><img alt="" src="source/dvwalogin.png" style="height:819px; width:1375px" /></a></p>
+
+<p>Дополнительные материалы в <a href="source/Additional.rar" target="_blank">Additional.rar</a></p>
+
+
+    </div>
+    <br>
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

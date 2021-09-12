@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<a href="hack.html">       
+    <div class="banner_block" style="background-image:url('source/hack_9X2ouwy.jpg')">
+        <div class="banner_content">
+            <h2>Хак</h2>
+            <p>Лучшая защита - это нападение.</p>
+        </div>
+    </div>
+    </a>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="hack.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+
+
+ <div class="text_content">
+        <p>Nmap - это лучший сканер портов и главный инструмент пинтестера. Nmap умеет сканировать диапазоны IP, подсети и отдельные хосты и может определить ОС, сервисы на портах и их версии. Функционал расширяется за счет сторонних скриптов, которые можно писать и самому. Итак первое с чего можно начать это</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt># nmap localhost</tt></div>
+
+<p>В манах часто пишут, что nmap сканирует только првые 1024 порта по умолчанию, ну во-первых: можно задать диапазон портов в ручную через опцию -p</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap localhost -p 1-65535</div>
+
+<p>А во-вторых: список портов которые nmap будет сканировать по дефолту определен в файле &quot;<code>/usr/share/nmap/nmap-services&quot;. Nmap также может попытаться определить версию сервиса, для этого надо указать опцию -sV</code></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><code># nmap localhost -sV</code></div>
+
+<p>А опция -O попросит утилиту определить ОС хоста. Есть возможность более детального сканирования (агрессивного) с помощью опции -A. Ниже я приведу список примеров сканирований.</p>
+
+<p>Настройка диапазонов портов</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap localhost -p 22,21,80,100-200</div>
+
+<p>Сканируем подсеть</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap 192.168.0.0/24 -p 22</div>
+
+<p>Сканирование списка хостов из файла</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p 22 -iL hosts.txt</div>
+
+<p>TCP сканирование (будет использован системный вызов Connect())</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22 -sT localhost</div>
+
+<p>SYN, FIN, Xmas, TCP Null сканирования</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22 -sS localhost</div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22 -sF localhost</div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22 -sX localhost</div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22 -sN localhost</div>
+
+<p>Не определять доменные имена</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -n -p22 localhost</div>
+
+<p>Показывать причину, по которой определенный порт считается &laquo;открытым&raquo;:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22,80,100-200 --reason localhost</div>
+
+<p>Пингануть хосты для проверки, онлайн ли они, но не сканировать порты:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -sn 192.168.0.0/24</div>
+
+<p>Сканировать хосты, даже если они не отвечают на пинги:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22,80 -Pn localhost</div>
+
+<p>Считать, что хост онлайн, если он отвечает на SYN, посланный на порт 443:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22,80,443 -PS 443 192.168.0.0/24</div>
+
+<p>Сканирование UDP (работает медленнее обычного сканирования TCP):</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -sU -p111 localhost</div>
+
+<p>Ограничиваем время, которое можно потратить на один хост:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22 --host-timeout 1m localhost</div>
+
+<p>Управление степенью параллелизма:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22 --max-parallelism 2 localhost</div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22 --min-parallelism 2 localhost</div>
+
+<p>Делаем паузу прежде, чем перейти к следующему хосту:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22 --scan-delay 5s 192.168.0.0/24</div>
+
+<p>Ограничение на число пакетов, посылаемых в секунду:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22 --min-rate 1 --max-rate 100 localhost</div>
+
+<p>Обновить базу данных скриптов <a href="https://nmap.org/nsedoc/">NSE (Nmap Scripting Engine)</a></p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap --script-updatedb</div>
+
+<p>Натравляем все скрипты из группы default:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap --script default localhost</div>
+
+<p>Все скрипты, название которых начинается на http</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap --script http-* localhost</div>
+
+<p>&nbsp;Не пинговать перед сканированием (при игнорировании ICMP)</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22 -P0 localhost</div>
+
+<p>Сохранить результат в файл</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -p22 -o scan.log localhost</div>
+
+<p>Указываем адреса по маске, диапазону, диапазонам, вся сеть по маске 255.255.0.0</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap 192.168.*.*</div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap 192.168.0-255.0-255</div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap 192.168.1-50,51-255.1,2,3,4,5-255</div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap 192.168.0.0/16</div>
+
+<h3>Обход брэндмауеров</h3>
+
+<p>Разные методы сканирования необходимы для обхода IDS (это система обранужения вторжений) и брендмауеров. Для фильтрафии порта брендмауер отбрасывает пакеты&nbsp;ASK, которые отправляются при созднии нового соединения, а пакеты SYN, которые отправляются в рамках текущего соеинения, проходят свободно.&nbsp; А еще есть&nbsp;stateful-брандмауэры. Они более детальнее анализируют приходящие пакеты и могут определить пакеты nmap отправленные в рамках сканировани. Iptables такое умеет, например. А выяснить, какой тип брандмауэра используется, можно, выполнив SYN-сканирование и сразу за ним &mdash; ACK-сканирование. Если порты, отмеченные во время SYN-сканирования как filtered, стали unfiltered, значит, перед тобой не stateful-брандмауэр. Кроме того, можно попробовать обойти брандмауэр с помощью изменения номера исходящего порта:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap --source-port 53 192.168.0.1</div>
+
+<p>Это эксплуатация старой как мир ошибки настройки брандмауэра, которая заключается в том, что админ открывает доступ всему входящему трафику (включая протокол TCP) с порта 53, чтобы позволить приложениям беспрепятственно выполнять DNS-запросы. Сегодня такое встречается редко, но, как показывает практика, некомпетентность со временем не исчезает. Кроме всего прочего, в Nmap есть средства для скрытия факта сканирования от глаз брандмауэров и IDS:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap -f 192.168.0.1</div>
+
+<p>В этом случае Nmap будет разбивать пакеты на крохотные фрагменты размером 8 байт. Делает он это в надежде на то, что брандмауэр или IDS не сможет собрать пакет из фрагментов и проанализировать его заголовок (по причине плохой реализации или в угоду производительности) и просто пропустит пакет или отбросит.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap --mtu 16 192.168.0.1</div>
+
+<p>Та же история, только с возможностью контролировать размер пакета (в данном случае 16). Можно использовать против брандмауэров и IDS, которые умеют ловить факты сканирования с помощью Nmap, анализируя размер фрагмента.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"># nmap --data-length 25 192.168.0.1</div>
+
+<p>Добавляет в конец пакета указанное количество рандомных байтов. Цель та же, что и в предыдущем случае: обмануть IDS, которая может быть способна обнаружить сканирование, анализируя размер пакета (Nmap всегда посылает пакеты длиной 40 байт при использовании протокола TCP).</p>
+
+<p>Расширение функционала с помощью скриптов.</p>
+
+<p>Nmap поставляется с более чем 500 скриптами, которые могут относиться к одной или нескольким из четырнадцати категорий.</p>
+
+<ul>
+    <li><strong>auth</strong> &mdash; проверка возможности логина. Например, скрипт ftp-anon пробует выполнить анонимный логин на FTP-сервер.</li>
+    <li><strong>broadcast</strong> &mdash; различные виды обнаружения хостов в сети. Пример: broadcast-upnp-info &mdash; скрипт для поиска UPnP-сервисов.</li>
+    <li><strong>brute</strong> &mdash; реализация техник брутфорса паролей. Пример: http-brute &mdash; брутфорс паролей от веб-сервера.</li>
+    <li><strong>default</strong> &mdash; скрипты, запускаемые автоматически при указании опции <code>-A</code> или <code>-sC</code>. Обычно это простые быстрые скрипты, собирающие дополнительную информацию о машине, вроде уже приведенного выше ftp-anon.</li>
+    <li><strong>discovery</strong> &mdash; практически аналог broadcast. Пример: smb-enum-shares &mdash; поиск расшаренных с помощью протокола SMB дисков.</li>
+    <li><strong>dos</strong> &mdash; скрипты для организации DoS-атак. Пример: smb-vuln-regsvc-dos &mdash; выводит из строя Windows 2000 путем эксплуатации уязвимости MSRC8742.</li>
+    <li><strong>exploit</strong> &mdash; эксплуатация или проверка на уязвимость. Пример: smb-vuln-ms06-025 &mdash; проверка машин Windows на уязвимость MS06-025.</li>
+    <li><strong>external</strong> &mdash; скрипты, использующие внешние ресурсы для получения дополнительной информации о машине. Пример: whois.</li>
+    <li><strong>fuzzer</strong> &mdash; скрипты, посылающие удаленной стороне неожиданные и неправильно сформированные данные с целью поиска уязвимостей или попытки выполнить DoS. Пример: dns-fuzz.</li>
+    <li><strong>intrusive</strong> &mdash; скрипты, выполняющие активные действия в отношении машины. Пример: snmp-brute &mdash; брутфорс SNMP-сервера.</li>
+    <li><strong>malware</strong> &mdash; проверка на зараженность машины вирусами и бэкдорами. Пример: smtp-strangeport &mdash; поиск SMTP-сервера на нестандартном порте, что может быть свидетельством заражения машины трояном, рассылающим спам.</li>
+    <li><strong>safe</strong> &mdash; &laquo;безопасные&raquo; скрипты, которые не совершают активных действий в отношении машины, не забивают канал пакетами и не эксплуатируют уязвимости. Пример: ssh-hostkey &mdash; получает публичные ключи SSH-сервера.</li>
+    <li><strong>version</strong> &mdash; получение версий работающих служб. Пример: pptp-version &mdash; выводит на экран дополнительную информацию о PPTP-сервере.</li>
+    <li><strong>vuln</strong> &mdash; проверка служб на уязвимости.</li>
+</ul>
+
+<p>Если указать опции <code>-A</code> или <code>-sC</code>, скрипты категории <code>default</code> будут запускаться автоматически.&nbsp;Все скрипты расположены по пути:&nbsp;&nbsp;<code>/usr/share/nmap/scripts и ты можешь сам писать себе скрипты, ну если надумаешь выучить язык Lua.</code></p>
+
+<p>Шесть состояний порта&nbsp;Nmap</p>
+
+<ul>
+    <li>open &mdash; порт открыт.</li>
+    <li>closed &mdash; порт закрыт.</li>
+    <li>filtered &mdash; порт фильтруется, неизвестно, закрыт или открыт.</li>
+    <li>unfiltered &mdash; порт не фильтруется, неизвестно, закрыт или открыт (такой результат может дать только ACK-сканирование).</li>
+    <li>open|filtered &mdash; порт либо открыт, либо фильтруется.</li>
+    <li>closed|filtered &mdash; порт либо закрыт, либо фильтруется (такой результат может дать только Idle-сканирование).</li>
+</ul>
+
+<p>Также рекомендую добавить плагин <a href="https://github.com/vulnersCom/nmap-vulners" target="_blank">vulners</a>, который при сканировании с флагом -sV соберет известные уязвимости для сервиса, работающим на этом порту.</p>
+
+<p>&nbsp;</p>
+    </div>
+    <br> 
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

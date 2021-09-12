@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<a href="hack.html">       
+    <div class="banner_block" style="background-image:url('source/hack_9X2ouwy.jpg')">
+        <div class="banner_content">
+            <h2>Хак</h2>
+            <p>Лучшая защита - это нападение.</p>
+        </div>
+    </div>
+    </a>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="hack.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+
+
+
+ <div class="text_content">
+        <p>Рассмотрим инструменты, с помощью которых ты сможешь собирать информацию по своим жертвам, чтобы определять векторы атак. В IT важно обладать информацией, у кого больше информации тот и победил. Недостаток информации может препятствовать взлому, что непременно плохо. Наверное, первое что я пытаюсь узнать о сайте - это CMS.</p>
+
+<p>CMS - это движек сайта, какая то платформа которая отвечает за обработку, хранение и создание контента. Каждая со своими причудами и уязвимостями и к каждой есть плагины, которые тоже обладают своими уязвимостями, так что при целевых атаках важно знать какой менеджер контента используется. А еще бывают целевые атаки на какой-то движек или, что чаще всего, на определенную версию движка или определенную версию плагина для движка.</p>
+
+<p>Определить CMS бывает как достаточно просто, так и достаточно легко. И инструментов существует множество, рекомендую взглянуть на этот <a href="https://github.com/HA71/WhatCMS" target="_blank">список</a>.</p>
+
+<h3><strong><a href="https://github.com/wpscanteam/wpscan" target="_blank">WPScan</a></strong></h3>
+
+<p>Идет в коробке с кали. Собирает информацию по движку и плагинам, и ищет известные уязвимости для найденых версий.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ wpscan https://cybrary.it</tt></div>
+
+<p><span style="color:#999999">Это не реклама сайта, он сам загуглися</span></p>
+
+<p><a href="source/anal1.png"><img alt="" src="source/anal1.png" style="height:400px; width:100%" /></a></p>
+
+<p>Собирает достаточно много полезной информации и дает ссылки на описание уязвимостей. Т.е. вот как ты увидишь из результатов сканирования, теперь можно выбрать чтонибудь интересное и попробовать пробиться на сайт. Например протестировать потенциальную скулю</p>
+
+<blockquote>
+<p>Title: WordPress 2.3.0-4.8.1 - $wpdb-&gt;prepare() potential SQL Injection<br />
+Reference: https://wpvulndb.com/vulnerabilities/8905<br />
+Reference: https://wordpress.org/news/2017/09/wordpress-4-8-2-security-and-maintenance-release/<br />
+Reference: https://github.com/WordPress/WordPress/commit/70b21279098fc973eae803693c0705a548128e48<br />
+Reference: https://github.com/WordPress/WordPress/commit/fc930d3daed1c3acef010d04acc2c5de93cd18ec</p>
+</blockquote>
+
+<p>Или посмотреть как проэексплуатировать</p>
+
+<blockquote>
+<p>Title: WP Job Manager &lt;= 1.26.1 - Unauthenticated Arbitrary File Upload<br />
+Reference: https://wpvulndb.com/vulnerabilities/8908<br />
+Reference: https://packetstormsecurity.com/files/137866/WordPress-WP-Job-Manager-1.25-Shell-Upload.html<br />
+Reference: https://www.pluginvulnerabilities.com/2017/07/13/image-upload-capability-in-wordpress-plugin-being-abused/<br />
+Reference: https://wordpress.org/support/topic/wp-job-manager-1-26-2-released/</p>
+</blockquote>
+
+<h3><strong><a href="https://github.com/rastating/joomlavs" target="_blank">JoomlaVS</a></strong></h3>
+
+<p>Такой же как и впскан, только для джумлы. Не идет в комплекте поэтому нужно качать и ставить. Ставишь зависимости</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt># apt install ruby-dev zlib1g-dev liblzma-dev libcurl4-openssl-dev build-essential patch</tt></div>
+
+<p>Переходишь в каталог с joomlavs и устанавливаешь</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt># gem install bundler &amp;&amp; bundle install</tt></div>
+
+<p>Теперь можно запускать</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ ./joomlavs -u &#39;http://site.dom&#39;</tt></div>
+
+<p><a href="source/anal2.png"><img alt="" src="source/anal2.png" style="height:400px; width:100%" /></a></p>
+
+<h3><strong><a href="https://github.com/rezasp/joomscan" target="_blank">JoomlaScan</a></strong></h3>
+
+<p>Если тебя смущает, что JoomlaVS давно не обновлялся, можешь воспользоваться JoomlaScan, которой также хорош и идет в комплекте с Кали</p>
+
+<p><a href="source/anal3.png"><img alt="" src="source/anal3.png" style="height:400px; width:100%" /></a></p>
+
+<p>Рассказывать тут тоже особо нечего, также ищет установленные плагины и уязвимости под них, в догонку смотрит логи, файлы бекапов, конфиги и просто интересные ссылки. Также от OWASP есть еще <a href="https://github.com/rezasp/vbscan" target="_blank">VBScan</a></p>
+
+<h3><strong><a href="https://github.com/guelfoweb/knock" target="_blank">Knockpy</a></strong></h3>
+
+<p>А что делать когда не удалось определить CMS или не нашлось никаких дыр. Тогда можно узнать какие суб-домены имеет сайт. Суб домены это домены выше второго уровня. Например домен com - это домен первого уровня и по этому домену доступен сайт</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>http://www.com</tt></div>
+
+<p>А домен `google.com` - это домен второго уровня, уровни считаются справа на лево. Как ты наверное уже понял, домен `sub.google.com` принадлежит `google.com` и получив доступ на `sub.google.com`, при определенных обстоятельствах, ты можешь получить и `google.com` тоже, и наоборот. Под определенными обстоятельствами я подразумеваю: нахождение обоих сайтов на одном физическом сервере, неправильную настройку прав на сервере или ты каким то образом повысишь привелегии.</p>
+
+<p>Ставится через setup.py</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt># python setup.py install</tt></div>
+
+<p>После чего доступен в системе и запускается по команде:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ knock bbcamerica.com</tt></div>
+
+<p><a href="source/anal4.png"><img alt="" src="source/anal4.png" style="height:400px; width:100%" /></a></p>
+
+<p>Отсюда уже можно стартовать, пробуя пробиться через поддомен. Еще одна интересная фишка субдоменов - это когда компании регистрируют их и забывают, срок регистрации выходит и субдомен освобождается. Тогда ты можешь зарегестрировать этот субдомен и повесить на него фишинговый сайт, что повысит доверие потенциальных жертв. Также можно отправлять и письма с этого субдомена, как он самой компании которой должен был принадлежать этот самый субдомен.</p>
+
+<h4><strong><a href="https://github.com/maurosoria/dirsearch" target="_blank">DirSearch</a></strong></h4>
+
+<p>Когда у тебя на руках будет логин и пароль от админки сайта или если у тебя появится желаение брутануть админку, в первую очередь тебе нужно найти эту самую админку, а для этого требуется брутануть директирии сайта. DirSearch отличный инструмент для брута директорий.</p>
+
+<p><a href="source/anal5.png"><img alt="" src="source/anal5.png" style="height:400px; width:100%" /></a></p>
+
+<p>Для поиска тебе потребуется список возможных директорий, который ты можешь найти в фазинг листах. Ключ -f принудительно будет добавлять расширение, указанное для аргумента -e, для строк без слеша на конце. Работает на третьем пайтоне и не имеет зависимотей, во всяком случае у меня завелся сразу.</p>
+
+<h3><strong>IP адрес</strong></h3>
+
+<p>Очень часто на серверах настраивается Cloudfire для дополнительной защиты сайта от сканирований и дидоса. Определить наличие клауда можно по заголовкам ответа сервера, например</p>
+
+<pre>
+<code class="language-http">HTTP/2.0 200 OK
+content-type: text/html; charset=windows-1251
+vary: Accept-Encoding
+strict-transport-security: max-age=63072000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+server: cloudflare
+cf-ray: 42b4f64b9bee272c-FRA
+content-encoding: br
+X-Firefox-Spdy: h2</code></pre>
+
+<p>Вот пример ответа сервера за клаудом, видно, да? Так вот, если мы будем выполнять ping или сканирование Nmap или просто попробуем обратиться к IP то пакет будет направлен на клауд. Клауд выступает в качестве прозрачного прокси сервера.</p>
+
+<p><a href="source/anal9.png"><img alt="" src="source/anal9.png" style="height:400px; width:100%" /></a></p>
+
+<p>Вот например nslookup показывает нам IP адреса для домена exploit.in. А теперь посмотрим на NS записи этого домена</p>
+
+<p><a href="source/anal8.png"><img alt="" src="source/anal8.png" style="height:400px; width:100%" /></a></p>
+
+<p>Видно, что домен привязан к NS от клауда. А мы знаем, что клауд вяжет домен к своим IP адресам, которые и выступают как прокси, скрывая он нас реальный IP сайта. Я давал пару ссылок где можно попробовать найти IP сайта за клаудом. Также есть возможность поиска историю изменения IP для домена <a href="http://viewdns.info/iphistory/" target="_blank">ТУТ</a> и <a href="https://dnslytics.com/ip-history" target="_blank">ТУТ</a>. Есть еще вариант написать в форму обратной связи, если на сервере стоит почта, то отправленное нам письмо в заголовках будет содержать реальный IP сервера. Не то чтобы там будет заголовок &quot;Server IP without Cloudfire&quot; и сам адрес, там просто будет набор IP адресов всех серверов через которые прошло сообщение и вот среди них, возможно будет IP жертвы. Еще как вариант - это просмотр MX записей для домена. Т.е. если на сервере стоит почта, то он имеет MX записи которые могу выдать реальный IP. Вариантов тут много на самом деле, все зависит от оплошности сисадмина.</p>
+
+<h3><strong>Nmap</strong></h3>
+
+<p>Если тебе удастся узнать IP адрес сервера, то пришло время запускать сканер портов. Обязательно при этом заюзать плагин <a href="https://github.com/vulnersCom/nmap-vulners" target="_blank">vulners</a>. Инструкция по установке проста, нужно скачать NSE скрипт и сунуть в папку со своими скриптами для Nmap. После этого он будет доступен по имени, как показано на скринах на странице гитхаба.</p>
+
+<p>&nbsp;</p>
+
+<p>Да, написано тут не много, потому что каждый софт имеет документацию и описание, копировать сюда которое не имеет смысла. Получив всю возможную информацию можно составлять возможные векторы для атаки и начать действовать.</p>
+    </div>
+    <br>
+
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+
+
+<div class="banner_block" style="background-image:url('source/virusology.jpeg')">
+        <div class="banner_content">
+            <h2>Фреймворки</h2>
+            <p>Вирусология</p>
+            <p>Зголовок обновика</p>
+        </div>
+    </div>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="virus.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+    
+  <div class="text_content">
+        <p>В основном вирусы решают какую-то одну конкретную задачу. Например стиллер специализируется на отправке всех ценных данных на сервер хакеру. Кейлоггер запоминает нажатия клавиш. Клиппер подменяет адреса кошельков. В стороне от вирусов есть разные пейлоады, которые позволяют хакеру получать доступ к машине. Сюда добавляются ещё методы маскировки пейлоада и эксплоиты. Всё это непосредственно связано со взломом и используется хакерами, но это - разные программы. Фреймворки нужны как раз для того, чтобы объединить все эти инструменты в одном месте. Это платформа, которая позволяет создавать, маскировать и эксплуатировать вирусы. Самым популярным фреймворком является metasploit. У него модульная структура, что позволяет дополнять его новыми типами пейлоадов не изменяя код.</p>
+
+<p>Фреймворки - очень полезные инструменты. Они позволяют не углубляться в суть новой уязвимости и не держать у себя в системе сотни программ. С их помощью можно автоматизировать атаку. Но с другой стороны такая автоматизация играет и плохую роль - антивирусу проще найти сгенерированный вирус. Все пейлоады metasploit известны и методы, которыми он пользуется для обхода антивирусов, тоже известны. Ещё бы, metasploit открытый фреймфорк и с выходом нового модуля его может получить каждый. В том числе и антивирусные лаборатории, которые пристально исследуют все новые разработки.</p>
+
+<p>Если поискать, то можно найти много инструментов для маскировки кода и обхода детектов. В случае с интерпретируемым кодом это делается с помощью обфускации. Для исполняемых файлов есть методы упаковки, криптования и некоторые другие. Но все общедоступные решения приходят к одному концу: антивирусы обучаются как противостоять методу обхода и вместо снижения детектов вирус начинает ещё больше светиться. Хоть в фреймворках и есть методы для обхода детектов, но на практики проблем они не решают.</p>
+
+<p>В этой лекции мы рассмотрим структуру metasploit. Потом глубже углубимся в функционал.</p>
+
+<p>&nbsp;</p>
+
+<h2 style="text-align:center">Структура</h2>
+
+<p><strong>msfconsole </strong>- основной модуль. Все действия выполняются отсюда</p>
+
+<p><strong>msfd </strong>- сервер msfconsole к которому можно удалённо подключиться</p>
+
+<p><strong>msfdb </strong>- управление базой данных metasploit. В ней хранится информация о всех модулях</p>
+
+<p><strong>msfrpcd </strong>- RPC сервер metasploit</p>
+
+<p><strong>msfrpc </strong>- удалённое подключение к RPC серверу metasploit</p>
+
+<p><strong>msfvenom </strong>- фабрика пейлоадов</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">Программ в наборе metasploit framrwork много. Однако в основном используется только msfconsole и msfvenom</div>
+
+<h2 style="text-align:center">&nbsp;</h2>
+
+<h2 style="text-align:center">Терминология</h2>
+
+<p><strong>payload </strong>- что-то(для упрощения скажем exe), что исполняется на заражаемой машине. В результате обработки пейлоада система заражается, после чего она доступна из metasploit</p>
+
+<p><strong>сессия </strong>- это активное соединение между метасплоитом и жертвой.</p>
+
+<p><strong>handler </strong>- это то, что обрабатывает и принимает соединения на сервере хакера.</p>
+
+<p>&nbsp;</p>
+
+<p>Тут уже виднеется одно отличие фреймворка от типичного вируса: payload просто создаёт сессию с устройством. В от других вирусов, у которых есть конкретные задачи, metasploit нацелен на создание подключения. А что делать с этим подключением уже решает сам хакер.</p>
+
+<p>И в metasploit есть обширный функционал, который можно применить на боте. Фреймворки особенно полезны в тех случаях, когда до заражения о жертве ничего не известно. Благодаря большому количеству модулей, атаку можно будет построить на месте, оперируя через открытую сессию.</p>
+
+<h2 style="text-align:center">&nbsp;</h2>
+
+<h2 style="text-align:center">Функционал</h2>
+
+<p>Это описание основных команд, которые доступны в активной сессии metasploit.</p>
+
+<p><br />
+<em><strong>background </strong></em>- отсоединиться от текущей сессии, но не разрывать её.</p>
+
+<p><em><strong>cat %путь%</strong></em> - вывести содержимое файла по пути<strong> %путь%</strong></p>
+
+<p><em><strong>cd %путь% </strong></em>- сменить текущую директорию на<strong> %путь%</strong></p>
+
+<p><em><strong>pwd</strong></em> - напечатать текущую рабочую директорию на машине жертвы</p>
+
+<p><em><strong>clearev</strong></em> - сбрасывает логи на машине жертвы</p>
+
+<p><em><strong>download %путь%</strong></em> - качает файл по пути <strong>%путь%</strong> с машины жертвы</p>
+
+<p><strong><em>edit %путь%</em></strong> - редактирует файл по пути <strong>%путь%</strong></p>
+
+<p><em><strong>execute -f %путь%</strong></em> - выполняет программу у жертвы по пути <strong>%путь%</strong></p>
+
+<p><strong><em>getuid </em></strong>- выводит имя машины жертвы</p>
+
+<p><em><strong>idletime </strong></em>- выводит как долго компьютер находится в бездействии</p>
+
+<p><em><strong>ipconfig </strong></em>- печатает настройки сети</p>
+
+<p><em><strong>lcd </strong></em>- меняет рабочую папку на сервере metasploit</p>
+
+<p><em><strong>lpwd </strong></em>- печатает текущую рабочую директорию на сервере metasploit</p>
+
+<p><em><strong>ls </strong></em>- печатает содержимое текущий директории на жертве</p>
+
+<p><em><strong>ps </strong></em>- выводит список запущенных приложений</p>
+
+<p><em><strong>search -f %маска% </strong></em>- ищет файлы по маске<strong> %маска%</strong>. Маской может быть и имя файла</p>
+
+<p><em><strong>shell </strong></em>- даёт доступ к системной консоли на жертве</p>
+
+<p><em><strong>upload %имя% %путь%</strong></em> - <strong>%имя% </strong>это название файла на сервере, <strong>%путь%</strong> - место, куда жертве будет записан выбранный файл.</p>
+
+<p>Как из них видно, большинство функций совершенно базовые. Это низкоуровневое управление машиной. Но используя этот функционал с машиной можно сделать всё, что угодно. Если надо загрузить сторонний вирус, в metasploiit есть все возможности для этого. Так же в нём практически нет функций, которые завязаны только на windows. Всё дело в том, что metasploit может работать с пейлоадами не только для windows, но и для других операционных систем.</p>
+    </div>
+    <br>
+
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

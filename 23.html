@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<a href="hack.html">       
+    <div class="banner_block" style="background-image:url('source/hack_9X2ouwy.jpg')">
+        <div class="banner_content">
+            <h2>Хак</h2>
+            <p>Лучшая защита - это нападение.</p>
+        </div>
+    </div>
+    </a>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="hack.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+
+
+<div class="text_content">
+        <p>Как уже говорилось при поиске, копировании, перемещении, etc можно использовать маски. Например гифки для своих статей я делаю через утилиту &quot;convert&quot;. Если мне нужно сконвертировать файлы из директории &quot;frames&quot;, в которой лежат файлы: <tt>pic1.png, pic2.png, pic3.png, pic4.png, pic5.png, pic.png, 1.png, file.txt</tt>, и мне нужны только <tt>picN.png</tt> где <tt>N</tt> от 1 до 4, то:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ convert -delay 200 -loop 0 frames/pic[1..4].png test.gif</tt></div>
+
+<p>Вот только этого не всегда достаточно, если бы один из файлов назывался бы <tt>piC4.png</tt>, то он не был бы включен в результирующую гифку или не был бы скопирован или найден и etc. Когда требуется гибкость, то используются регулярные выражения.</p>
+
+<h2><strong>Регулярные выражения</strong></h2>
+
+<blockquote>
+<p>Регулярные выражения - формальный язык поиска и осуществления манипуляций с подстроками в тексте, основанный на использовании метасимволов. Для поиска используется строка-образец (<em>pattern</em>), состоящая из символов и метасимволов и задающая правило поиска. Для манипуляций с текстом дополнительно задаётся строка замены, которая также может содержать в себе специальные символы. (Wiki)</p>
+</blockquote>
+
+<h3>Синтаксис регулярных выражений</h3>
+
+<p>Регулярки (регекспы, regexp, regular expression) являются регистрозависимыми. Строка &quot;<tt>hello</tt>&quot; - это уже регулярка, которой соответствует только одна строка - &quot;<tt>hello</tt>&quot; и не соответствуют: &quot;<tt>Hello</tt>&quot;, &quot;<tt>helLo</tt>&quot;, etc. Также при составлении регулярного выражения применяются спецсимволы (или метасимволы): <code><strong><span style="color:#e67e22">. ^ $ * + ? { } [ ] \ | ( ) &lt; &gt; :</span></strong>. </code>Поэтому если требуется найти спец символ, то он должен быть экранирован с помощью &quot;<tt>\</tt>&quot;. А еще есть предопределенные соответствия, что-то типо шоткатов:</p>
+
+<ul>
+    <li><strong><span style="color:#e67e22"><code>\d</code></span></strong> - Соответствует любой цифре; эквивалент класса <strong><span style="color:#e67e22"><code>[0-9]</code></span></strong>.</li>
+    <li><strong><span style="color:#e67e22"><code>\D</code></span></strong> - Соответствует любому нечисловому символу; эквивалент класса <strong><span style="color:#e67e22"><code>[^0-9]</code></span></strong>.</li>
+    <li><strong><span style="color:#e67e22"><code>\s</code></span></strong> - Соответствует любому символу whitespace; эквивалент <strong><span style="color:#e67e22"><code>[ \t\n\r\f\v]</code></span></strong>.</li>
+    <li><strong><span style="color:#e67e22"><code>\S</code></span></strong> - Соответствует любому не-whitespace символу; эквивалент <strong><span style="color:#e67e22"><code>[^ \t\n\r\f\v]</code></span></strong>.</li>
+    <li><strong><span style="color:#e67e22"><code>\w</code></span></strong> - Соответствует любой букве или цифре; эквивалент <strong><span style="color:#e67e22"><code>[a-zA-Z0-9_]</code></span></strong>.</li>
+    <li><strong><span style="color:#e67e22"><code>\W</code></span></strong> - Наоборот; эквивалент <strong><span style="color:#e67e22"><code>[^a-zA-Z0-9_]</code></span></strong>.</li>
+</ul>
+
+<p>Итак, начнем с простого, с перечислений. Перечисления заключаются в <strong><span style="color:#e67e22"><tt>[]</tt></span></strong> между которыми указывается набор символов один из которых должен быть в строке. Например в результате команды &quot;<tt>split</tt>&quot; мы получаем файлы с меняющимися индексами: <tt>chunka<u>a</u></tt>, <tt>chanka<u>b</u></tt>, etc. Таким образом (<em>если у нас не больше 28-ми кусков</em>) мы можем найти их все с помощью такого регулярного выражения: <tt>chunka<strong><span style="color:#e67e22">[abcdefghi</span></strong>.......короче весь алфавит<strong><span style="color:#e67e22">]</span></strong></tt>. Если у тебя хватит терпения закончить весь алфавит, то получится то что нужно. Таким образом процессор регулярных выражений будет искать все, что начинается со строки &quot;<tt>chunka</tt>&quot; + <u>один символ из набора</u>. Правда когда нужно указать алфавит, то можно поступить иначе, указать диапазон: <strong><span style="color:#e67e22"><tt>a-z</tt></span></strong>. Получается: <tt>chunka<strong><span style="color:#e67e22">[a-z]</span></strong></tt>. Как просто, правда? А если в последней букве может быть другой регистр? Тогда: <tt>chunka<strong><span style="color:#e67e22">[A-z]</span></strong></tt>, что будет равно <tt>chunka<strong><span style="color:#e67e22">[a-zA-Z]</span></strong></tt>. Тоже самое и с цифрами: <strong><span style="color:#e67e22"><tt>[0-9]</tt></span></strong>. Еще можно указывать не полный диапазон, а его срез, например <strong><span style="color:#e67e22"><tt>[1-4]</tt></span></strong>. Также в наборе может быть несолько диапазонов и перечислений: <tt>chunka<strong><span style="color:#e67e22">[a-cDg0-3]</span></strong></tt>. Т.е. на месте последней буквы нашего регулярного выражения может быть любой символ из <strong><span style="color:#e67e22"><tt>[abcDg0123]</tt></span></strong> (<em>порядок, кстати, не важен</em>).</p>
+
+<p>Открой сайт&nbsp;<a href="http://regexr">RegExr</a> и пробуй там. Ты можешь заметить в строке ввода регулярки на сайте в начале и в конце &quot;<tt>/</tt>&quot;. Это потому что регулярные выражения пришли в наш мир из языка программирования Perl, а в перле начало и конец регулярного выражения обозначается &quot;<tt>/</tt>&quot;, а мезанизм поиска с помощью регулярок встроен в язык. Есть еще <span style="color:#999999"><s>рожденный в грехе</s></span> язык программировани PHP в котором при написании регекспа нужно на концах указать любые спец символы которые не будут использованы в самом выражении <span style="color:#999999"><s>идиотизм</s></span>.</p>
+
+<p>Описание значений метасимволов:</p>
+
+<ul>
+    <li><span style="color:#e67e22"><strong><tt>.</tt></strong></span> - обозначает любой символ (кроме символа перевода строки!).</li>
+    <li><strong><span style="color:#e67e22"><tt>^</tt></span></strong> - указатель на начало потока данных, в <strong><span style="color:#e67e22">[]</span></strong> используется для исключения символов из поиска.</li>
+    <li><strong><span style="color:#e67e22"><tt>$</tt></span></strong> - указатель на конец потока данных.</li>
+    <li><strong><span style="color:#e67e22"><tt>*</tt></span></strong> - повторяющий символ, означающий ничего или много.</li>
+    <li><strong><span style="color:#e67e22"><tt>+</tt></span></strong> - 1 или много.</li>
+    <li><strong><span style="color:#e67e22"><tt>?</tt></span></strong> - 0 или 1 и определяет жадность.</li>
+    <li><strong><span style="color:#e67e22"><tt>{}</tt></span></strong> - определяет диапазон повторений.</li>
+    <li><strong><span style="color:#e67e22"><tt>[]</tt></span></strong> - указывает набор.</li>
+    <li><strong><span style="color:#e67e22"><tt>\</tt></span></strong> - экранирование.</li>
+    <li><strong><span style="color:#e67e22"><tt>|</tt></span></strong> - логическое ИЛИ.</li>
+    <li><strong><span style="color:#e67e22"><tt>()</tt></span></strong> - неименнованная группировка.</li>
+    <li><strong><span style="color:#e67e22"><tt>&lt;&gt;</tt></span></strong> - именнованная группировка.</li>
+</ul>
+
+<p>Регулярные выражения могут быть жадными и нежадными.</p>
+
+<pre>
+<code class="language-html">&lt;div&gt;&lt;h1&gt;Hello World!&lt;/h1&gt;&lt;p&gt;This is message for all people!&lt;p&gt;&lt;/div&gt;</code></pre>
+
+<p>Попробуем найти все теги в этом тексте. Если мы напишем такую регулярку</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt><span style="color:#3498db">\&lt;</span><span style="color:#c0392b">.</span><span style="color:#f39c12"><span style="background-color:null">+</span></span><span style="color:#3498db">\&gt;</span></tt></div>
+
+<p>то она съест все от первого символа &quot;<tt>&lt;</tt>&quot; до последнего &quot;<tt>&gt;</tt>&quot;, это и есть жадное регулярное выражение. Символ &quot;<tt>&gt;</tt>&quot; ищется самый последний.</p>
+
+<p><img alt="" src="source/2018-05-18-10-25-52.png" style="height:298px; width:100%" /></p>
+
+<p>Чтобы умерить аппетиты регулярки используется символ &quot;<strong><span style="color:#e67e22"><tt>?</tt></span></strong>&quot;. Т.е. чтобы найти именно теги надо после &quot;<span style="color:#e67e22"><tt>+</tt></span>&quot; написать &quot;<span style="color:#e67e22"><tt>?</tt></span>&quot;</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt><span style="color:#3498db">\&lt;</span><span style="color:#c0392b">.</span><span style="color:#f39c12">+?</span><span style="color:#3498db">\&gt;</span></tt></div>
+
+<p><img alt="" src="source/2018-05-18-10-26-08.png" style="height:288px; width:100%" />Отлично! Вот только не все так просто, если кто то решил написать в тексте &quot;<tt>&lt;&gt;</tt>&quot;, то получится следующее</p>
+
+<p><img alt="" src="source/2018-05-18-10-26-29.png" style="height:313px; width:100%" /></p>
+
+<p>Потому что &quot;<strong><span style="color:#e67e22"><tt>.+</tt></span></strong>&quot; говорит, что любой символ, а символ &quot;<tt>&gt;</tt>&quot; тоже к ним относится, должен повторяться 1 или более раз. Таким образом строка &quot;<tt>&lt;&gt; Any text&gt;</tt>&quot; попадет под наше условие из-за того, что между первыми скобками нет ничего. Чтобы решить это нужно заменить символ повторения на &quot;<strong><span style="color:#e67e22"><tt>*</tt></span></strong>&quot;.</p>
+
+<p><img alt="" src="source/2018-05-18-10-27-25.png" style="height:280px; width:100%" /></p>
+
+<p>Хорошо, а что если тебе понадобится найти текст между тегами? Тогда регулярное выражение может быть таким:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt><span style="color:#8e44ad">\&gt;</span>[<span style="color:#f1c40f">\w</span><span style="color:#27ae60">\s</span><span style="color:#3498db">\!</span>]<span style="color:#f39c12">+</span><span style="color:#8e44ad">\&lt;</span></tt></div>
+
+<p>Тут жадность не важна потому, что мы задали набор из букв, пробела и восклицательного знака.</p>
+
+<p>Хорошо. А что если мы ищем строки только определенной длины? Например длина строки может быть от 4-х до 5-ти символов. Тогда нужно указать интервал в <strong><span style="color:#e67e22">{}</span></strong> через запятую.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt><span style="color:#f1c40f">\w</span><span style="color:#3498db">{</span>4,5<span style="color:#3498db">}</span></tt></div>
+
+<p>А если нужны слова?</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt><span style="color:#9b59b6">[</span><span style="color:#c0392b">^</span><span style="color:#f1c40f">\w</span><span style="color:#9b59b6">]</span><span style="color:#f1c40f">\w</span><span style="color:#3498db">{</span>4,5<span style="color:#3498db">}</span><span style="color:#27ae60">\s</span></tt></div>
+
+<p>Также кол-во повторений можно задавать так: <span style="color:#e67e22">{4}</span> -равно 4-м, <span style="color:#e67e22">{4,}</span> - от 4-х и больше, <span style="color:#e67e22">{,4}</span> - не больше 4-х.</p>
+
+<p>Пример посерьезнее, возьмем главную страницу сайта &quot;<u><tt>https://freelance.ru/</tt></u>&quot; и попробуем найти там email адреса. <span style="color:#999999"><sub>Исходный код можно посмотреть через ПКМ -&gt; Исходный код страницы.</sub></span></p>
+
+<p>Пишем регулярку! Мы знаем, что в email адресе в качесвте имени пользователя могут быть: цифры, буквы, знак подчеркивания и точка; все это может повторяться. В качестве разделителя идет символ &quot;@&quot;. В домене могут быть: цифры, буквы, точка. Тогда регулярка будет такой:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>[\w0-9\.\_]+@[\w\.0-9]+</tt></div>
+
+<p>И результат:</p>
+
+<p><img alt="" src="source/2018-05-18-11-20-41.png" style="height:498px; width:100%" /></p>
+
+<p>Также можно собрать мета информацию о контакте и поискать номера телефонов, например.</p>
+
+<p><img alt="" src="source/2018-05-18-11-37-48.png" style="height:571px; width:100%" /></p>
+
+<p>Разберемся что я тут написал:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt><span style="color:#f39c12">(</span><span style="color:null">([А-яA-z]+(\:|\-|\s)+?\s)?[\w0-9\.\_]+@[\w\.0-9]+</span><span style="color:#f39c12">)</span><strong><span style="color:#c0392b">|</span></strong><span style="color:#3498db">(</span><span style="color:null">([А-яA-z]+(\.|\:|\-|\s)+?\s)?\+[\d \(\)\-]{11,}(\&lt;|\w)+?</span><span style="color:#3498db">)</span></tt></div>
+
+<p>Делится все по скобкам и получается что у нас 2 регулярных выражения объединеных с помощью &quot;<strong><span style="color:#e67e22"><tt>|</tt></span></strong>&quot; в один:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt><span style="color:#3498db">(</span>[А-яA-z]+<span style="color:#f1c40f">(</span>\:|\-|\s<span style="color:#f1c40f">)</span>+?\s<span style="color:#3498db">)</span>?[\w0-9\.\_]+@[\w\.0-9]+</tt></div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt><span style="color:#3498db">(</span>[А-яA-z]+<span style="color:#f1c40f">(</span>\.|\:|\-|\s<span style="color:#f1c40f">)</span>+?\s<span style="color:#3498db">)</span>?\+[\d \(\)\-]{11,}<span style="color:#2ecc71">(</span>\&lt;|\w<span style="color:#2ecc71">)</span>+?</tt></div>
+
+<p>В первом и втором регулярках тоже есть группировка, первая часть обеих регулярок повторяется:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>([А-яA-z]+(\:|\-|\s)+?\s)?</tt></div>
+
+<p>Эта часть заключена в скобки чтобы в конце поставить знак &quot;<strong><span style="color:#e67e22"><tt>?</tt></span></strong>&quot; (<em>это называется группированием</em>). И работать это будет так, если соответствие этому регулярному выражению найдено, то оно берется в результат, иначе просто игнорируется. Расчленим его и посмотрим на куски:</p>
+
+<ul>
+    <li><strong><span style="color:#e67e22"><tt>[А-яA-z]+</tt></span></strong> - Будет сопоставляться кириллица и латинница, &quot;<strong><span style="color:#e67e22"><tt>+</tt></span></strong>&quot; - так как должна быть либо буква либо несколько букв которые идут до выражения ниже</li>
+    <li><strong><span style="color:#e67e22"><tt>(\:|\-|\s)+?\s</tt></span></strong> - здесь объединяется группа символов разделителей, ведь описание контакта как то отделяется от самого контакта. Это может быть один символ из: <strong><tt>: - \s</tt></strong>. Вконце стоит &quot;<strong><span style="color:#e67e22"><tt>+</tt></span></strong>&quot;, что значит символы могут повториться и &quot;<strong><span style="color:#e67e22"><tt>?</tt></span></strong>&quot; чтобы не жадничал. завершается все символом &quot;<strong><span style="color:#e67e22"><tt>\s</tt></span></strong>&quot;. Все это нужно чтобы соответствовать: <u>Тел. </u>{data}, <u>Email - </u>{data}, <u>Email: </u>{data}.</li>
+</ul>
+
+<p>С первой частью разобрались. Теперь разберемся со второй частью второй регулярки:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>\+[\d \(\)\-]{11,}(\&lt;|\w)+?</tt></div>
+
+<p>Номера телефонов начинаются с &quot;<tt>+</tt>&quot; поэтому и регулярка начинается также. Дальше идет группировка: <strong><tt>цифры ( ) -</tt></strong>; и все это может повторяться не менее 11-ти раз. Завершает номер телефона либо буква (<em>начало другого слова</em>), либо начало html тега.</p>
+
+<p>Глаза можно выколоть смотря и составляя такие сложные регулярные выражения, да? Тогда вот посмотри на регулярное выражение проверяющее валидность email адреса по стандартам RFC.</p>
+
+<h3><u>RFC 822</u></h3>
+
+<pre>
+<code>(?:(?:\r\n)?[ \t])*(?:(?:(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t]
+)+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|"(?:[^\"\r\\]|\\.|(?:(?:\r\n)?[ \t]))*"(?:(?:
+\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(
+?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|"(?:[^\"\r\\]|\\.|(?:(?:\r\n)?[ 
+\t]))*"(?:(?:\r\n)?[ \t])*))*@(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\0
+31]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\
+](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+
+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:
+(?:\r\n)?[ \t])*))*|(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z
+|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|"(?:[^\"\r\\]|\\.|(?:(?:\r\n)?[ \t]))*"(?:(?:\r\n)
+?[ \t])*)*\&lt;(?:(?:\r\n)?[ \t])*(?:@(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\
+r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[
+ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)
+?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t]
+)*))*(?:,@(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[
+ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*
+)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t]
+)+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*)
+*:(?:(?:\r\n)?[ \t])*)?(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+
+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|"(?:[^\"\r\\]|\\.|(?:(?:\r\n)?[ \t]))*"(?:(?:\r
+\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:
+\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|"(?:[^\"\r\\]|\\.|(?:(?:\r\n)?[ \t
+]))*"(?:(?:\r\n)?[ \t])*))*@(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031
+]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](
+?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?
+:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?
+:\r\n)?[ \t])*))*\&gt;(?:(?:\r\n)?[ \t])*)|(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?
+:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|"(?:[^\"\r\\]|\\.|(?:(?:\r\n)?
+[ \t]))*"(?:(?:\r\n)?[ \t])*)*:(?:(?:\r\n)?[ \t])*(?:(?:(?:[^()&lt;&gt;@,;:\\".\[\] 
+\000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|"(?:[^\"\r\\]|
+\\.|(?:(?:\r\n)?[ \t]))*"(?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;
+@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|"
+(?:[^\"\r\\]|\\.|(?:(?:\r\n)?[ \t]))*"(?:(?:\r\n)?[ \t])*))*@(?:(?:\r\n)?[ \t]
+)*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\
+".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?
+:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[
+\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*|(?:[^()&lt;&gt;@,;:\\".\[\] \000-
+\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|"(?:[^\"\r\\]|\\.|(
+?:(?:\r\n)?[ \t]))*"(?:(?:\r\n)?[ \t])*)*\&lt;(?:(?:\r\n)?[ \t])*(?:@(?:[^()&lt;&gt;@,;
+:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([
+^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\"
+.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\
+]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*(?:,@(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\
+[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\
+r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] 
+\000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\r\\]
+|\\.)*\](?:(?:\r\n)?[ \t])*))*)*:(?:(?:\r\n)?[ \t])*)?(?:[^()&lt;&gt;@,;:\\".\[\] \0
+00-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|"(?:[^\"\r\\]|\\
+.|(?:(?:\r\n)?[ \t]))*"(?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,
+;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|"(?
+:[^\"\r\\]|\\.|(?:(?:\r\n)?[ \t]))*"(?:(?:\r\n)?[ \t])*))*@(?:(?:\r\n)?[ \t])*
+(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".
+\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[
+^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]
+]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*\&gt;(?:(?:\r\n)?[ \t])*)(?:,\s*(
+?:(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\
+".\[\]]))|"(?:[^\"\r\\]|\\.|(?:(?:\r\n)?[ \t]))*"(?:(?:\r\n)?[ \t])*)(?:\.(?:(
+?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[
+\["()&lt;&gt;@,;:\\".\[\]]))|"(?:[^\"\r\\]|\\.|(?:(?:\r\n)?[ \t]))*"(?:(?:\r\n)?[ \t
+])*))*@(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t
+])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?
+:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|
+\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*|(?:
+[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\
+]]))|"(?:[^\"\r\\]|\\.|(?:(?:\r\n)?[ \t]))*"(?:(?:\r\n)?[ \t])*)*\&lt;(?:(?:\r\n)
+?[ \t])*(?:@(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["
+()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)
+?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;
+@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*(?:,@(?:(?:\r\n)?[
+ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,
+;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t]
+)*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\
+".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*)*:(?:(?:\r\n)?[ \t])*)?
+(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()&lt;&gt;@,;:\\".
+\[\]]))|"(?:[^\"\r\\]|\\.|(?:(?:\r\n)?[ \t]))*"(?:(?:\r\n)?[ \t])*)(?:\.(?:(?:
+\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[
+"()&lt;&gt;@,;:\\".\[\]]))|"(?:[^\"\r\\]|\\.|(?:(?:\r\n)?[ \t]))*"(?:(?:\r\n)?[ \t])
+*))*@(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])
++|\Z|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\
+.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z
+|(?=[\["()&lt;&gt;@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*\&gt;(?:(
+?:\r\n)?[ \t])*))*)?;\s*)</code></pre>
+
+<h3><u>RFC 5322</u></h3>
+
+<pre>
+<code>\A(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*
+ |  "(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]
+      |  \\[\x01-\x09\x0b\x0c\x0e-\x7f])*")
+@ (?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?
+  |  \[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}
+       (?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:
+          (?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]
+          |  \\[\x01-\x09\x0b\x0c\x0e-\x7f])+)
+     \])\z</code></pre>
+
+<p>&nbsp;</p>
+
+<h2><strong>Применение регулярных выражений</strong></h2>
+
+<p>Теория без практики мертва. В линукс есть замечательный инструмент &quot;<tt>egrep</tt>&quot;, который позволяет искать файлы используя синтаксис регулярных выражений. Искать можно в файлах (<em>также рекурсивно</em>) и передавая информацию на стандартный поток ввода. Крайне удобно применять egrep при поиске процессов. Команда &quot;<tt>ps</tt>&quot; выводит информацию о процессах в системе.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ ps aux</tt></div>
+
+<p>Процессов очень много, тогда если нас интересуют все процессы используеющие Python можно сделать так:</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ ps aux | egrep <strong><span style="color:#e67e22">python</span></strong></tt></div>
+
+<p>Стоит учесть что egrep будет искать соответствие регулярному выражению во всей строке это значит, что процессы</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>user &nbsp;&nbsp;&nbsp;&nbsp; 5716&nbsp; 0.0&nbsp; 0.0 197212&nbsp;&nbsp;&nbsp;&nbsp; 8 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; date &nbsp; time /usr/bin/<span style="color:#c0392b">python3</span> /path/to/file</tt></div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>user &nbsp;&nbsp;&nbsp; 5786&nbsp; 0.0&nbsp; 0.0 433096&nbsp; 4132 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sl&nbsp;&nbsp; date &nbsp; time /usr/bin/env <span style="color:#c0392b">python3</span></tt></div>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>user &nbsp;&nbsp;&nbsp; 576&nbsp; 0.0&nbsp; 0.0 135096&nbsp; 132 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sl&nbsp;&nbsp; date &nbsp; time /usr/bin/nano /path/to/<span style="color:#c0392b">python3</span>/file.txt</tt></div>
+
+<p>будут таже показаны в выводе. Чтобы это исправить читайте справку по &quot;ps&quot; или составляйте более точные регулярки.</p>
+
+<p>Есть одна особенность использования grep (<em>egrep аналогичная утилита только использует расширенный синтаксис по умолчанию запускаясь с флагом <strong>-e</strong></em>) зависимость от системной локали. Например на моей системе те регулярки, что я писал под код сайта флиланса уже не работют. Поэтому научимся применять пайтон при решении подобных задачь.</p>
+
+<p><img alt="" src="source/egrep_error.png" style="height:617px; width:100%" /></p>
+
+<h2><strong>Python regex</strong></h2>
+
+<p>Python - это высокоуровневый интерпретируемый язык программирования общего назначения. Большего знать сейчас и не надо. По умолчанию присутствует в подавляющем числе дистрибутивов линукс, исключение составляют сборки под микроконтроллеры раве что, например его может не быть в роутерах. На данный момент дистрибутивы для десктопа распространяются с двумя версиями этого языка: 2.7 и 3.5.</p>
+
+<p><img alt="" src="source/2018-05-18-12-44-00.png" style="height:617px; width:100%" /></p>
+
+<p>В качестве редактора я использую SublimeText 3, ты можешь пользоваться любым текстовым редактором, хоть nano.</p>
+
+<p>Вот такой простой скрипт:</p>
+
+<p><img alt="" src="source/peregex_source.png" style="height:349px; width:100%" /></p>
+
+<p>И запустим:</p>
+
+<p><img alt="" src="source/pyregexp_run.gif" style="height:617px; width:100%" /></p>
+
+<p>Ничего сложного :-)</p>
+
+<p>Немного о синтаксисе &quot;<tt><strong>./</strong>file</tt>&quot;. Думаю тебе понятно, что это указание полного пути к файлу. Первая строка в самом файле &quot;<tt>#!/usr/bin/env python3</tt>&quot; определяет, что будет запущено при таком подходе. Т.е. будет запущена утилита env которая в качестве параметра получит &quot;python3&quot; и запустит его. Это нужно чтобы не писать полный путь к интерпретатору, который может лежать где угодно. &quot;<tt>./file</tt>&quot; это способ относительного запуска исполняемых файлов. Думаю объяснения уже излишни.</p>
+
+<blockquote>
+<p>Порой лучший способ что то понять, взять и попробовать!</p>
+</blockquote>
+    </div>
+    <br>
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>

