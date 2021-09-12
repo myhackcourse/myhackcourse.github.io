@@ -1,0 +1,159 @@
+ /* Грузим шрифты */
+ @font-face {
+     font-family: 'montserrat-regular';
+     src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+          url('../fonts/montserrat-regular-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'montserrat-semibold';
+     src: url('../fonts/montserrat-semibold-webfont.woff2') format('woff2'),
+          url('../fonts/montserrat-semibold-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'montserrat-medium';
+     src: url('../fonts/montserrat-medium-webfont.woff2') format('woff2'),
+          url('../fonts/montserrat-medium-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'montserrat-bold';
+     src: url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+          url('../fonts/montserrat-bold-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'montserrat-extrabold';
+     src: url('../fonts/montserrat-extrabold-webfont.woff2') format('woff2'),
+          url('../fonts/montserrat-extrabold-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'montserrat-black';
+     src: url('../fonts/montserrat-black-webfont.woff2') format('woff2'),
+          url('../fonts/montserrat-black-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'montserrat-light';
+     src: url('../fonts/montserrat-light-webfont.woff2') format('woff2'),
+          url('../fonts/montserrat-light-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ /* ТИПОГРАФИКА */
+
+   body {
+       font-family: montserrat-regular, 'sans-serif', regular;
+       color: #fff;
+   }
+
+    h1, h2, h3, h4 {
+       font-family: montserrat-bold, 'sans-serif', regular;
+       color: #fff;
+   }
+
+ /* Общее оформление */
+
+ body {
+     background: #373737;
+ }
+
+ .container {
+     margin: 24px auto;
+     padding: 16px 0px;
+     border-radius: 24px;
+     background: #434343;
+     min-height: 800px;
+     position: relative;
+     left: 0;
+ }
+
+ .nav {
+     height: 48px;
+     padding: 8px 0;
+     border-bottom: 1px solid #888;
+     margin-bottom: 32px;
+ }
+
+ .logo {
+     height: 36px;
+     position: relative;
+     bottom: 4px;
+     right: 4px;
+ }
+
+ .master {
+     float: right;
+     color: #888;
+ }
+
+ .param-div {
+    margin-bottom: 40px;
+ }
+
+ .param {
+     font-family: MB;
+     font-size: 14px;
+ }
+
+ .param-box {
+     padding: 8px 16px;
+     background: #555;
+     display: inline;
+     font-family: MB;
+     font-size: 18px;
+ }
+
+ .center {
+     text-align: center;
+ }
+
+ .big {
+    font-size: 32px;
+ }
+
+ .small {
+     font-size: 11px;
+     color: #888;
+ }
+
+ .btn {
+    padding: 12px 24px;
+    font-family: MM;
+    font-size: 16px;
+    color: #fff;
+    background: #6b6b6b;
+    border: none;
+    border-radius: 2px;
+    transition: all .2s;
+
+ }
+
+ .btn:hover, .btn:focus {
+    background: rgba(255,255,255,.2);
+ }
+
+ .foot {
+     font-size: 12px;
+     text-align: center;
+     color: #777;
+     margin-bottom: 24px;
+ }
+
+ ::-moz-selection { background: #34a3ff; color: #fff; }
+::selection { background: #34a3ff; color: #fff; }
